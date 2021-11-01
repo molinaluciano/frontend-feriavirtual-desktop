@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace feriavirtual_frontend
 {
-    public partial class productor : Form
+    public partial class gestionarSubastas : Form
     {
-        private void btnVolver_Click(object sender, EventArgs e)
+        public gestionarSubastas()
         {
-            gestionarProductores gestionarProductor = new gestionarProductores();
-            this.Hide();
-            gestionarProductor.ShowDialog();
+            InitializeComponent();
         }
     }
 }

@@ -56,6 +56,7 @@ namespace feriavirtual_frontend
             this.btnAceptarCompra.TabIndex = 1;
             this.btnAceptarCompra.Text = "Aceptar Procesos de Compra";
             this.btnAceptarCompra.UseVisualStyleBackColor = true;
+            this.btnAceptarCompra.Click += new System.EventHandler(this.btnAceptarCompra_Click);
             // 
             // btnControlarEstados
             // 
@@ -66,6 +67,7 @@ namespace feriavirtual_frontend
             this.btnControlarEstados.TabIndex = 2;
             this.btnControlarEstados.Text = "Controlar Estados";
             this.btnControlarEstados.UseVisualStyleBackColor = true;
+            this.btnControlarEstados.Click += new System.EventHandler(this.btnControlarEstados_Click);
             // 
             // btnGestionarPagos
             // 
@@ -76,6 +78,7 @@ namespace feriavirtual_frontend
             this.btnGestionarPagos.TabIndex = 3;
             this.btnGestionarPagos.Text = "Gestionar Pagos";
             this.btnGestionarPagos.UseVisualStyleBackColor = true;
+            this.btnGestionarPagos.Click += new System.EventHandler(this.btnGestionarPagos_Click);
             // 
             // btnIngresarSaldos
             // 
@@ -86,6 +89,7 @@ namespace feriavirtual_frontend
             this.btnIngresarSaldos.TabIndex = 4;
             this.btnIngresarSaldos.Text = "Ingresar Saldos";
             this.btnIngresarSaldos.UseVisualStyleBackColor = true;
+            this.btnIngresarSaldos.Click += new System.EventHandler(this.btnIngresarSaldos_Click);
             // 
             // btnVolver
             // 
@@ -96,6 +100,7 @@ namespace feriavirtual_frontend
             this.btnVolver.TabIndex = 5;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // gestionarVentas
             // 

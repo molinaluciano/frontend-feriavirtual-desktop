@@ -49,6 +49,7 @@ namespace feriavirtual_frontend
             this.btnNuevoProductor.TabIndex = 0;
             this.btnNuevoProductor.Text = "Nuevo Productor";
             this.btnNuevoProductor.UseVisualStyleBackColor = true;
+            this.btnNuevoProductor.Click += new System.EventHandler(this.btnNuevoProductor_Click);
             // 
             // btnVolver
             // 
@@ -59,6 +60,7 @@ namespace feriavirtual_frontend
             this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label1
             // 

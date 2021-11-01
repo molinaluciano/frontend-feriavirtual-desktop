@@ -57,6 +57,7 @@ namespace feriavirtual_frontend
             this.btnGestionarUsuarios.TabIndex = 1;
             this.btnGestionarUsuarios.Text = "Gestionar Usuarios";
             this.btnGestionarUsuarios.UseVisualStyleBackColor = true;
+            this.btnGestionarUsuarios.Click += new System.EventHandler(this.btnGestionarUsuarios_Click);
             // 
             // btnGestionarVentas
             // 
@@ -67,6 +68,7 @@ namespace feriavirtual_frontend
             this.btnGestionarVentas.TabIndex = 2;
             this.btnGestionarVentas.Text = "Gestionar Ventas";
             this.btnGestionarVentas.UseVisualStyleBackColor = true;
+            this.btnGestionarVentas.Click += new System.EventHandler(this.btnGestionarVentas_Click);
             // 
             // btnGestionarInformes
             // 
@@ -87,6 +89,7 @@ namespace feriavirtual_frontend
             this.btnGestionarSubastas.TabIndex = 4;
             this.btnGestionarSubastas.Text = "Gestionar Subastas";
             this.btnGestionarSubastas.UseVisualStyleBackColor = true;
+            this.btnGestionarSubastas.Click += new System.EventHandler(this.btnGestionarSubastas_Click);
             // 
             // label1
             // 

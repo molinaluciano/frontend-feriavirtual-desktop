@@ -83,6 +83,7 @@ namespace feriavirtual_frontend
             this.btnVolver.TabIndex = 3;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnNuevoCliente
             // 
@@ -93,6 +94,7 @@ namespace feriavirtual_frontend
             this.btnNuevoCliente.TabIndex = 4;
             this.btnNuevoCliente.Text = "Nuevo Cliente";
             this.btnNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
             // textBox1
             // 

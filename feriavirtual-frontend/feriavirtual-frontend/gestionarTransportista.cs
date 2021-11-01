@@ -16,5 +16,19 @@ namespace feriavirtual_frontend
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            gestionarUsuarios gestionarUsuario = new gestionarUsuarios();
+            this.Hide();
+            gestionarUsuario.ShowDialog();
+        }
+
+        private void btnNuevoTransportista_Click(object sender, EventArgs e)
+        {
+            transportista transportistas = new transportista();
+            this.Hide();
+            transportistas.ShowDialog();
+        }
     }
 }

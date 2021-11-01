@@ -24,5 +24,26 @@ namespace feriavirtual_frontend
             this.Hide();
             principal.ShowDialog();
         }
+
+        private void btnGestionarUsuarios_Click(object sender, EventArgs e)
+        {
+            gestionarUsuarios gestionarUsuario = new gestionarUsuarios();
+            this.Hide();
+            gestionarUsuario.ShowDialog();
+        }
+
+        private void btnGestionarVentas_Click(object sender, EventArgs e)
+        {
+            gestionarVentas gestionarVenta = new gestionarVentas();
+            this.Hide();
+            gestionarVenta.ShowDialog();
+        }
+
+        private void btnGestionarSubastas_Click(object sender, EventArgs e)
+        {
+            gestionarSubastas gestionarSubasta = new gestionarSubastas();
+            this.Hide();
+            gestionarSubasta.ShowDialog();
+        }
     }
 }

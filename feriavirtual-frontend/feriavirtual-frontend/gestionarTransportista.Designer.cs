@@ -30,6 +30,9 @@ namespace feriavirtual_frontend
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridRut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridNomTransportista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnNuevoTransportista = new System.Windows.Forms.Button();
@@ -37,9 +40,6 @@ namespace feriavirtual_frontend
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridRut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridNomTransportista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,24 @@ namespace feriavirtual_frontend
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(638, 259);
             this.dataGridView1.TabIndex = 17;
+            // 
+            // dataGridRut
+            // 
+            this.dataGridRut.HeaderText = "Rut";
+            this.dataGridRut.Name = "dataGridRut";
+            this.dataGridRut.ReadOnly = true;
+            // 
+            // dataGridNomTransportista
+            // 
+            this.dataGridNomTransportista.HeaderText = "Nombre Transportista";
+            this.dataGridNomTransportista.Name = "dataGridNomTransportista";
+            this.dataGridNomTransportista.ReadOnly = true;
+            // 
+            // dataGridOptions
+            // 
+            this.dataGridOptions.HeaderText = "Options";
+            this.dataGridOptions.Name = "dataGridOptions";
+            this.dataGridOptions.ReadOnly = true;
             // 
             // textBox2
             // 
@@ -82,6 +100,7 @@ namespace feriavirtual_frontend
             this.btnNuevoTransportista.TabIndex = 13;
             this.btnNuevoTransportista.Text = "Nuevo Transportista";
             this.btnNuevoTransportista.UseVisualStyleBackColor = true;
+            this.btnNuevoTransportista.Click += new System.EventHandler(this.btnNuevoTransportista_Click);
             // 
             // btnVolver
             // 
@@ -92,6 +111,7 @@ namespace feriavirtual_frontend
             this.btnVolver.TabIndex = 12;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label3
             // 
@@ -122,24 +142,6 @@ namespace feriavirtual_frontend
             this.label1.Size = new System.Drawing.Size(420, 42);
             this.label1.TabIndex = 9;
             this.label1.Text = "Gestionar Transportistas";
-            // 
-            // dataGridRut
-            // 
-            this.dataGridRut.HeaderText = "Rut";
-            this.dataGridRut.Name = "dataGridRut";
-            this.dataGridRut.ReadOnly = true;
-            // 
-            // dataGridNomTransportista
-            // 
-            this.dataGridNomTransportista.HeaderText = "Nombre Transportista";
-            this.dataGridNomTransportista.Name = "dataGridNomTransportista";
-            this.dataGridNomTransportista.ReadOnly = true;
-            // 
-            // dataGridOptions
-            // 
-            this.dataGridOptions.HeaderText = "Options";
-            this.dataGridOptions.Name = "dataGridOptions";
-            this.dataGridOptions.ReadOnly = true;
             // 
             // gestionarTransportista
             // 

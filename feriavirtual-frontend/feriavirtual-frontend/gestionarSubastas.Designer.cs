@@ -1,7 +1,7 @@
 ﻿
 namespace feriavirtual_frontend
 {
-    partial class gestionarPagos
+    partial class gestionarSubastas
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,12 @@ namespace feriavirtual_frontend
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridIdVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.btnCrearSubasta = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridIdSubasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridNomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,11 +43,31 @@ namespace feriavirtual_frontend
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(239, 38);
+            this.label1.Location = new System.Drawing.Point(213, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 42);
+            this.label1.Size = new System.Drawing.Size(344, 42);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Gestionar Pagos";
+            this.label1.Text = "Gestionar Subastas";
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(107, 385);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(170, 36);
+            this.btnVolver.TabIndex = 1;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            // 
+            // btnCrearSubasta
+            // 
+            this.btnCrearSubasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearSubasta.Location = new System.Drawing.Point(540, 385);
+            this.btnCrearSubasta.Name = "btnCrearSubasta";
+            this.btnCrearSubasta.Size = new System.Drawing.Size(157, 36);
+            this.btnCrearSubasta.TabIndex = 2;
+            this.btnCrearSubasta.Text = "Crear Subasta";
+            this.btnCrearSubasta.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -54,19 +76,26 @@ namespace feriavirtual_frontend
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridIdVenta,
+            this.dataGridIdSubasta,
+            this.dataGridNomCliente,
             this.dataGridOptions});
-            this.dataGridView1.Location = new System.Drawing.Point(133, 117);
+            this.dataGridView1.Location = new System.Drawing.Point(107, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(520, 203);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Size = new System.Drawing.Size(590, 222);
+            this.dataGridView1.TabIndex = 3;
             // 
-            // dataGridIdVenta
+            // dataGridIdSubasta
             // 
-            this.dataGridIdVenta.HeaderText = "Id Venta Estado Finalizado";
-            this.dataGridIdVenta.Name = "dataGridIdVenta";
-            this.dataGridIdVenta.ReadOnly = true;
+            this.dataGridIdSubasta.HeaderText = "Id Subasta";
+            this.dataGridIdSubasta.Name = "dataGridIdSubasta";
+            this.dataGridIdSubasta.ReadOnly = true;
+            // 
+            // dataGridNomCliente
+            // 
+            this.dataGridNomCliente.HeaderText = "Nombre Cliente";
+            this.dataGridNomCliente.Name = "dataGridNomCliente";
+            this.dataGridNomCliente.ReadOnly = true;
             // 
             // dataGridOptions
             // 
@@ -74,27 +103,17 @@ namespace feriavirtual_frontend
             this.dataGridOptions.Name = "dataGridOptions";
             this.dataGridOptions.ReadOnly = true;
             // 
-            // btnVolver
-            // 
-            this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(290, 360);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(193, 46);
-            this.btnVolver.TabIndex = 2;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // gestionarPagos
+            // gestionarSubastas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnCrearSubasta);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label1);
-            this.Name = "gestionarPagos";
-            this.Text = "gestionarPagos";
+            this.Name = "gestionarSubastas";
+            this.Text = "gestionarSubastas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -104,9 +123,11 @@ namespace feriavirtual_frontend
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridOptions;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnCrearSubasta;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdSubasta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNomCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridOptions;
     }
 }

@@ -17,6 +17,32 @@ namespace feriavirtual_frontend
             InitializeComponent();
         }
 
-        
+        private void btnGestionarProductores_Click(object sender, EventArgs e)
+        {
+            gestionarProductores gestionarProductor = new gestionarProductores();
+            this.Hide();
+            gestionarProductor.ShowDialog();
+        }
+
+        private void btnGestionarClientes_Click(object sender, EventArgs e)
+        {
+            gestionarClientes gestionarCliente = new gestionarClientes();
+            this.Hide();
+            gestionarCliente.ShowDialog();
+        }
+
+        private void btnGestionarTransportistas_Click(object sender, EventArgs e)
+        {
+            gestionarTransportista gestionarTransportistas = new gestionarTransportista();
+            this.Hide();
+            gestionarTransportistas.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            menuAdministrador menuAdmin = new menuAdministrador();
+            this.Hide();
+            menuAdmin.ShowDialog();
+        }
     }
 }

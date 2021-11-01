@@ -16,5 +16,19 @@ namespace feriavirtual_frontend
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            gestionarUsuarios gestionarUsuario = new gestionarUsuarios();
+            this.Hide();
+            gestionarUsuario.ShowDialog();
+        }
+
+        private void btnNuevoProductor_Click(object sender, EventArgs e)
+        {
+            productor productores = new productor();
+            this.Hide();
+            productores.ShowDialog();
+        }
     }
 }
