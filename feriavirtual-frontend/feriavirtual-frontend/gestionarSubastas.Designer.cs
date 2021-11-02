@@ -32,11 +32,11 @@ namespace feriavirtual_frontend
             this.label1 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnCrearSubasta = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvGestionarSubastas = new System.Windows.Forms.DataGridView();
             this.dataGridIdSubasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarSubastas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +58,7 @@ namespace feriavirtual_frontend
             this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnCrearSubasta
             // 
@@ -69,21 +70,21 @@ namespace feriavirtual_frontend
             this.btnCrearSubasta.Text = "Crear Subasta";
             this.btnCrearSubasta.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dtgvGestionarSubastas
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvGestionarSubastas.AllowUserToAddRows = false;
+            this.dtgvGestionarSubastas.AllowUserToDeleteRows = false;
+            this.dtgvGestionarSubastas.AllowUserToOrderColumns = true;
+            this.dtgvGestionarSubastas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvGestionarSubastas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridIdSubasta,
             this.dataGridNomCliente,
             this.dataGridOptions});
-            this.dataGridView1.Location = new System.Drawing.Point(107, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(590, 222);
-            this.dataGridView1.TabIndex = 3;
+            this.dtgvGestionarSubastas.Location = new System.Drawing.Point(107, 140);
+            this.dtgvGestionarSubastas.Name = "dtgvGestionarSubastas";
+            this.dtgvGestionarSubastas.ReadOnly = true;
+            this.dtgvGestionarSubastas.Size = new System.Drawing.Size(590, 222);
+            this.dtgvGestionarSubastas.TabIndex = 3;
             // 
             // dataGridIdSubasta
             // 
@@ -108,13 +109,13 @@ namespace feriavirtual_frontend
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvGestionarSubastas);
             this.Controls.Add(this.btnCrearSubasta);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label1);
             this.Name = "gestionarSubastas";
             this.Text = "gestionarSubastas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarSubastas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,7 +126,7 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnCrearSubasta;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvGestionarSubastas;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdSubasta;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNomCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridOptions;

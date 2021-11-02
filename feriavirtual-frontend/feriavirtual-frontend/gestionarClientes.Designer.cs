@@ -37,11 +37,11 @@ namespace feriavirtual_frontend
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.cbxTipoCliente = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvGestionarClientes = new System.Windows.Forms.DataGridView();
             this.dataGridRut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,21 +120,21 @@ namespace feriavirtual_frontend
             this.cbxTipoCliente.TabIndex = 7;
             this.cbxTipoCliente.Text = "Tipo Cliente";
             // 
-            // dataGridView1
+            // dtgvGestionarClientes
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvGestionarClientes.AllowUserToAddRows = false;
+            this.dtgvGestionarClientes.AllowUserToDeleteRows = false;
+            this.dtgvGestionarClientes.AllowUserToOrderColumns = true;
+            this.dtgvGestionarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvGestionarClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridRut,
             this.dataGridNomCliente,
             this.dataGridOptions});
-            this.dataGridView1.Location = new System.Drawing.Point(81, 180);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(638, 259);
-            this.dataGridView1.TabIndex = 8;
+            this.dtgvGestionarClientes.Location = new System.Drawing.Point(81, 180);
+            this.dtgvGestionarClientes.Name = "dtgvGestionarClientes";
+            this.dtgvGestionarClientes.ReadOnly = true;
+            this.dtgvGestionarClientes.Size = new System.Drawing.Size(638, 259);
+            this.dtgvGestionarClientes.TabIndex = 8;
             // 
             // dataGridRut
             // 
@@ -159,7 +159,7 @@ namespace feriavirtual_frontend
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 518);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvGestionarClientes);
             this.Controls.Add(this.cbxTipoCliente);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -170,7 +170,7 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.label1);
             this.Name = "gestionarClientes";
             this.Text = "gestionarClientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,7 +186,7 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox cbxTipoCliente;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvGestionarClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridRut;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNomCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridOptions;

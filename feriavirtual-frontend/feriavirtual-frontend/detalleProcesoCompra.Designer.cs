@@ -38,12 +38,12 @@ namespace feriavirtual_frontend
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.txtNombreSolicitud = new System.Windows.Forms.TextBox();
             this.txtPais = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvDetalleCompra = new System.Windows.Forms.DataGridView();
             this.dataGridFruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridKg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridCalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDetalleCompra)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -127,22 +127,22 @@ namespace feriavirtual_frontend
             this.txtPais.Size = new System.Drawing.Size(263, 20);
             this.txtPais.TabIndex = 8;
             // 
-            // dataGridView1
+            // dtgvDetalleCompra
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvDetalleCompra.AllowUserToAddRows = false;
+            this.dtgvDetalleCompra.AllowUserToDeleteRows = false;
+            this.dtgvDetalleCompra.AllowUserToOrderColumns = true;
+            this.dtgvDetalleCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDetalleCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridFruta,
             this.dataGridCategoria,
             this.dataGridKg,
             this.dataGridCalidad});
-            this.dataGridView1.Location = new System.Drawing.Point(157, 215);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(485, 185);
-            this.dataGridView1.TabIndex = 9;
+            this.dtgvDetalleCompra.Location = new System.Drawing.Point(157, 215);
+            this.dtgvDetalleCompra.Name = "dtgvDetalleCompra";
+            this.dtgvDetalleCompra.ReadOnly = true;
+            this.dtgvDetalleCompra.Size = new System.Drawing.Size(485, 185);
+            this.dtgvDetalleCompra.TabIndex = 9;
             // 
             // dataGridFruta
             // 
@@ -173,7 +173,7 @@ namespace feriavirtual_frontend
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 505);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvDetalleCompra);
             this.Controls.Add(this.txtPais);
             this.Controls.Add(this.txtNombreSolicitud);
             this.Controls.Add(this.txtNombreCliente);
@@ -185,7 +185,7 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.btnVolver);
             this.Name = "detalleProcesoCompra";
             this.Text = "detalleProcesoCompra";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDetalleCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +202,7 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.TextBox txtNombreSolicitud;
         private System.Windows.Forms.TextBox txtPais;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvDetalleCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridFruta;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridKg;

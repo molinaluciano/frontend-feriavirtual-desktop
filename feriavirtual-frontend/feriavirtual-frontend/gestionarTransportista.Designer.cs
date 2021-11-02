@@ -29,7 +29,7 @@ namespace feriavirtual_frontend
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvGestionarTransportistas = new System.Windows.Forms.DataGridView();
             this.dataGridRut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNomTransportista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,24 +40,24 @@ namespace feriavirtual_frontend
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarTransportistas)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgvGestionarTransportistas
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvGestionarTransportistas.AllowUserToAddRows = false;
+            this.dtgvGestionarTransportistas.AllowUserToDeleteRows = false;
+            this.dtgvGestionarTransportistas.AllowUserToOrderColumns = true;
+            this.dtgvGestionarTransportistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvGestionarTransportistas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridRut,
             this.dataGridNomTransportista,
             this.dataGridOptions});
-            this.dataGridView1.Location = new System.Drawing.Point(83, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(638, 259);
-            this.dataGridView1.TabIndex = 17;
+            this.dtgvGestionarTransportistas.Location = new System.Drawing.Point(83, 142);
+            this.dtgvGestionarTransportistas.Name = "dtgvGestionarTransportistas";
+            this.dtgvGestionarTransportistas.ReadOnly = true;
+            this.dtgvGestionarTransportistas.Size = new System.Drawing.Size(638, 259);
+            this.dtgvGestionarTransportistas.TabIndex = 17;
             // 
             // dataGridRut
             // 
@@ -148,7 +148,7 @@ namespace feriavirtual_frontend
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 474);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvGestionarTransportistas);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnNuevoTransportista);
@@ -158,7 +158,7 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.label1);
             this.Name = "gestionarTransportista";
             this.Text = "gestionarTransportista";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarTransportistas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +166,7 @@ namespace feriavirtual_frontend
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvGestionarTransportistas;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnNuevoTransportista;

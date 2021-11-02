@@ -31,11 +31,11 @@ namespace feriavirtual_frontend
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvAceptarCompra = new System.Windows.Forms.DataGridView();
             this.dataGridNumeroSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAceptarCompra)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,21 +59,21 @@ namespace feriavirtual_frontend
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // dataGridView1
+            // dtgvAceptarCompra
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvAceptarCompra.AllowUserToAddRows = false;
+            this.dtgvAceptarCompra.AllowUserToDeleteRows = false;
+            this.dtgvAceptarCompra.AllowUserToOrderColumns = true;
+            this.dtgvAceptarCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvAceptarCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridNumeroSolicitud,
             this.dataGridNombreCliente,
             this.dataGridOptions});
-            this.dataGridView1.Location = new System.Drawing.Point(115, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(588, 232);
-            this.dataGridView1.TabIndex = 2;
+            this.dtgvAceptarCompra.Location = new System.Drawing.Point(115, 113);
+            this.dtgvAceptarCompra.Name = "dtgvAceptarCompra";
+            this.dtgvAceptarCompra.ReadOnly = true;
+            this.dtgvAceptarCompra.Size = new System.Drawing.Size(588, 232);
+            this.dtgvAceptarCompra.TabIndex = 2;
             // 
             // dataGridNumeroSolicitud
             // 
@@ -98,12 +98,12 @@ namespace feriavirtual_frontend
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvAceptarCompra);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label1);
             this.Name = "aceptarProcesoCompra";
             this.Text = "aceptarProcesoCompra";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAceptarCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,7 +113,7 @@ namespace feriavirtual_frontend
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvAceptarCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNumeroSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridOptions;

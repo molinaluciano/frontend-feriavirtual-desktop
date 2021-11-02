@@ -33,11 +33,11 @@ namespace feriavirtual_frontend
             this.btnVolver = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvGestionarProductor = new System.Windows.Forms.DataGridView();
             this.dataGridContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNomProductor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarProductor)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNuevoProductor
@@ -72,21 +72,21 @@ namespace feriavirtual_frontend
             this.label1.TabIndex = 2;
             this.label1.Text = "Gestionar Productores";
             // 
-            // dataGridView1
+            // dtgvGestionarProductor
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvGestionarProductor.AllowUserToAddRows = false;
+            this.dtgvGestionarProductor.AllowUserToDeleteRows = false;
+            this.dtgvGestionarProductor.AllowUserToOrderColumns = true;
+            this.dtgvGestionarProductor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvGestionarProductor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridContrato,
             this.dataGridNomProductor,
             this.dataGridOptions});
-            this.dataGridView1.Location = new System.Drawing.Point(81, 141);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(639, 234);
-            this.dataGridView1.TabIndex = 3;
+            this.dtgvGestionarProductor.Location = new System.Drawing.Point(81, 141);
+            this.dtgvGestionarProductor.Name = "dtgvGestionarProductor";
+            this.dtgvGestionarProductor.ReadOnly = true;
+            this.dtgvGestionarProductor.Size = new System.Drawing.Size(639, 234);
+            this.dtgvGestionarProductor.TabIndex = 3;
             // 
             // dataGridContrato
             // 
@@ -111,13 +111,13 @@ namespace feriavirtual_frontend
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvGestionarProductor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnNuevoProductor);
             this.Name = "gestionarProductores";
             this.Text = "gestionarProductores";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarProductor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +129,7 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvGestionarProductor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridContrato;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNomProductor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridOptions;
