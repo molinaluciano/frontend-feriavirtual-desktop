@@ -2,23 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace feriavirtual_frontend.Models
 {
-    class Usuarios
+    class Transportistas
     {
-        [JsonConstructor] public Usuarios() { }
-        public Usuarios(int idUsuario, int idTipoUsuario, int idPais, string nombre, string apellidoPaterno, string apellidoMaterno, string correo, 
-                        string contrasena, int rut, string numeroIdentificador, string direccion, int codigoPostal, int telefono)
+        public Transportistas(string correo, string contrasena, int idTransportista, string nombre, string apellidoPaterno,
+                       string apellidoMaterno, int rut, string numeroIdentificador, string direccion, int codigoPostal, int telefono)
         {
             this.correo = correo;
             this.contrasena = contrasena;
-            this.idTipoUsuario = idTipoUsuario;
-            this.idPais = idPais;
-            this.idUsuario = idUsuario;
+            this.idTransportista = idTransportista;
             this.nombre = nombre;
             this.apellidoPaterno = apellidoPaterno;
             this.apellidoMaterno = apellidoMaterno;
@@ -29,21 +24,11 @@ namespace feriavirtual_frontend.Models
             this.telefono = telefono;
         }
 
-        public Usuarios(string correo, string contrasena, int idTipoUsuario)
-        {
-            this.correo = correo;
-            this.contrasena = contrasena;
-            this.idTipoUsuario = idTipoUsuario;
-        }
         public string correo { get; set; }
 
         public string contrasena { get; set; }
 
-        public int idTipoUsuario { get; set; }
-
-        public int idPais { get; set; }
-
-        public int idUsuario { get; set; }
+        public int idTransportista { get; set; }
 
         public string nombre { get; set; }
 
@@ -60,5 +45,7 @@ namespace feriavirtual_frontend.Models
         public int codigoPostal { get; set; }
 
         public int telefono { get; set; }
+
+
     }
 }

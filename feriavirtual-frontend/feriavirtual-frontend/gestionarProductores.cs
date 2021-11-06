@@ -26,9 +26,9 @@ namespace feriavirtual_frontend
 
         private void btnNuevoProductor_Click(object sender, EventArgs e)
         {
-            productor productores = new productor();
+            productor nuevoProductor = new productor();
             this.Hide();
-            productores.ShowDialog();
+            nuevoProductor.ShowDialog();
         }
     }
 }

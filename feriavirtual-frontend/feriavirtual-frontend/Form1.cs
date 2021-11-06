@@ -43,7 +43,7 @@ namespace feriavirtual_frontend
 
                 menuAdministrador menuAdministrador = new menuAdministrador();
 
-                if (result == "ADMINISTRADOR")
+                if (result.Contains("ADMINISTRADOR")  )
                 {
                     this.Hide();
                     menuAdministrador.ShowDialog();
