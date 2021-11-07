@@ -57,25 +57,33 @@ namespace feriavirtual_frontend
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbxTipoCliente
             // 
+            this.cbxTipoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipoCliente.FormattingEnabled = true;
-            this.cbxTipoCliente.Location = new System.Drawing.Point(405, 446);
+            this.cbxTipoCliente.Items.AddRange(new object[] {
+            "Cliente Externo",
+            "Cliente Local",
+            "Cliente Interno"});
+            this.cbxTipoCliente.Location = new System.Drawing.Point(405, 456);
             this.cbxTipoCliente.Name = "cbxTipoCliente";
             this.cbxTipoCliente.Size = new System.Drawing.Size(256, 21);
             this.cbxTipoCliente.TabIndex = 112;
-            this.cbxTipoCliente.Text = "Tipo Cliente";
             // 
             // cbxPais
             // 
+            this.cbxPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPais.FormattingEnabled = true;
-            this.cbxPais.Location = new System.Drawing.Point(142, 447);
+            this.cbxPais.Items.AddRange(new object[] {
+            "Chile"});
+            this.cbxPais.Location = new System.Drawing.Point(142, 456);
             this.cbxPais.Name = "cbxPais";
             this.cbxPais.Size = new System.Drawing.Size(227, 21);
             this.cbxPais.TabIndex = 111;
-            this.cbxPais.Text = "Seleccione País";
             // 
             // txtTelefono
             // 
@@ -196,6 +204,7 @@ namespace feriavirtual_frontend
             this.btnAgregarCliente.TabIndex = 97;
             this.btnAgregarCliente.Text = "Agregar Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
             // label13
             // 
@@ -315,11 +324,33 @@ namespace feriavirtual_frontend
             this.label1.TabIndex = 85;
             this.label1.Text = "Nuevo Cliente";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(142, 440);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 16);
+            this.label12.TabIndex = 113;
+            this.label12.Text = "Seleccione Pais";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(402, 440);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(133, 16);
+            this.label15.TabIndex = 114;
+            this.label15.Text = "Seleccione Tipo Cliente";
+            // 
             // cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 613);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.cbxTipoCliente);
             this.Controls.Add(this.cbxPais);
             this.Controls.Add(this.txtTelefono);
@@ -385,5 +416,7 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label15;
     }
 }

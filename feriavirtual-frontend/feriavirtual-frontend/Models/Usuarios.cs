@@ -43,7 +43,7 @@ namespace feriavirtual_frontend.Models
 
         public int idPais { get; set; }
 
-        public int idUsuario { get; set; }
+        public int? idUsuario { get; set; }
 
         public string nombre { get; set; }
 

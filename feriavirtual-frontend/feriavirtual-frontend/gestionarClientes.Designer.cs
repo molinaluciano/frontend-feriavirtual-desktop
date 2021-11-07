@@ -38,7 +38,6 @@ namespace feriavirtual_frontend
             this.txtRut = new System.Windows.Forms.TextBox();
             this.cbxTipoCliente = new System.Windows.Forms.ComboBox();
             this.dtgvGestionarClientes = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataGridRut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdTipoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +52,7 @@ namespace feriavirtual_frontend
             this.dataGridCodigoPostal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOptions = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,16 +165,6 @@ namespace feriavirtual_frontend
             this.dtgvGestionarClientes.ReadOnly = true;
             this.dtgvGestionarClientes.Size = new System.Drawing.Size(638, 259);
             this.dtgvGestionarClientes.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(514, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 17);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Tipo Cliente";
             // 
             // dataGridRut
             // 
@@ -290,6 +280,16 @@ namespace feriavirtual_frontend
             this.dataGridOptions.ReadOnly = true;
             this.dataGridOptions.Text = "Editar";
             this.dataGridOptions.UseColumnTextForButtonValue = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(514, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Tipo Cliente";
             // 
             // gestionarClientes
             // 
