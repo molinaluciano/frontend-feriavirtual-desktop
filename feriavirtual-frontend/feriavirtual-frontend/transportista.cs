@@ -66,7 +66,7 @@ namespace feriavirtual_frontend
             }
             else
             {
-                MessageBox.Show("Error Usuario no fue ingresado");
+                MessageBox.Show("Error Transportista no fue ingresado");
             }
 
         }

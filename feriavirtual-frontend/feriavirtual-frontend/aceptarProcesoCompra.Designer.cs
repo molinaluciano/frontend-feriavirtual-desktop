@@ -34,7 +34,13 @@ namespace feriavirtual_frontend
             this.dtgvAceptarCompra = new System.Windows.Forms.DataGridView();
             this.dataGridNumeroSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdEstadoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdUsuaio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdTipoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridProductorSeleccionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridFechaPublicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridOpcion1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridOpcion2 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAceptarCompra)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,35 +69,99 @@ namespace feriavirtual_frontend
             // 
             this.dtgvAceptarCompra.AllowUserToAddRows = false;
             this.dtgvAceptarCompra.AllowUserToDeleteRows = false;
-            this.dtgvAceptarCompra.AllowUserToOrderColumns = true;
             this.dtgvAceptarCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvAceptarCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridNumeroSolicitud,
             this.dataGridNombreCliente,
-            this.dataGridOptions});
-            this.dtgvAceptarCompra.Location = new System.Drawing.Point(115, 113);
+            this.dataGridIdEstadoSolicitud,
+            this.dataGridIdUsuaio,
+            this.dataGridIdTipoSolicitud,
+            this.dataGridProductorSeleccionado,
+            this.dataGridFechaPublicacion,
+            this.dataGridOpcion1,
+            this.dataGridOpcion2});
+            this.dtgvAceptarCompra.Location = new System.Drawing.Point(75, 113);
             this.dtgvAceptarCompra.Name = "dtgvAceptarCompra";
             this.dtgvAceptarCompra.ReadOnly = true;
-            this.dtgvAceptarCompra.Size = new System.Drawing.Size(588, 232);
+            this.dtgvAceptarCompra.Size = new System.Drawing.Size(674, 232);
             this.dtgvAceptarCompra.TabIndex = 2;
+            this.dtgvAceptarCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvAceptarCompra_CellContentClick);
             // 
             // dataGridNumeroSolicitud
             // 
+            this.dataGridNumeroSolicitud.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridNumeroSolicitud.DataPropertyName = "idSolicitud";
             this.dataGridNumeroSolicitud.HeaderText = "Número Solicitud";
             this.dataGridNumeroSolicitud.Name = "dataGridNumeroSolicitud";
             this.dataGridNumeroSolicitud.ReadOnly = true;
+            this.dataGridNumeroSolicitud.Width = 103;
             // 
             // dataGridNombreCliente
             // 
+            this.dataGridNombreCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridNombreCliente.HeaderText = "Nombre Cliente";
             this.dataGridNombreCliente.Name = "dataGridNombreCliente";
             this.dataGridNombreCliente.ReadOnly = true;
             // 
-            // dataGridOptions
+            // dataGridIdEstadoSolicitud
             // 
-            this.dataGridOptions.HeaderText = "Options";
-            this.dataGridOptions.Name = "dataGridOptions";
-            this.dataGridOptions.ReadOnly = true;
+            this.dataGridIdEstadoSolicitud.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridIdEstadoSolicitud.DataPropertyName = "idEstadoSolicitud";
+            this.dataGridIdEstadoSolicitud.HeaderText = "EstadoSolicitud";
+            this.dataGridIdEstadoSolicitud.Name = "dataGridIdEstadoSolicitud";
+            this.dataGridIdEstadoSolicitud.ReadOnly = true;
+            this.dataGridIdEstadoSolicitud.Width = 105;
+            // 
+            // dataGridIdUsuaio
+            // 
+            this.dataGridIdUsuaio.DataPropertyName = "idUsuario";
+            this.dataGridIdUsuaio.HeaderText = "idUsuario";
+            this.dataGridIdUsuaio.Name = "dataGridIdUsuaio";
+            this.dataGridIdUsuaio.ReadOnly = true;
+            this.dataGridIdUsuaio.Visible = false;
+            // 
+            // dataGridIdTipoSolicitud
+            // 
+            this.dataGridIdTipoSolicitud.DataPropertyName = "idTipoSolicitud";
+            this.dataGridIdTipoSolicitud.HeaderText = "Tipo Solicitud";
+            this.dataGridIdTipoSolicitud.Name = "dataGridIdTipoSolicitud";
+            this.dataGridIdTipoSolicitud.ReadOnly = true;
+            this.dataGridIdTipoSolicitud.Visible = false;
+            // 
+            // dataGridProductorSeleccionado
+            // 
+            this.dataGridProductorSeleccionado.DataPropertyName = "productorSeleccionado";
+            this.dataGridProductorSeleccionado.HeaderText = "ProductorSeleccionado";
+            this.dataGridProductorSeleccionado.Name = "dataGridProductorSeleccionado";
+            this.dataGridProductorSeleccionado.ReadOnly = true;
+            this.dataGridProductorSeleccionado.Visible = false;
+            // 
+            // dataGridFechaPublicacion
+            // 
+            this.dataGridFechaPublicacion.DataPropertyName = "fechaPublicacion";
+            this.dataGridFechaPublicacion.HeaderText = "FechaPublicacion";
+            this.dataGridFechaPublicacion.Name = "dataGridFechaPublicacion";
+            this.dataGridFechaPublicacion.ReadOnly = true;
+            // 
+            // dataGridOpcion1
+            // 
+            this.dataGridOpcion1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridOpcion1.HeaderText = "Opcion1";
+            this.dataGridOpcion1.Name = "dataGridOpcion1";
+            this.dataGridOpcion1.ReadOnly = true;
+            this.dataGridOpcion1.Text = "Aceptar";
+            this.dataGridOpcion1.UseColumnTextForButtonValue = true;
+            this.dataGridOpcion1.Width = 53;
+            // 
+            // dataGridOpcion2
+            // 
+            this.dataGridOpcion2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridOpcion2.HeaderText = "Opcion2";
+            this.dataGridOpcion2.Name = "dataGridOpcion2";
+            this.dataGridOpcion2.ReadOnly = true;
+            this.dataGridOpcion2.Text = "Rechazar";
+            this.dataGridOpcion2.UseColumnTextForButtonValue = true;
+            this.dataGridOpcion2.Width = 53;
             // 
             // aceptarProcesoCompra
             // 
@@ -103,6 +173,7 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.label1);
             this.Name = "aceptarProcesoCompra";
             this.Text = "aceptarProcesoCompra";
+            this.Load += new System.EventHandler(this.aceptarProcesoCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAceptarCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,6 +187,12 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.DataGridView dtgvAceptarCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNumeroSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNombreCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridOptions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdEstadoSolicitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdUsuaio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdTipoSolicitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridProductorSeleccionado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridFechaPublicacion;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion1;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion2;
     }
 }
