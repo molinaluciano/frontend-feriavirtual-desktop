@@ -176,6 +176,7 @@ namespace feriavirtual_frontend
             this.btnAgregarTransportista.TabIndex = 125;
             this.btnAgregarTransportista.Text = "Agregar Transportista";
             this.btnAgregarTransportista.UseVisualStyleBackColor = true;
+            this.btnAgregarTransportista.Click += new System.EventHandler(this.btnAgregarTransportista_Click);
             // 
             // label13
             // 

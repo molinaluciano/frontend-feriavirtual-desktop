@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace feriavirtual_frontend.Models
 {
     class Transportistas
     {
+        [JsonConstructor] public Transportistas() { }
         public Transportistas(string correo, string contrasena, int idTransportista, string nombre, string apellidoPaterno,
                        string apellidoMaterno, int rut, string numeroIdentificador, string direccion, int codigoPostal, int telefono)
         {
@@ -28,7 +30,7 @@ namespace feriavirtual_frontend.Models
 
         public string contrasena { get; set; }
 
-        public int idTransportista { get; set; }
+        public int? idTransportista { get; set; }
 
         public string nombre { get; set; }
 
@@ -45,6 +47,10 @@ namespace feriavirtual_frontend.Models
         public int codigoPostal { get; set; }
 
         public int telefono { get; set; }
+
+        public int idPais { get; set; }
+
+        public int idTipoUsuario { get; set; }
 
 
     }

@@ -83,9 +83,17 @@ namespace feriavirtual_frontend
             var httpResponseContrato = await contrato.PostAsync(urlContrato, contentContrato);
             var httpResponse = await productor.PostAsync(urlProductor, content);
 
-            if (httpResponse.IsSuccessStatusCode)
+            if (httpResponseContrato.IsSuccessStatusCode)
             {
                 var resultContrato = await httpResponse.Content.ReadAsStringAsync();
+            }
+            else
+            {
+                MessageBox.Show("Error Contrato no ingresado");
+            }
+
+            if (httpResponse.IsSuccessStatusCode)
+            {
                 var result = await httpResponse.Content.ReadAsStringAsync();
 
                 MessageBox.Show("Productor ingresado correctamente");

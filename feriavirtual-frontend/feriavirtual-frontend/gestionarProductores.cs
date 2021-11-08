@@ -16,7 +16,7 @@ namespace feriavirtual_frontend
 {
     public partial class gestionarProductores : Form
     {
-        string url = "http://localhost:8080//select-producer";
+        string url = "http://localhost:8080/select-producer";
         public gestionarProductores()
         {
             InitializeComponent();
