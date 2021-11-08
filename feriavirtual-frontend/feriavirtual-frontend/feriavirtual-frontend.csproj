@@ -194,14 +194,15 @@
     <Compile Include="menuAdministrador.Designer.cs">
       <DependentUpon>menuAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Contrato.cs" />
     <Compile Include="Models\Productores.cs" />
     <Compile Include="Models\Transportistas.cs" />
     <Compile Include="Models\Usuarios.cs" />
-    <Compile Include="productor.cs">
+    <Compile Include="productores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="productor.Designer.cs">
-      <DependentUpon>productor.cs</DependentUpon>
+    <Compile Include="productores.Designer.cs">
+      <DependentUpon>productores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,8 +270,8 @@
     <EmbeddedResource Include="menuAdministrador.resx">
       <DependentUpon>menuAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="productor.resx">
-      <DependentUpon>productor.cs</DependentUpon>
+    <EmbeddedResource Include="productores.resx">
+      <DependentUpon>productores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

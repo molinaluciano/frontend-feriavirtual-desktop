@@ -124,7 +124,6 @@ C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\fer
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.gestionarVentas.resources
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.ingresarSaldos.resources
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.menuAdministrador.resources
-C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.productor.resources
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.Properties.Resources.resources
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.transportista.resources
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual-frontend.csproj.GenerateResource.cache
@@ -134,3 +133,4 @@ C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\fer
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual-frontend.pdb
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\bin\Debug\Newtonsoft.Json.dll
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\bin\Debug\Newtonsoft.Json.xml
+C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.productores.resources

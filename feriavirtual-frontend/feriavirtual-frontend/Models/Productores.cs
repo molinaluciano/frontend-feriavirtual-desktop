@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace feriavirtual_frontend.Models
 {
     class Productores
     {
-        public Productores(string correo, string contrasena, int idProductor, string nombre, string apellidoPaterno,
-                      string apellidoMaterno, int rut, string numeroIdentificador, string direccion, int codigoPostal, int telefono, int contrato)
+        [JsonConstructor] public Productores() { }
+        public Productores(string correo, string contrasena, int idUsuario, string nombre, string apellidoPaterno, 
+                      string apellidoMaterno, int rut, string numeroIdentificador, string direccion, int codigoPostal, int telefono, int idContrato)
         {
             this.correo = correo;
             this.contrasena = contrasena;
-            this.idProductor = idProductor;
+            this.idUsuario = idUsuario;
             this.nombre = nombre;
             this.apellidoPaterno = apellidoPaterno;
             this.apellidoMaterno = apellidoMaterno;
@@ -22,14 +24,14 @@ namespace feriavirtual_frontend.Models
             this.direccion = direccion;
             this.codigoPostal = codigoPostal;
             this.telefono = telefono;
-            this.contrato = contrato;
+            this.idContrato = idContrato;
         }
 
         public string correo { get; set; }
 
         public string contrasena { get; set; }
 
-        public int idProductor { get; set; }
+        public int? idUsuario { get; set; }
 
         public string nombre { get; set; }
 
@@ -47,6 +49,8 @@ namespace feriavirtual_frontend.Models
 
         public int telefono { get; set; }
 
-        public int contrato { get; set; }
+        public int? idContrato { get; set; }
+
+        public int idTipoUsuario { get; set; }
     }
 }
