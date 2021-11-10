@@ -32,7 +32,15 @@ namespace feriavirtual_frontend
 
         private async void gestionarProductores_Load(object sender, EventArgs e)
         {
-            string requestProductor = await GetHtppProductor();
+            string requestProductor ="";
+            try
+            {
+                requestProductor = await GetHtppProductor();
+            }
+            catch (WebException err)
+            {
+                Console.WriteLine(err);
+            }
 
             List<Productores> lstProductores = JsonConvert.DeserializeObject<List<Productores>>(requestProductor);
 
@@ -59,7 +67,7 @@ namespace feriavirtual_frontend
             if (dtgvGestionarProductor.Columns[e.ColumnIndex].Name == "dataGridOpcion1")
             {
                 int idUsuario = Int32.Parse(dtgvGestionarProductor.CurrentRow.Cells["dataGridIdUsuario"].Value.ToString());
-                editarProductor editar = new editarProductor();
+                editarProductor editar = new editarProductor(idUsuario);
                 this.Hide();
                 editar.ShowDialog();
 

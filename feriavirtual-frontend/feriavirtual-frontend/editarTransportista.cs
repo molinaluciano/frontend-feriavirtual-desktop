@@ -99,7 +99,7 @@ namespace feriavirtual_frontend
             {
                 var result = await httpResponse.Content.ReadAsStringAsync();
 
-                MessageBox.Show("UTransportista Editado Correctamente");
+                MessageBox.Show("Transportista Editado Correctamente");
 
                 gestionarTransportista gestionarT = new gestionarTransportista();
                 this.Hide();

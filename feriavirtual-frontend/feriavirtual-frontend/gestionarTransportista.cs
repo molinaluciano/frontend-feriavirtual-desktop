@@ -40,15 +40,17 @@ namespace feriavirtual_frontend
         private async void gestionarTransportista_Load(object sender, EventArgs e)
         {
 
-            string requestTransportista = await GetHtppTransportista();
+            string requestTransportista = "";
+            try
+            {
+                requestTransportista = await GetHtppTransportista();
+            }
+            catch (WebException err)
+            {
+                Console.WriteLine(err);
+            }
 
             List<Transportistas> lstTransportistas = JsonConvert.DeserializeObject<List<Transportistas>>(requestTransportista);
-
-            foreach(Transportistas transportistas in lstTransportistas)
-            {
-                transportistas.idPais = 1;
-                transportistas.idTipoUsuario = 7;
-            }
 
             dtgvGestionarTransportistas.DataSource = lstTransportistas;
 

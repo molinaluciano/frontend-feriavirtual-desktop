@@ -29,7 +29,6 @@ namespace feriavirtual_frontend
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCodigoPostal = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -44,8 +43,6 @@ namespace feriavirtual_frontend
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnEditarProductor = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,13 +55,6 @@ namespace feriavirtual_frontend
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(142, 493);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(187, 20);
-            this.textBox12.TabIndex = 55;
             // 
             // txtTelefono
             // 
@@ -166,43 +156,26 @@ namespace feriavirtual_frontend
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(145, 565);
+            this.btnVolver.Location = new System.Drawing.Point(145, 509);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(184, 40);
             this.btnVolver.TabIndex = 42;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnEditarProductor
             // 
             this.btnEditarProductor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarProductor.Location = new System.Drawing.Point(457, 565);
+            this.btnEditarProductor.Location = new System.Drawing.Point(457, 509);
             this.btnEditarProductor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditarProductor.Name = "btnEditarProductor";
             this.btnEditarProductor.Size = new System.Drawing.Size(204, 40);
             this.btnEditarProductor.TabIndex = 41;
             this.btnEditarProductor.Text = "Editar Productor";
             this.btnEditarProductor.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(436, 461);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 13);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "Firma";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(139, 461);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 16);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Descripción Contrato";
+            this.btnEditarProductor.Click += new System.EventHandler(this.btnEditarProductor_Click);
             // 
             // label11
             // 
@@ -318,8 +291,7 @@ namespace feriavirtual_frontend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 640);
-            this.Controls.Add(this.textBox12);
+            this.ClientSize = new System.Drawing.Size(800, 575);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCodigoPostal);
             this.Controls.Add(this.label14);
@@ -334,8 +306,6 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEditarProductor);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -349,14 +319,13 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.label1);
             this.Name = "editarProductor";
             this.Text = "editarProductor";
+            this.Load += new System.EventHandler(this.editarProductor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtCodigoPostal;
         private System.Windows.Forms.Label label14;
@@ -371,8 +340,6 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnEditarProductor;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

@@ -46,9 +46,19 @@ namespace feriavirtual_frontend
 
         private async void gestionarClientes_Load(object sender, EventArgs e)
         {
-            string requestExterno = await GetHtppExterno();
-            string requestLocal = await GetHtppLocal();
-            string requestInterno = await GetHtppInterno();
+            string requestExterno = "";
+            string requestLocal = "";
+            string requestInterno = "";
+            try
+            {
+                requestExterno = await GetHtppExterno();
+                requestLocal = await GetHtppLocal();
+                requestInterno = await GetHtppInterno();
+            }
+            catch(WebException err)
+            {
+                Console.WriteLine(err);
+            }
 
 
             List<Usuarios> lstExternos = JsonConvert.DeserializeObject<List<Usuarios>>(requestExterno);
@@ -57,9 +67,10 @@ namespace feriavirtual_frontend
 
             var lstUsuarios = new List<Usuarios>();
 
-            lstUsuarios.AddRange(lstExternos);
-            lstUsuarios.AddRange(lstLocales);
-            lstUsuarios.AddRange(lstInternos);
+            if (lstExternos == null) { } else { lstUsuarios.AddRange(lstExternos); };
+            if (lstLocales == null) { } else { lstUsuarios.AddRange(lstLocales); };
+            if (lstInternos == null) { } else { lstUsuarios.AddRange(lstInternos); }; 
+
 
             dtgvGestionarClientes.DataSource = lstUsuarios;
         }
