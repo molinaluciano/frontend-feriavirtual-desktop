@@ -110,6 +110,7 @@ namespace feriavirtual_frontend
             this.txtConfirmarContrasena.Location = new System.Drawing.Point(405, 288);
             this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
+            this.txtConfirmarContrasena.PasswordChar = '*';
             this.txtConfirmarContrasena.Size = new System.Drawing.Size(256, 20);
             this.txtConfirmarContrasena.TabIndex = 48;
             // 
@@ -118,6 +119,7 @@ namespace feriavirtual_frontend
             this.txtContrasena.Location = new System.Drawing.Point(142, 288);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(246, 20);
             this.txtContrasena.TabIndex = 47;
             // 
@@ -281,7 +283,7 @@ namespace feriavirtual_frontend
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(252, 36);
+            this.label1.Location = new System.Drawing.Point(195, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(394, 58);
             this.label1.TabIndex = 28;

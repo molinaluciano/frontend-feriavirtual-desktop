@@ -111,6 +111,7 @@ namespace feriavirtual_frontend
             this.txtConfirmarContrasena.Location = new System.Drawing.Point(407, 324);
             this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
+            this.txtConfirmarContrasena.PasswordChar = '*';
             this.txtConfirmarContrasena.Size = new System.Drawing.Size(256, 20);
             this.txtConfirmarContrasena.TabIndex = 158;
             // 
@@ -119,6 +120,7 @@ namespace feriavirtual_frontend
             this.txtContrasena.Location = new System.Drawing.Point(144, 324);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(246, 20);
             this.txtContrasena.TabIndex = 157;
             // 

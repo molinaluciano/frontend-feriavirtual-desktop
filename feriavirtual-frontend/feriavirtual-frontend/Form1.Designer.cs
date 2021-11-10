@@ -90,6 +90,7 @@ namespace feriavirtual_frontend
             // 
             this.txtContrasena.Location = new System.Drawing.Point(276, 242);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(222, 20);
             this.txtContrasena.TabIndex = 5;
             // 
