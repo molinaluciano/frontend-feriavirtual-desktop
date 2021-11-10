@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using feriavirtual_frontend.Models;
+using System.Net.Http;
 
 namespace feriavirtual_frontend
 {
@@ -39,10 +40,11 @@ namespace feriavirtual_frontend
         }
         public async Task<string> GetHtppProductor()
         {
-            WebRequest oRequestProductor = WebRequest.Create(url);
-            WebResponse oResponseProductor = oRequestProductor.GetResponse();
-            StreamReader srProductor = new StreamReader(oResponseProductor.GetResponseStream());
-            return await srProductor.ReadToEndAsync();
+                WebRequest oRequestProductor = WebRequest.Create(url);
+                WebResponse oResponseProductor = oRequestProductor.GetResponse();
+                StreamReader srProductor = new StreamReader(oResponseProductor.GetResponseStream());
+                return await srProductor.ReadToEndAsync();
+
         }
 
         private void btnNuevoProductor_Click(object sender, EventArgs e)
@@ -50,6 +52,52 @@ namespace feriavirtual_frontend
             productores nuevoProductor = new productores();
             this.Hide();
             nuevoProductor.ShowDialog();
+        }
+
+        private async void dtgvGestionarProductor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgvGestionarProductor.Columns[e.ColumnIndex].Name == "dataGridOpcion1")
+            {
+                int idUsuario = Int32.Parse(dtgvGestionarProductor.CurrentRow.Cells["dataGridIdUsuario"].Value.ToString());
+                editarProductor editar = new editarProductor();
+                this.Hide();
+                editar.ShowDialog();
+
+            }
+            if(dtgvGestionarProductor.Columns[e.ColumnIndex].Name == "dataGridOpcion2")
+            {
+                var eliminarCliente = new HttpClient();
+
+                Usuarios delteUsuario = new Usuarios(Int32.Parse(dtgvGestionarProductor.CurrentRow.Cells["dataGridIdUsuario"].Value.ToString()), 6);
+
+                var data = System.Text.Json.JsonSerializer.Serialize<Usuarios>(delteUsuario);
+                HttpContent content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+
+                //var httpResponse = await eliminarCliente.DeleteAsync(urlDelete + content);
+
+                var request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Delete,
+                    RequestUri = new Uri("http://localhost:8080/delete-user"),
+                    Content = content
+                };
+
+                var httpResponse = await eliminarCliente.SendAsync(request);
+
+                if (httpResponse.IsSuccessStatusCode && (MessageBox.Show("Seguro Desea eliminar este Cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                {
+                    var result = await httpResponse.Content.ReadAsStringAsync();
+
+                    MessageBox.Show("Cliente Eliminado correctamente");
+                    gestionarProductores gestionar = new gestionarProductores();
+                    this.Hide();
+                    gestionar.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Error Cliente no puedo ser eliminado");
+                }
+            }
         }
     }
 }

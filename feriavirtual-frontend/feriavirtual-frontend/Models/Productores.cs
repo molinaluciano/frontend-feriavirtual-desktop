@@ -10,7 +10,7 @@ namespace feriavirtual_frontend.Models
     class Productores
     {
         [JsonConstructor] public Productores() { }
-        public Productores(string correo, string contrasena, int idUsuario, string nombre, string apellidoPaterno, 
+        public Productores(string correo, string contrasena, int idUsuario, string nombre, string apellidoPaterno, int idPais, 
                       string apellidoMaterno, int rut, string numeroIdentificador, string direccion, int codigoPostal, int telefono, int idContrato)
         {
             this.correo = correo;
@@ -25,6 +25,7 @@ namespace feriavirtual_frontend.Models
             this.codigoPostal = codigoPostal;
             this.telefono = telefono;
             this.idContrato = idContrato;
+            this.idPais = idPais;
         }
 
         public string correo { get; set; }
@@ -52,5 +53,7 @@ namespace feriavirtual_frontend.Models
         public int? idContrato { get; set; }
 
         public int idTipoUsuario { get; set; }
+
+        public int idPais { get; set; }
     }
 }

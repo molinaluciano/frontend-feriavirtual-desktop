@@ -34,7 +34,7 @@ namespace feriavirtual_frontend
 
             Transportistas transportistas = new Transportistas()
             {
-                idTransportista = null,
+                idUsuario = null,
                 nombre = txtNombres.Text,
                 apellidoPaterno = txtApellidoPaterno.Text,
                 apellidoMaterno = txtApellidoMaterno.Text,

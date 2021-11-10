@@ -164,6 +164,7 @@ namespace feriavirtual_frontend
             this.btnVolver.TabIndex = 152;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnEditarTransportista
             // 
@@ -175,6 +176,7 @@ namespace feriavirtual_frontend
             this.btnEditarTransportista.TabIndex = 151;
             this.btnEditarTransportista.Text = "Editar Transportista";
             this.btnEditarTransportista.UseVisualStyleBackColor = true;
+            this.btnEditarTransportista.Click += new System.EventHandler(this.btnEditarTransportista_Click);
             // 
             // label13
             // 
@@ -327,6 +329,7 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.label1);
             this.Name = "editarTransportista";
             this.Text = "editarTransportista";
+            this.Load += new System.EventHandler(this.editarTransportista_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

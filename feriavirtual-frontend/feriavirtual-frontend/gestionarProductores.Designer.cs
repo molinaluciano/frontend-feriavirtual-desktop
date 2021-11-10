@@ -33,10 +33,12 @@ namespace feriavirtual_frontend
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dtgvGestionarProductor = new System.Windows.Forms.DataGridView();
+            this.btnNuevoProductor = new System.Windows.Forms.Button();
             this.dataGridContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdTipoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNomProductor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridIdProductor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridRut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNumeroIdentificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,8 +48,8 @@ namespace feriavirtual_frontend
             this.dataGridApellidoMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridContrasena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridOptions = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnNuevoProductor = new System.Windows.Forms.Button();
+            this.dataGridOpcion1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridOpcion2 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarProductor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,9 +81,10 @@ namespace feriavirtual_frontend
             this.dtgvGestionarProductor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvGestionarProductor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridContrato,
+            this.dataGridIdPais,
             this.dataGridIdTipoUsuario,
             this.dataGridNomProductor,
-            this.dataGridIdProductor,
+            this.dataGridIdUsuario,
             this.dataGridRut,
             this.dataGridNumeroIdentificador,
             this.dataGridDireccion,
@@ -91,12 +94,25 @@ namespace feriavirtual_frontend
             this.dataGridApellidoMaterno,
             this.dataGridCorreo,
             this.dataGridContrasena,
-            this.dataGridOptions});
+            this.dataGridOpcion1,
+            this.dataGridOpcion2});
             this.dtgvGestionarProductor.Location = new System.Drawing.Point(81, 141);
             this.dtgvGestionarProductor.Name = "dtgvGestionarProductor";
             this.dtgvGestionarProductor.ReadOnly = true;
             this.dtgvGestionarProductor.Size = new System.Drawing.Size(639, 234);
             this.dtgvGestionarProductor.TabIndex = 3;
+            this.dtgvGestionarProductor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvGestionarProductor_CellContentClick);
+            // 
+            // btnNuevoProductor
+            // 
+            this.btnNuevoProductor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoProductor.Location = new System.Drawing.Point(527, 397);
+            this.btnNuevoProductor.Name = "btnNuevoProductor";
+            this.btnNuevoProductor.Size = new System.Drawing.Size(193, 32);
+            this.btnNuevoProductor.TabIndex = 4;
+            this.btnNuevoProductor.Text = "Nuevo Productor";
+            this.btnNuevoProductor.UseVisualStyleBackColor = true;
+            this.btnNuevoProductor.Click += new System.EventHandler(this.btnNuevoProductor_Click);
             // 
             // dataGridContrato
             // 
@@ -105,6 +121,14 @@ namespace feriavirtual_frontend
             this.dataGridContrato.HeaderText = "Contrato";
             this.dataGridContrato.Name = "dataGridContrato";
             this.dataGridContrato.ReadOnly = true;
+            // 
+            // dataGridIdPais
+            // 
+            this.dataGridIdPais.DataPropertyName = "idPais";
+            this.dataGridIdPais.HeaderText = "idPais";
+            this.dataGridIdPais.Name = "dataGridIdPais";
+            this.dataGridIdPais.ReadOnly = true;
+            this.dataGridIdPais.Visible = false;
             // 
             // dataGridIdTipoUsuario
             // 
@@ -122,13 +146,13 @@ namespace feriavirtual_frontend
             this.dataGridNomProductor.Name = "dataGridNomProductor";
             this.dataGridNomProductor.ReadOnly = true;
             // 
-            // dataGridIdProductor
+            // dataGridIdUsuario
             // 
-            this.dataGridIdProductor.DataPropertyName = "idUsuario";
-            this.dataGridIdProductor.HeaderText = "IdUsuario";
-            this.dataGridIdProductor.Name = "dataGridIdProductor";
-            this.dataGridIdProductor.ReadOnly = true;
-            this.dataGridIdProductor.Visible = false;
+            this.dataGridIdUsuario.DataPropertyName = "idUsuario";
+            this.dataGridIdUsuario.HeaderText = "IdUsuario";
+            this.dataGridIdUsuario.Name = "dataGridIdUsuario";
+            this.dataGridIdUsuario.ReadOnly = true;
+            this.dataGridIdUsuario.Visible = false;
             // 
             // dataGridRut
             // 
@@ -202,25 +226,25 @@ namespace feriavirtual_frontend
             this.dataGridContrasena.ReadOnly = true;
             this.dataGridContrasena.Visible = false;
             // 
-            // dataGridOptions
+            // dataGridOpcion1
             // 
-            this.dataGridOptions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridOptions.HeaderText = "Opciones";
-            this.dataGridOptions.Name = "dataGridOptions";
-            this.dataGridOptions.ReadOnly = true;
-            this.dataGridOptions.Text = "Editar";
-            this.dataGridOptions.UseColumnTextForButtonValue = true;
+            this.dataGridOpcion1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridOpcion1.HeaderText = "Opcion1";
+            this.dataGridOpcion1.Name = "dataGridOpcion1";
+            this.dataGridOpcion1.ReadOnly = true;
+            this.dataGridOpcion1.Text = "Editar";
+            this.dataGridOpcion1.UseColumnTextForButtonValue = true;
+            this.dataGridOpcion1.Width = 53;
             // 
-            // btnNuevoProductor
+            // dataGridOpcion2
             // 
-            this.btnNuevoProductor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoProductor.Location = new System.Drawing.Point(527, 397);
-            this.btnNuevoProductor.Name = "btnNuevoProductor";
-            this.btnNuevoProductor.Size = new System.Drawing.Size(193, 32);
-            this.btnNuevoProductor.TabIndex = 4;
-            this.btnNuevoProductor.Text = "Nuevo Productor";
-            this.btnNuevoProductor.UseVisualStyleBackColor = true;
-            this.btnNuevoProductor.Click += new System.EventHandler(this.btnNuevoProductor_Click);
+            this.dataGridOpcion2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridOpcion2.HeaderText = "Opcion2";
+            this.dataGridOpcion2.Name = "dataGridOpcion2";
+            this.dataGridOpcion2.ReadOnly = true;
+            this.dataGridOpcion2.Text = "Eliminar";
+            this.dataGridOpcion2.UseColumnTextForButtonValue = true;
+            this.dataGridOpcion2.Width = 53;
             // 
             // gestionarProductores
             // 
@@ -245,10 +269,12 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridView dtgvGestionarProductor;
+        private System.Windows.Forms.Button btnNuevoProductor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridContrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdPais;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdTipoUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNomProductor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdProductor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridRut;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNumeroIdentificador;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridDireccion;
@@ -258,7 +284,7 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridApellidoMaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridContrasena;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridOptions;
-        private System.Windows.Forms.Button btnNuevoProductor;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion1;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion2;
     }
 }

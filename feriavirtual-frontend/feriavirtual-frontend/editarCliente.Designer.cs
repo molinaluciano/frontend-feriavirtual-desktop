@@ -43,8 +43,6 @@ namespace feriavirtual_frontend
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,8 +54,6 @@ namespace feriavirtual_frontend
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxPais = new System.Windows.Forms.ComboBox();
-            this.cbxTipoCliente = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtTelefono
@@ -160,41 +156,26 @@ namespace feriavirtual_frontend
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(142, 567);
+            this.btnVolver.Location = new System.Drawing.Point(142, 495);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(227, 40);
             this.btnVolver.TabIndex = 70;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnEditarCliente
             // 
             this.btnEditarCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCliente.Location = new System.Drawing.Point(439, 567);
+            this.btnEditarCliente.Location = new System.Drawing.Point(439, 495);
             this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(222, 40);
             this.btnEditarCliente.TabIndex = 69;
             this.btnEditarCliente.Text = "Editar Cliente";
             this.btnEditarCliente.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(436, 463);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 13);
-            this.label13.TabIndex = 68;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(139, 463);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 16);
-            this.label12.TabIndex = 67;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // label11
             // 
@@ -306,31 +287,11 @@ namespace feriavirtual_frontend
             this.label1.TabIndex = 56;
             this.label1.Text = "Editar Cliente";
             // 
-            // cbxPais
-            // 
-            this.cbxPais.FormattingEnabled = true;
-            this.cbxPais.Location = new System.Drawing.Point(142, 463);
-            this.cbxPais.Name = "cbxPais";
-            this.cbxPais.Size = new System.Drawing.Size(227, 21);
-            this.cbxPais.TabIndex = 83;
-            this.cbxPais.Text = "Seleccione País";
-            // 
-            // cbxTipoCliente
-            // 
-            this.cbxTipoCliente.FormattingEnabled = true;
-            this.cbxTipoCliente.Location = new System.Drawing.Point(405, 462);
-            this.cbxTipoCliente.Name = "cbxTipoCliente";
-            this.cbxTipoCliente.Size = new System.Drawing.Size(256, 21);
-            this.cbxTipoCliente.TabIndex = 84;
-            this.cbxTipoCliente.Text = "Tipo Cliente";
-            // 
             // editarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 645);
-            this.Controls.Add(this.cbxTipoCliente);
-            this.Controls.Add(this.cbxPais);
+            this.ClientSize = new System.Drawing.Size(800, 568);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCodigoPostal);
             this.Controls.Add(this.label14);
@@ -345,8 +306,6 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEditarCliente);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -360,6 +319,7 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.label1);
             this.Name = "editarCliente";
             this.Text = "editarCliente";
+            this.Load += new System.EventHandler(this.editarCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,8 +341,6 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnEditarCliente;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -394,7 +352,5 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbxPais;
-        private System.Windows.Forms.ComboBox cbxTipoCliente;
     }
 }

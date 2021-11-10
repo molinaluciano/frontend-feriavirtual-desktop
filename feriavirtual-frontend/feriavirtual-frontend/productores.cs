@@ -13,6 +13,8 @@ using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Net.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace feriavirtual_frontend
 {
@@ -37,11 +39,11 @@ namespace feriavirtual_frontend
 
             if (chkBoxSi.Checked)
             {
-                selectedFirma = "s";
+                selectedFirma = "1";
             }
             else
             {
-                selectedFirma = "n";
+                selectedFirma = "0";
             }
 
             var contrato = new HttpClient();
@@ -57,6 +59,23 @@ namespace feriavirtual_frontend
                 idEstadoContrato = 1
             };
 
+
+            var dataContrato = System.Text.Json.JsonSerializer.Serialize<Contrato>(contratos);
+            HttpContent contentContrato = new StringContent(dataContrato, System.Text.Encoding.UTF8, "application/json");
+            var httpResponseContrato = await contrato.PostAsync(urlContrato, contentContrato);
+
+            var id = "";
+            if (httpResponseContrato.IsSuccessStatusCode)
+            {
+                var resultContrato = await httpResponseContrato.Content.ReadAsStringAsync();
+                var resultId = JObject.Parse(resultContrato);
+                id = resultId["id"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Error Contrato no ingresado");
+            }
+
             Productores productores = new Productores()
             {
                 correo = txtCorreo.Text,
@@ -70,27 +89,17 @@ namespace feriavirtual_frontend
                 direccion = txtDireccion.Text,
                 codigoPostal = Int32.Parse(txtCodigoPostal.Text),
                 telefono = Int32.Parse(txtTelefono.Text),
-                idContrato = null,
-                idTipoUsuario = 6
+                idContrato = Int32.Parse(id),
+                idTipoUsuario = 6,
+                idPais = 1
             };
 
-            var dataContrato = JsonSerializer.Serialize<Contrato>(contratos);
-            var data = JsonSerializer.Serialize<Productores>(productores);
+            var data = System.Text.Json.JsonSerializer.Serialize<Productores>(productores);
 
-            HttpContent contentContrato = new StringContent(dataContrato, System.Text.Encoding.UTF8, "application/json");
             HttpContent content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
 
-            var httpResponseContrato = await contrato.PostAsync(urlContrato, contentContrato);
             var httpResponse = await productor.PostAsync(urlProductor, content);
 
-            if (httpResponseContrato.IsSuccessStatusCode)
-            {
-                var resultContrato = await httpResponse.Content.ReadAsStringAsync();
-            }
-            else
-            {
-                MessageBox.Show("Error Contrato no ingresado");
-            }
 
             if (httpResponse.IsSuccessStatusCode)
             {

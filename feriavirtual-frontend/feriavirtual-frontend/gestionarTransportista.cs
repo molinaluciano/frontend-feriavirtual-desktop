@@ -43,6 +43,12 @@ namespace feriavirtual_frontend
 
             List<Transportistas> lstTransportistas = JsonConvert.DeserializeObject<List<Transportistas>>(requestTransportista);
 
+            foreach(Transportistas transportistas in lstTransportistas)
+            {
+                transportistas.idPais = 1;
+                transportistas.idTipoUsuario = 7;
+            }
+
             dtgvGestionarTransportistas.DataSource = lstTransportistas;
 
         }
@@ -75,5 +81,17 @@ namespace feriavirtual_frontend
                 fila.Visible = fila.Cells["dataGridRut"].Value.ToString().ToUpper().Contains(txtRut.Text.ToUpper());
             }
         }
+
+        private void dtgvGestionarTransportistas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dtgvGestionarTransportistas.Columns[e.ColumnIndex].Name == "dataGridOpcion1")
+            {
+                int idUsuario = Int32.Parse(dtgvGestionarTransportistas.CurrentRow.Cells["dataGridIdTransportista"].Value.ToString());
+                editarTransportista editar = new editarTransportista(idUsuario);
+                this.Hide();
+                editar.ShowDialog();
+            }
+        }
+
     }
 }

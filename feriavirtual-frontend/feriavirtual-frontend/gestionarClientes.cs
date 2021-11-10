@@ -20,26 +20,28 @@ namespace feriavirtual_frontend
     public partial class gestionarClientes : Form
     {
         string urlExterno = "http://localhost:8080/select-user/2";
-        string urlLocal   = "http://localhost:8080/select-user/3";
+        string urlLocal = "http://localhost:8080/select-user/3";
         string urlInterno = "http://localhost:8080/select-user/4";
 
         public gestionarClientes()
         {
             InitializeComponent();
         }
+      
 
+        
         private void btnVolver_Click(object sender, EventArgs e)
         {
             gestionarUsuarios gestionarUsuario = new gestionarUsuarios();
             this.Hide();
             gestionarUsuario.ShowDialog();
         }
-
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             cliente clientes = new cliente();
             this.Hide();
             clientes.ShowDialog();
+
         }
 
         private async void gestionarClientes_Load(object sender, EventArgs e)
@@ -135,6 +137,53 @@ namespace feriavirtual_frontend
                     fila.Visible = fila.Cells["dataGridIdTipoCliente"].Value.ToString().Contains("4");
                 }
             }
+        }
+
+        private async void dtgvGestionarClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dtgvGestionarClientes.Columns[e.ColumnIndex].Name == "dataGridOpcion1")
+            {
+                int idUsuario = Int32.Parse(dtgvGestionarClientes.CurrentRow.Cells["dataGridIdUsuario"].Value.ToString());
+                editarCliente editarClientes = new editarCliente(idUsuario);
+                this.Hide();
+                editarClientes.ShowDialog();
+
+            }
+            if (dtgvGestionarClientes.Columns[e.ColumnIndex].Name == "dataGridOpcion2")
+            {
+                var eliminarCliente = new HttpClient();
+
+                Usuarios delteUsuario = new Usuarios(Int32.Parse(dtgvGestionarClientes.CurrentRow.Cells["dataGridIdUsuario"].Value.ToString()), Int32.Parse(dtgvGestionarClientes.CurrentRow.Cells["dataGridIdTipoCliente"].Value.ToString()));
+
+                var data = System.Text.Json.JsonSerializer.Serialize<Usuarios>(delteUsuario);
+                HttpContent content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+
+                //var httpResponse = await eliminarCliente.DeleteAsync(urlDelete + content);
+
+                var request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Delete,
+                    RequestUri = new Uri("http://localhost:8080/delete-user"),
+                    Content = content
+                };
+
+                var httpResponse = await eliminarCliente.SendAsync(request);
+
+                if (httpResponse.IsSuccessStatusCode && (MessageBox.Show("Seguro Desea eliminar este Cliente?","Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                {
+                    var result = await httpResponse.Content.ReadAsStringAsync();
+
+                    MessageBox.Show("Cliente Eliminado correctamente");
+                    gestionarClientes gestionarCliente = new gestionarClientes();
+                    this.Hide();
+                    gestionarCliente.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Error Cliente no puedo ser eliminado");
+                }
+            }
+            
         }
     }
 }

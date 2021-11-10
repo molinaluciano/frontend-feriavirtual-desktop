@@ -28,6 +28,25 @@ namespace feriavirtual_frontend.Models
             this.codigoPostal = codigoPostal;
             this.telefono = telefono;
         }
+        public Usuarios(string nombre, string apellidoPaterno, string apellidoMaterno, string correo,
+                       string contrasena, int rut, string numeroIdentificador, string direccion, int codigoPostal, int telefono)
+        {
+            this.correo = correo;
+            this.contrasena = contrasena;
+            this.nombre = nombre;
+            this.apellidoPaterno = apellidoPaterno;
+            this.apellidoMaterno = apellidoMaterno;
+            this.rut = rut;
+            this.numeroIdentificador = numeroIdentificador;
+            this.direccion = direccion;
+            this.codigoPostal = codigoPostal;
+            this.telefono = telefono;
+        }
+        public Usuarios(int idUsuario, int idTipoUsuario)
+        {
+            this.idTipoUsuario = idTipoUsuario;
+            this.idUsuario = idUsuario;
+        }
 
         public Usuarios(string correo, string contrasena, int idTipoUsuario)
         {
@@ -39,9 +58,9 @@ namespace feriavirtual_frontend.Models
 
         public string contrasena { get; set; }
 
-        public int idTipoUsuario { get; set; }
+        public int? idTipoUsuario { get; set; }
 
-        public int idPais { get; set; }
+        public int? idPais { get; set; }
 
         public int? idUsuario { get; set; }
 
