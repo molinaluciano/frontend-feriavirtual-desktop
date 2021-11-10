@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -82,7 +83,7 @@ namespace feriavirtual_frontend
             }
         }
 
-        private void dtgvGestionarTransportistas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dtgvGestionarTransportistas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(dtgvGestionarTransportistas.Columns[e.ColumnIndex].Name == "dataGridOpcion1")
             {
@@ -90,6 +91,41 @@ namespace feriavirtual_frontend
                 editarTransportista editar = new editarTransportista(idUsuario);
                 this.Hide();
                 editar.ShowDialog();
+            }
+
+            if (dtgvGestionarTransportistas.Columns[e.ColumnIndex].Name == "dataGridOpcion2")
+            {
+                var eliminarTransportista = new HttpClient();
+
+                Transportistas delteTransportista = new Transportistas(Int32.Parse(dtgvGestionarTransportistas.CurrentRow.Cells["dataGridIdTransportista"].Value.ToString()), 7);
+
+                var data = System.Text.Json.JsonSerializer.Serialize<Transportistas>(delteTransportista);
+                HttpContent content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+
+                //var httpResponse = await eliminarCliente.DeleteAsync(urlDelete + content);
+
+                var request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Delete,
+                    RequestUri = new Uri("http://localhost:8080/delete-user"),
+                    Content = content
+                };
+
+                var httpResponse = await eliminarTransportista.SendAsync(request);
+
+                if (httpResponse.IsSuccessStatusCode && (MessageBox.Show("Seguro Desea eliminar este Transportista?", "Eliminar Transportista", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                {
+                    var result = await httpResponse.Content.ReadAsStringAsync();
+
+                    MessageBox.Show("Transportista Eliminado correctamente");
+                    gestionarTransportista gestionarT = new gestionarTransportista();
+                    this.Hide();
+                    gestionarT.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Error Transportista no puedo ser eliminado");
+                }
             }
         }
 

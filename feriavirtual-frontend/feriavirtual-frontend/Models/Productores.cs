@@ -27,6 +27,11 @@ namespace feriavirtual_frontend.Models
             this.idContrato = idContrato;
             this.idPais = idPais;
         }
+        public Productores(int idUsuario, int idTipoUsuario)
+        {
+            this.idUsuario = idUsuario;
+            this.idTipoUsuario = idTipoUsuario;
+        }
 
         public string correo { get; set; }
 

@@ -66,11 +66,11 @@ namespace feriavirtual_frontend
             }
             if(dtgvGestionarProductor.Columns[e.ColumnIndex].Name == "dataGridOpcion2")
             {
-                var eliminarCliente = new HttpClient();
+                var eliminarProductor = new HttpClient();
 
-                Usuarios delteUsuario = new Usuarios(Int32.Parse(dtgvGestionarProductor.CurrentRow.Cells["dataGridIdUsuario"].Value.ToString()), 6);
+                Productores deleteProductor = new Productores(Int32.Parse(dtgvGestionarProductor.CurrentRow.Cells["dataGridIdUsuario"].Value.ToString()), 6);
 
-                var data = System.Text.Json.JsonSerializer.Serialize<Usuarios>(delteUsuario);
+                var data = System.Text.Json.JsonSerializer.Serialize<Productores>(deleteProductor);
                 HttpContent content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
 
                 //var httpResponse = await eliminarCliente.DeleteAsync(urlDelete + content);
@@ -82,20 +82,20 @@ namespace feriavirtual_frontend
                     Content = content
                 };
 
-                var httpResponse = await eliminarCliente.SendAsync(request);
+                var httpResponse = await eliminarProductor.SendAsync(request);
 
-                if (httpResponse.IsSuccessStatusCode && (MessageBox.Show("Seguro Desea eliminar este Cliente?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                if (httpResponse.IsSuccessStatusCode && (MessageBox.Show("Seguro Desea eliminar este Productor?", "Eliminar Productor", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 {
                     var result = await httpResponse.Content.ReadAsStringAsync();
 
-                    MessageBox.Show("Cliente Eliminado correctamente");
+                    MessageBox.Show("Productor Eliminado correctamente");
                     gestionarProductores gestionar = new gestionarProductores();
                     this.Hide();
                     gestionar.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Error Cliente no puedo ser eliminado");
+                    MessageBox.Show("Error Productor no puedo ser eliminado");
                 }
             }
         }

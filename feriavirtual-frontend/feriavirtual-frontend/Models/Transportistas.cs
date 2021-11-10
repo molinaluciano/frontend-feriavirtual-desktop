@@ -25,6 +25,11 @@ namespace feriavirtual_frontend.Models
             this.codigoPostal = codigoPostal;
             this.telefono = telefono;
         }
+        public Transportistas(int idUsuario, int idTipoUsuario)
+        {
+            this.idUsuario = idUsuario;
+            this.idTipoUsuario = idTipoUsuario;
+        }
 
         public string correo { get; set; }
 
