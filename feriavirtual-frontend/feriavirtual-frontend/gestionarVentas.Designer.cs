@@ -65,7 +65,7 @@ namespace feriavirtual_frontend
             this.btnControlarEstados.Name = "btnControlarEstados";
             this.btnControlarEstados.Size = new System.Drawing.Size(363, 47);
             this.btnControlarEstados.TabIndex = 2;
-            this.btnControlarEstados.Text = "Controlar Estados";
+            this.btnControlarEstados.Text = "Controlar Estados de Ventas";
             this.btnControlarEstados.UseVisualStyleBackColor = true;
             this.btnControlarEstados.Click += new System.EventHandler(this.btnControlarEstados_Click);
             // 

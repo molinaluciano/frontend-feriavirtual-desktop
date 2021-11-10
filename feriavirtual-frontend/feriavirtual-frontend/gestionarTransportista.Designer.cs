@@ -205,17 +205,17 @@ namespace feriavirtual_frontend
             // 
             // txtRut
             // 
-            this.txtRut.Location = new System.Drawing.Point(445, 100);
+            this.txtRut.Location = new System.Drawing.Point(492, 97);
             this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(276, 20);
+            this.txtRut.Size = new System.Drawing.Size(229, 20);
             this.txtRut.TabIndex = 15;
             this.txtRut.TextChanged += new System.EventHandler(this.txtRut_TextChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(83, 100);
+            this.txtNombre.Location = new System.Drawing.Point(151, 97);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(256, 20);
+            this.txtNombre.Size = new System.Drawing.Size(214, 20);
             this.txtNombre.TabIndex = 14;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -244,22 +244,22 @@ namespace feriavirtual_frontend
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(441, 76);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(453, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 21);
+            this.label3.Size = new System.Drawing.Size(33, 17);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Rut";
+            this.label3.Text = "Rut:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(79, 76);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(80, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 21);
+            this.label2.Size = new System.Drawing.Size(65, 17);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Nombre:";
             // 
             // label1
             // 

@@ -67,7 +67,7 @@ namespace feriavirtual_frontend
             {
                 var editarSolicitud = new HttpClient();
 
-                Solicitudes solicitud = new Solicitudes(2, Int32.Parse(dtgvAceptarCompra.CurrentRow.Cells["dataGridNumeroSolicitud"].Value.ToString()));
+                Solicitudes solicitud = new Solicitudes(3, Int32.Parse(dtgvAceptarCompra.CurrentRow.Cells["dataGridNumeroSolicitud"].Value.ToString()));
 
                 var data = System.Text.Json.JsonSerializer.Serialize<Solicitudes>(solicitud);
                 HttpContent content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");

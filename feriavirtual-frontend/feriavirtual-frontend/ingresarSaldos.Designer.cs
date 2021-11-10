@@ -120,9 +120,11 @@ namespace feriavirtual_frontend
             // 
             // textBox1
             // 
+            this.textBox1.AllowDrop = true;
             this.textBox1.Location = new System.Drawing.Point(139, 244);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(479, 20);
+            this.textBox1.Size = new System.Drawing.Size(479, 50);
             this.textBox1.TabIndex = 9;
             // 
             // btnVolver

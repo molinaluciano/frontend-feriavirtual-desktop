@@ -50,6 +50,10 @@ namespace feriavirtual_frontend
             this.dataGridContrasena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOpcion1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridOpcion2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtRut = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarProductor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +72,7 @@ namespace feriavirtual_frontend
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(211, 61);
+            this.label1.Location = new System.Drawing.Point(200, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(400, 42);
             this.label1.TabIndex = 2;
@@ -96,10 +100,10 @@ namespace feriavirtual_frontend
             this.dataGridContrasena,
             this.dataGridOpcion1,
             this.dataGridOpcion2});
-            this.dtgvGestionarProductor.Location = new System.Drawing.Point(81, 141);
+            this.dtgvGestionarProductor.Location = new System.Drawing.Point(81, 147);
             this.dtgvGestionarProductor.Name = "dtgvGestionarProductor";
             this.dtgvGestionarProductor.ReadOnly = true;
-            this.dtgvGestionarProductor.Size = new System.Drawing.Size(639, 234);
+            this.dtgvGestionarProductor.Size = new System.Drawing.Size(639, 228);
             this.dtgvGestionarProductor.TabIndex = 3;
             this.dtgvGestionarProductor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvGestionarProductor_CellContentClick);
             // 
@@ -160,7 +164,6 @@ namespace feriavirtual_frontend
             this.dataGridRut.HeaderText = "Rut";
             this.dataGridRut.Name = "dataGridRut";
             this.dataGridRut.ReadOnly = true;
-            this.dataGridRut.Visible = false;
             // 
             // dataGridNumeroIdentificador
             // 
@@ -246,11 +249,51 @@ namespace feriavirtual_frontend
             this.dataGridOpcion2.UseColumnTextForButtonValue = true;
             this.dataGridOpcion2.Width = 53;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(78, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Nombre:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(442, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Rut:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(145, 100);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(237, 20);
+            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            // 
+            // txtRut
+            // 
+            this.txtRut.Location = new System.Drawing.Point(481, 100);
+            this.txtRut.Name = "txtRut";
+            this.txtRut.Size = new System.Drawing.Size(239, 20);
+            this.txtRut.TabIndex = 8;
+            this.txtRut.TextChanged += new System.EventHandler(this.txtRut_TextChanged);
+            // 
             // gestionarProductores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtRut);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnNuevoProductor);
             this.Controls.Add(this.dtgvGestionarProductor);
             this.Controls.Add(this.label1);
@@ -286,5 +329,9 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridContrasena;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion1;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtRut;
     }
 }

@@ -107,5 +107,27 @@ namespace feriavirtual_frontend
                 }
             }
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            dtgvGestionarProductor.CurrentCell = null;
+
+
+            foreach (DataGridViewRow fila in dtgvGestionarProductor.Rows)
+            {
+                fila.Visible = fila.Cells["dataGridNomProductor"].Value.ToString().ToUpper().Contains(txtNombre.Text.ToUpper());
+            }
+        }
+
+        private void txtRut_TextChanged(object sender, EventArgs e)
+        {
+            dtgvGestionarProductor.CurrentCell = null;
+
+
+            foreach (DataGridViewRow fila in dtgvGestionarProductor.Rows)
+            {
+                fila.Visible = fila.Cells["dataGridRut"].Value.ToString().ToUpper().Contains(txtRut.Text.ToUpper());
+            }
+        }
     }
 }
