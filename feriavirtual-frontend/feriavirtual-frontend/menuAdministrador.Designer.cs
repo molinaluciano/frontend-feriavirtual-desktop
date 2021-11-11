@@ -57,7 +57,7 @@ namespace feriavirtual_frontend
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 542);
+            this.panelMenu.Size = new System.Drawing.Size(220, 581);
             this.panelMenu.TabIndex = 6;
             // 
             // btnCerrarSesion
@@ -67,7 +67,7 @@ namespace feriavirtual_frontend
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 482);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 521);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(220, 60);
             this.btnCerrarSesion.TabIndex = 11;
@@ -158,12 +158,12 @@ namespace feriavirtual_frontend
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(76)))), ((int)(((byte)(64)))));
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(764, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(864, 80);
             this.panelTitleBar.TabIndex = 7;
             // 
             // lblTitle
@@ -172,7 +172,7 @@ namespace feriavirtual_frontend
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(254, 27);
+            this.lblTitle.Location = new System.Drawing.Point(304, 27);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(212, 24);
             this.lblTitle.TabIndex = 0;
@@ -183,17 +183,18 @@ namespace feriavirtual_frontend
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 80);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(764, 462);
+            this.panelDesktop.Size = new System.Drawing.Size(864, 501);
             this.panelDesktop.TabIndex = 8;
             // 
             // menuAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 542);
+            this.ClientSize = new System.Drawing.Size(1084, 581);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.MinimumSize = new System.Drawing.Size(950, 500);
             this.Name = "menuAdministrador";
             this.Text = "Bienvenido Administrador";
             this.panelMenu.ResumeLayout(false);

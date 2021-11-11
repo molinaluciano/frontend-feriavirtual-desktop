@@ -30,10 +30,10 @@ namespace feriavirtual_frontend
                 {
                     disableButton();
                     currentButton = (Button)btnSender;
-                    currentButton.BackColor =  Color.FromArgb(51,76,51);
+                    currentButton.BackColor =  Color.FromArgb(51, 76, 64);
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Century Gothic", 14.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    panelTitleBar.BackColor = Color.FromArgb(51, 76, 51);
+                    panelTitleBar.BackColor = Color.FromArgb(51, 76, 64);
                 }
             }
         }
