@@ -92,5 +92,12 @@ namespace feriavirtual_frontend
             this.Hide();
             principal.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            menuAdministrador menu = new menuAdministrador();
+            this.Hide();
+            menu.ShowDialog();
+        }
     }
 }

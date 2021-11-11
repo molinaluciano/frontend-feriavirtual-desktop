@@ -200,7 +200,7 @@ namespace feriavirtual_frontend
             }
             if (dtgvAceptarCompra.Columns[e.ColumnIndex].Name == "dataGridOpcion3")
             {
-                int idSolicitud = Int32.Parse(dtgvAceptarCompra.CurrentRow.Cells["dataGridIdSolicitud"].Value.ToString());
+                int idSolicitud = Int32.Parse(dtgvAceptarCompra.CurrentRow.Cells["dataGridNumeroSolicitud"].Value.ToString());
                 detalleProcesoCompra detalle = new detalleProcesoCompra(idSolicitud);
                 detalle.TopLevel = false;
 

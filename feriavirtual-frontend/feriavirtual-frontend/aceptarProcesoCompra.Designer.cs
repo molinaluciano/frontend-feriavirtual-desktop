@@ -41,7 +41,7 @@ namespace feriavirtual_frontend
             this.dataGridFechaPublicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOpcion1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridOpcion2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridOpcion3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridOpcion3 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAceptarCompra)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,8 +177,9 @@ namespace feriavirtual_frontend
             this.dataGridOpcion3.HeaderText = "Opcion_3";
             this.dataGridOpcion3.Name = "dataGridOpcion3";
             this.dataGridOpcion3.ReadOnly = true;
-            this.dataGridOpcion3.ToolTipText = "Detalle";
-            this.dataGridOpcion3.Width = 78;
+            this.dataGridOpcion3.Text = "Detalle";
+            this.dataGridOpcion3.UseColumnTextForButtonValue = true;
+            this.dataGridOpcion3.Width = 59;
             // 
             // aceptarProcesoCompra
             // 
@@ -211,6 +212,6 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridFechaPublicacion;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion1;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridOpcion3;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion3;
     }
 }
