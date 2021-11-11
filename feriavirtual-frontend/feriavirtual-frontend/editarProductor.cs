@@ -121,6 +121,5 @@ namespace feriavirtual_frontend
             gestionar.BringToFront();
             gestionar.Show();
         }
-
     }
 }

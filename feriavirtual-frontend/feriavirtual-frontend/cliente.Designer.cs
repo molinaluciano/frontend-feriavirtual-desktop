@@ -45,7 +45,6 @@ namespace feriavirtual_frontend
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -63,15 +62,16 @@ namespace feriavirtual_frontend
             // 
             // cbxTipoCliente
             // 
+            this.cbxTipoCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxTipoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipoCliente.FormattingEnabled = true;
             this.cbxTipoCliente.Items.AddRange(new object[] {
             "Cliente Externo",
             "Cliente Local",
             "Cliente Interno"});
-            this.cbxTipoCliente.Location = new System.Drawing.Point(405, 456);
+            this.cbxTipoCliente.Location = new System.Drawing.Point(608, 449);
             this.cbxTipoCliente.Name = "cbxTipoCliente";
-            this.cbxTipoCliente.Size = new System.Drawing.Size(256, 21);
+            this.cbxTipoCliente.Size = new System.Drawing.Size(212, 21);
             this.cbxTipoCliente.TabIndex = 112;
             // 
             // cbxPais
@@ -80,31 +80,37 @@ namespace feriavirtual_frontend
             this.cbxPais.FormattingEnabled = true;
             this.cbxPais.Items.AddRange(new object[] {
             "Chile"});
-            this.cbxPais.Location = new System.Drawing.Point(142, 456);
+            this.cbxPais.Location = new System.Drawing.Point(101, 449);
             this.cbxPais.Name = "cbxPais";
-            this.cbxPais.Size = new System.Drawing.Size(227, 21);
+            this.cbxPais.Size = new System.Drawing.Size(217, 21);
             this.cbxPais.TabIndex = 111;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(142, 412);
+            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefono.Location = new System.Drawing.Point(101, 405);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTelefono.MinimumSize = new System.Drawing.Size(500, 20);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(519, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(719, 20);
             this.txtTelefono.TabIndex = 110;
             // 
             // txtCodigoPostal
             // 
-            this.txtCodigoPostal.Location = new System.Drawing.Point(405, 367);
+            this.txtCodigoPostal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodigoPostal.Location = new System.Drawing.Point(447, 360);
             this.txtCodigoPostal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodigoPostal.MinimumSize = new System.Drawing.Size(150, 20);
             this.txtCodigoPostal.Name = "txtCodigoPostal";
-            this.txtCodigoPostal.Size = new System.Drawing.Size(256, 20);
+            this.txtCodigoPostal.Size = new System.Drawing.Size(373, 20);
             this.txtCodigoPostal.TabIndex = 109;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(338, 367);
+            this.label14.Location = new System.Drawing.Point(381, 360);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(10, 13);
             this.label14.TabIndex = 108;
@@ -112,7 +118,7 @@ namespace feriavirtual_frontend
             // 
             // txtNumeroIdentificador
             // 
-            this.txtNumeroIdentificador.Location = new System.Drawing.Point(356, 367);
+            this.txtNumeroIdentificador.Location = new System.Drawing.Point(397, 360);
             this.txtNumeroIdentificador.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNumeroIdentificador.Name = "txtNumeroIdentificador";
             this.txtNumeroIdentificador.Size = new System.Drawing.Size(32, 20);
@@ -120,74 +126,90 @@ namespace feriavirtual_frontend
             // 
             // txtRut
             // 
-            this.txtRut.Location = new System.Drawing.Point(142, 367);
+            this.txtRut.Location = new System.Drawing.Point(101, 360);
             this.txtRut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(187, 20);
+            this.txtRut.Size = new System.Drawing.Size(274, 20);
             this.txtRut.TabIndex = 106;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(142, 323);
+            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDireccion.Location = new System.Drawing.Point(101, 316);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDireccion.MinimumSize = new System.Drawing.Size(500, 20);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(519, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(719, 20);
             this.txtDireccion.TabIndex = 105;
             // 
             // txtConfirmarContrasena
             // 
-            this.txtConfirmarContrasena.Location = new System.Drawing.Point(405, 274);
+            this.txtConfirmarContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(447, 267);
             this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtConfirmarContrasena.MinimumSize = new System.Drawing.Size(150, 20);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
             this.txtConfirmarContrasena.PasswordChar = '*';
-            this.txtConfirmarContrasena.Size = new System.Drawing.Size(256, 20);
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(373, 20);
             this.txtConfirmarContrasena.TabIndex = 104;
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(142, 274);
+            this.txtContrasena.Location = new System.Drawing.Point(101, 267);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(246, 20);
+            this.txtContrasena.Size = new System.Drawing.Size(328, 20);
             this.txtContrasena.TabIndex = 103;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(142, 221);
+            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCorreo.Location = new System.Drawing.Point(101, 214);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCorreo.MinimumSize = new System.Drawing.Size(500, 20);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(519, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(719, 20);
             this.txtCorreo.TabIndex = 102;
             // 
             // txtApellidoMaterno
             // 
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(405, 172);
+            this.txtApellidoMaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(447, 165);
             this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtApellidoMaterno.MinimumSize = new System.Drawing.Size(150, 20);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
-            this.txtApellidoMaterno.Size = new System.Drawing.Size(256, 20);
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(373, 20);
             this.txtApellidoMaterno.TabIndex = 101;
             // 
             // txtApellidoPaterno
             // 
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(142, 172);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(101, 165);
             this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
-            this.txtApellidoPaterno.Size = new System.Drawing.Size(246, 20);
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(328, 20);
             this.txtApellidoPaterno.TabIndex = 100;
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(142, 122);
+            this.txtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombres.Location = new System.Drawing.Point(101, 115);
             this.txtNombres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombres.MinimumSize = new System.Drawing.Size(500, 20);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(519, 20);
+            this.txtNombres.Size = new System.Drawing.Size(719, 20);
             this.txtNombres.TabIndex = 99;
             // 
             // btnVolver
             // 
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(142, 551);
+            this.btnVolver.Location = new System.Drawing.Point(101, 482);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(187, 40);
@@ -198,8 +220,10 @@ namespace feriavirtual_frontend
             // 
             // btnAgregarCliente
             // 
+            this.btnAgregarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.Location = new System.Drawing.Point(468, 551);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(627, 489);
             this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(193, 40);
@@ -208,19 +232,11 @@ namespace feriavirtual_frontend
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(436, 447);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 13);
-            this.label13.TabIndex = 96;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(139, 392);
+            this.label11.Location = new System.Drawing.Point(98, 385);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 16);
             this.label11.TabIndex = 95;
@@ -230,7 +246,7 @@ namespace feriavirtual_frontend
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(402, 348);
+            this.label10.Location = new System.Drawing.Point(444, 340);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 16);
             this.label10.TabIndex = 94;
@@ -240,7 +256,7 @@ namespace feriavirtual_frontend
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(139, 348);
+            this.label9.Location = new System.Drawing.Point(98, 341);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 16);
             this.label9.TabIndex = 93;
@@ -250,7 +266,7 @@ namespace feriavirtual_frontend
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(139, 303);
+            this.label8.Location = new System.Drawing.Point(98, 296);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 16);
             this.label8.TabIndex = 92;
@@ -260,7 +276,7 @@ namespace feriavirtual_frontend
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(402, 254);
+            this.label7.Location = new System.Drawing.Point(444, 247);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 16);
             this.label7.TabIndex = 91;
@@ -270,7 +286,7 @@ namespace feriavirtual_frontend
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(139, 254);
+            this.label6.Location = new System.Drawing.Point(98, 247);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 16);
             this.label6.TabIndex = 90;
@@ -280,7 +296,7 @@ namespace feriavirtual_frontend
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(142, 200);
+            this.label5.Location = new System.Drawing.Point(101, 193);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 16);
             this.label5.TabIndex = 89;
@@ -290,7 +306,7 @@ namespace feriavirtual_frontend
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(402, 152);
+            this.label4.Location = new System.Drawing.Point(444, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 88;
@@ -300,7 +316,7 @@ namespace feriavirtual_frontend
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(142, 151);
+            this.label3.Location = new System.Drawing.Point(101, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 16);
             this.label3.TabIndex = 87;
@@ -310,7 +326,7 @@ namespace feriavirtual_frontend
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(142, 103);
+            this.label2.Location = new System.Drawing.Point(101, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 86;
@@ -318,9 +334,10 @@ namespace feriavirtual_frontend
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(252, 22);
+            this.label1.Location = new System.Drawing.Point(318, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(358, 58);
             this.label1.TabIndex = 85;
@@ -330,7 +347,7 @@ namespace feriavirtual_frontend
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(142, 440);
+            this.label12.Location = new System.Drawing.Point(101, 429);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 16);
             this.label12.TabIndex = 113;
@@ -338,9 +355,10 @@ namespace feriavirtual_frontend
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(402, 440);
+            this.label15.Location = new System.Drawing.Point(605, 429);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(133, 16);
             this.label15.TabIndex = 114;
@@ -350,7 +368,7 @@ namespace feriavirtual_frontend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 613);
+            this.ClientSize = new System.Drawing.Size(984, 542);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cbxTipoCliente);
@@ -369,7 +387,6 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnAgregarCliente);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -406,7 +423,6 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnAgregarCliente;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

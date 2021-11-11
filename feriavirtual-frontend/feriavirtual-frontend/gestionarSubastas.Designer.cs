@@ -40,9 +40,10 @@ namespace feriavirtual_frontend
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(213, 39);
+            this.label1.Location = new System.Drawing.Point(312, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(344, 42);
             this.label1.TabIndex = 0;
@@ -50,10 +51,11 @@ namespace feriavirtual_frontend
             // 
             // btnCrearSubasta
             // 
+            this.btnCrearSubasta.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCrearSubasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearSubasta.Location = new System.Drawing.Point(319, 389);
+            this.btnCrearSubasta.Location = new System.Drawing.Point(381, 402);
             this.btnCrearSubasta.Name = "btnCrearSubasta";
-            this.btnCrearSubasta.Size = new System.Drawing.Size(157, 36);
+            this.btnCrearSubasta.Size = new System.Drawing.Size(263, 64);
             this.btnCrearSubasta.TabIndex = 2;
             this.btnCrearSubasta.Text = "Crear Subasta";
             this.btnCrearSubasta.UseVisualStyleBackColor = true;
@@ -63,25 +65,30 @@ namespace feriavirtual_frontend
             this.dtgvGestionarSubastas.AllowUserToAddRows = false;
             this.dtgvGestionarSubastas.AllowUserToDeleteRows = false;
             this.dtgvGestionarSubastas.AllowUserToOrderColumns = true;
+            this.dtgvGestionarSubastas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvGestionarSubastas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvGestionarSubastas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridIdSubasta,
             this.dataGridNomCliente,
             this.dataGridOptions});
-            this.dtgvGestionarSubastas.Location = new System.Drawing.Point(107, 140);
+            this.dtgvGestionarSubastas.Location = new System.Drawing.Point(112, 145);
             this.dtgvGestionarSubastas.Name = "dtgvGestionarSubastas";
             this.dtgvGestionarSubastas.ReadOnly = true;
-            this.dtgvGestionarSubastas.Size = new System.Drawing.Size(590, 222);
+            this.dtgvGestionarSubastas.Size = new System.Drawing.Size(763, 222);
             this.dtgvGestionarSubastas.TabIndex = 3;
             // 
             // dataGridIdSubasta
             // 
+            this.dataGridIdSubasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridIdSubasta.HeaderText = "Id Subasta";
             this.dataGridIdSubasta.Name = "dataGridIdSubasta";
             this.dataGridIdSubasta.ReadOnly = true;
             // 
             // dataGridNomCliente
             // 
+            this.dataGridNomCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridNomCliente.HeaderText = "Nombre Cliente";
             this.dataGridNomCliente.Name = "dataGridNomCliente";
             this.dataGridNomCliente.ReadOnly = true;
@@ -96,7 +103,7 @@ namespace feriavirtual_frontend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 542);
             this.Controls.Add(this.dtgvGestionarSubastas);
             this.Controls.Add(this.btnCrearSubasta);
             this.Controls.Add(this.label1);

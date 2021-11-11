@@ -40,7 +40,7 @@ namespace feriavirtual_frontend
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(332, 46);
+            this.label1.Location = new System.Drawing.Point(336, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(330, 42);
             this.label1.TabIndex = 0;
@@ -48,15 +48,15 @@ namespace feriavirtual_frontend
             // 
             // btnGestionarProductores
             // 
-            this.btnGestionarProductores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGestionarProductores.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGestionarProductores.AutoSize = true;
             this.btnGestionarProductores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnGestionarProductores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarProductores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarProductores.ForeColor = System.Drawing.Color.Silver;
-            this.btnGestionarProductores.Location = new System.Drawing.Point(339, 276);
+            this.btnGestionarProductores.Location = new System.Drawing.Point(317, 254);
             this.btnGestionarProductores.Name = "btnGestionarProductores";
-            this.btnGestionarProductores.Size = new System.Drawing.Size(323, 58);
+            this.btnGestionarProductores.Size = new System.Drawing.Size(363, 85);
             this.btnGestionarProductores.TabIndex = 1;
             this.btnGestionarProductores.Text = "Gestionar Productores";
             this.btnGestionarProductores.UseVisualStyleBackColor = false;
@@ -64,15 +64,15 @@ namespace feriavirtual_frontend
             // 
             // btnGestionarClientes
             // 
-            this.btnGestionarClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGestionarClientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGestionarClientes.AutoSize = true;
             this.btnGestionarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnGestionarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarClientes.ForeColor = System.Drawing.Color.Silver;
-            this.btnGestionarClientes.Location = new System.Drawing.Point(339, 187);
+            this.btnGestionarClientes.Location = new System.Drawing.Point(317, 163);
             this.btnGestionarClientes.Name = "btnGestionarClientes";
-            this.btnGestionarClientes.Size = new System.Drawing.Size(323, 58);
+            this.btnGestionarClientes.Size = new System.Drawing.Size(363, 85);
             this.btnGestionarClientes.TabIndex = 2;
             this.btnGestionarClientes.Text = "Gestionar Clientes";
             this.btnGestionarClientes.UseVisualStyleBackColor = false;
@@ -80,15 +80,15 @@ namespace feriavirtual_frontend
             // 
             // btnGestionarTransportistas
             // 
-            this.btnGestionarTransportistas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGestionarTransportistas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGestionarTransportistas.AutoSize = true;
             this.btnGestionarTransportistas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnGestionarTransportistas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarTransportistas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarTransportistas.ForeColor = System.Drawing.Color.Silver;
-            this.btnGestionarTransportistas.Location = new System.Drawing.Point(339, 362);
+            this.btnGestionarTransportistas.Location = new System.Drawing.Point(317, 345);
             this.btnGestionarTransportistas.Name = "btnGestionarTransportistas";
-            this.btnGestionarTransportistas.Size = new System.Drawing.Size(323, 58);
+            this.btnGestionarTransportistas.Size = new System.Drawing.Size(363, 85);
             this.btnGestionarTransportistas.TabIndex = 3;
             this.btnGestionarTransportistas.Text = "Gestionar Transportistas";
             this.btnGestionarTransportistas.UseVisualStyleBackColor = false;
