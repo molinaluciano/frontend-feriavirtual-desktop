@@ -17,11 +17,5 @@ namespace feriavirtual_frontend
             InitializeComponent();
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            menuAdministrador menuAdmin = new menuAdministrador();
-            this.Hide();
-            menuAdmin.ShowDialog();
-        }
     }
 }

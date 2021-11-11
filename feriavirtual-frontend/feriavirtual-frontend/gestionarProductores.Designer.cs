@@ -33,7 +33,6 @@ namespace feriavirtual_frontend
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dtgvGestionarProductor = new System.Windows.Forms.DataGridView();
-            this.btnNuevoProductor = new System.Windows.Forms.Button();
             this.dataGridContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdTipoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +49,7 @@ namespace feriavirtual_frontend
             this.dataGridContrasena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOpcion1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridOpcion2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnNuevoProductor = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -60,7 +60,7 @@ namespace feriavirtual_frontend
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(81, 397);
+            this.btnVolver.Location = new System.Drawing.Point(150, 466);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(86, 32);
             this.btnVolver.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace feriavirtual_frontend
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(200, 25);
+            this.label1.Location = new System.Drawing.Point(304, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(400, 42);
             this.label1.TabIndex = 2;
@@ -100,23 +100,12 @@ namespace feriavirtual_frontend
             this.dataGridContrasena,
             this.dataGridOpcion1,
             this.dataGridOpcion2});
-            this.dtgvGestionarProductor.Location = new System.Drawing.Point(81, 147);
+            this.dtgvGestionarProductor.Location = new System.Drawing.Point(150, 183);
             this.dtgvGestionarProductor.Name = "dtgvGestionarProductor";
             this.dtgvGestionarProductor.ReadOnly = true;
-            this.dtgvGestionarProductor.Size = new System.Drawing.Size(639, 228);
+            this.dtgvGestionarProductor.Size = new System.Drawing.Size(742, 248);
             this.dtgvGestionarProductor.TabIndex = 3;
             this.dtgvGestionarProductor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvGestionarProductor_CellContentClick);
-            // 
-            // btnNuevoProductor
-            // 
-            this.btnNuevoProductor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoProductor.Location = new System.Drawing.Point(527, 397);
-            this.btnNuevoProductor.Name = "btnNuevoProductor";
-            this.btnNuevoProductor.Size = new System.Drawing.Size(193, 32);
-            this.btnNuevoProductor.TabIndex = 4;
-            this.btnNuevoProductor.Text = "Nuevo Productor";
-            this.btnNuevoProductor.UseVisualStyleBackColor = true;
-            this.btnNuevoProductor.Click += new System.EventHandler(this.btnNuevoProductor_Click);
             // 
             // dataGridContrato
             // 
@@ -249,11 +238,22 @@ namespace feriavirtual_frontend
             this.dataGridOpcion2.UseColumnTextForButtonValue = true;
             this.dataGridOpcion2.Width = 53;
             // 
+            // btnNuevoProductor
+            // 
+            this.btnNuevoProductor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoProductor.Location = new System.Drawing.Point(699, 466);
+            this.btnNuevoProductor.Name = "btnNuevoProductor";
+            this.btnNuevoProductor.Size = new System.Drawing.Size(193, 32);
+            this.btnNuevoProductor.TabIndex = 4;
+            this.btnNuevoProductor.Text = "Nuevo Productor";
+            this.btnNuevoProductor.UseVisualStyleBackColor = true;
+            this.btnNuevoProductor.Click += new System.EventHandler(this.btnNuevoProductor_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 103);
+            this.label2.Location = new System.Drawing.Point(147, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 17);
             this.label2.TabIndex = 5;
@@ -263,7 +263,7 @@ namespace feriavirtual_frontend
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(442, 103);
+            this.label3.Location = new System.Drawing.Point(595, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 17);
             this.label3.TabIndex = 6;
@@ -271,17 +271,17 @@ namespace feriavirtual_frontend
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(145, 100);
+            this.txtNombre.Location = new System.Drawing.Point(211, 143);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(237, 20);
+            this.txtNombre.Size = new System.Drawing.Size(288, 20);
             this.txtNombre.TabIndex = 7;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtRut
             // 
-            this.txtRut.Location = new System.Drawing.Point(481, 100);
+            this.txtRut.Location = new System.Drawing.Point(624, 143);
             this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(239, 20);
+            this.txtRut.Size = new System.Drawing.Size(268, 20);
             this.txtRut.TabIndex = 8;
             this.txtRut.TextChanged += new System.EventHandler(this.txtRut_TextChanged);
             // 
@@ -289,7 +289,7 @@ namespace feriavirtual_frontend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 542);
             this.Controls.Add(this.txtRut);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label3);

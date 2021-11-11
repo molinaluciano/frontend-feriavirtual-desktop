@@ -30,8 +30,15 @@ namespace feriavirtual_frontend
         private void btnVolver_Click(object sender, EventArgs e)
         {
             gestionarVentas gestionarVenta = new gestionarVentas();
-            this.Hide();
-            gestionarVenta.ShowDialog();
+            gestionarVenta.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            gestionarVenta.FormBorderStyle = FormBorderStyle.None;
+            gestionarVenta.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(gestionarVenta);
+            gestionarVenta.BringToFront();
+            gestionarVenta.Show(); ;
         }
 
         private async void aceptarProcesoCompra_Load(object sender, EventArgs e)

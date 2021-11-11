@@ -30,7 +30,6 @@ namespace feriavirtual_frontend
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.btnCrearSubasta = new System.Windows.Forms.Button();
             this.dtgvGestionarSubastas = new System.Windows.Forms.DataGridView();
             this.dataGridIdSubasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,21 +48,10 @@ namespace feriavirtual_frontend
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestionar Subastas";
             // 
-            // btnVolver
-            // 
-            this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(107, 385);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(170, 36);
-            this.btnVolver.TabIndex = 1;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
             // btnCrearSubasta
             // 
             this.btnCrearSubasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearSubasta.Location = new System.Drawing.Point(540, 385);
+            this.btnCrearSubasta.Location = new System.Drawing.Point(319, 389);
             this.btnCrearSubasta.Name = "btnCrearSubasta";
             this.btnCrearSubasta.Size = new System.Drawing.Size(157, 36);
             this.btnCrearSubasta.TabIndex = 2;
@@ -111,7 +99,6 @@ namespace feriavirtual_frontend
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dtgvGestionarSubastas);
             this.Controls.Add(this.btnCrearSubasta);
-            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label1);
             this.Name = "gestionarSubastas";
             this.Text = "gestionarSubastas";
@@ -124,7 +111,6 @@ namespace feriavirtual_frontend
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnCrearSubasta;
         private System.Windows.Forms.DataGridView dtgvGestionarSubastas;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdSubasta;

@@ -68,8 +68,15 @@ namespace feriavirtual_frontend
         private void btnVolver_Click(object sender, EventArgs e)
         {
             gestionarTransportista gestionar = new gestionarTransportista();
-            this.Hide();
-            gestionar.ShowDialog();
+            gestionar.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            gestionar.FormBorderStyle = FormBorderStyle.None;
+            gestionar.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(gestionar);
+            gestionar.BringToFront();
+            gestionar.Show();
         }
 
         private async void btnEditarTransportista_Click(object sender, EventArgs e)
@@ -102,8 +109,15 @@ namespace feriavirtual_frontend
                 MessageBox.Show("Transportista Editado Correctamente");
 
                 gestionarTransportista gestionarT = new gestionarTransportista();
-                this.Hide();
-                gestionarT.ShowDialog();
+                gestionarT.TopLevel = false;
+
+                menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                gestionarT.FormBorderStyle = FormBorderStyle.None;
+                gestionarT.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(gestionarT);
+                gestionarT.BringToFront();
+                gestionarT.Show();
             }
             else
             {

@@ -20,36 +20,57 @@ namespace feriavirtual_frontend
         private void btnAceptarCompra_Click(object sender, EventArgs e)
         {
             aceptarProcesoCompra aceptarCompra = new aceptarProcesoCompra();
-            this.Hide();
-            aceptarCompra.ShowDialog();
+            aceptarCompra.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            aceptarCompra.FormBorderStyle = FormBorderStyle.None;
+            aceptarCompra.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(aceptarCompra);
+            aceptarCompra.BringToFront();
+            aceptarCompra.Show();
         }
 
         private void btnControlarEstados_Click(object sender, EventArgs e)
         {
             controlarEstadosVenta controlarEstados = new controlarEstadosVenta();
-            this.Hide();
-            controlarEstados.ShowDialog();
+            controlarEstados.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            controlarEstados.FormBorderStyle = FormBorderStyle.None;
+            controlarEstados.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(controlarEstados);
+            controlarEstados.BringToFront();
+            controlarEstados.Show();
         }
 
         private void btnGestionarPagos_Click(object sender, EventArgs e)
         {
             gestionarPagos gestionarPago = new gestionarPagos();
-            this.Hide();
-            gestionarPago.ShowDialog();
+            gestionarPago.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            gestionarPago.FormBorderStyle = FormBorderStyle.None;
+            gestionarPago.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(gestionarPago);
+            gestionarPago.BringToFront();
+            gestionarPago.Show(); 
         }
 
         private void btnIngresarSaldos_Click(object sender, EventArgs e)
         {
             ingresarSaldos ingresarSaldo = new ingresarSaldos();
-            this.Hide();
-            ingresarSaldo.ShowDialog();
-        }
+            ingresarSaldo.TopLevel = false;
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            menuAdministrador menuAdmin = new menuAdministrador();
-            this.Hide();
-            menuAdmin.ShowDialog();
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            ingresarSaldo.FormBorderStyle = FormBorderStyle.None;
+            ingresarSaldo.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(ingresarSaldo);
+            ingresarSaldo.BringToFront();
+            ingresarSaldo.Show(); 
         }
     }
 }

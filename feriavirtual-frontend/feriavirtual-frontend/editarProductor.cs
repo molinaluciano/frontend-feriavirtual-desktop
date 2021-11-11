@@ -92,8 +92,15 @@ namespace feriavirtual_frontend
                 MessageBox.Show("Productor Editado Correctamente");
 
                 gestionarProductores gestionarP = new gestionarProductores();
-                this.Hide();
-                gestionarP.ShowDialog();
+                gestionarP.TopLevel = false;
+
+                menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                gestionarP.FormBorderStyle = FormBorderStyle.None;
+                gestionarP.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(gestionarP);
+                gestionarP.BringToFront();
+                gestionarP.Show();
             }
             else
             {
@@ -104,8 +111,15 @@ namespace feriavirtual_frontend
         private void btnVolver_Click(object sender, EventArgs e)
         {
             gestionarProductores gestionar = new gestionarProductores();
-            this.Hide();
-            gestionar.ShowDialog();
+            gestionar.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            gestionar.FormBorderStyle = FormBorderStyle.None;
+            gestionar.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(gestionar);
+            gestionar.BringToFront();
+            gestionar.Show();
         }
 
     }

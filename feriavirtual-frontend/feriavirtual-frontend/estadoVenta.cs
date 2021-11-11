@@ -16,5 +16,19 @@ namespace feriavirtual_frontend
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            controlarEstadosVenta controlarEstados = new controlarEstadosVenta();
+            controlarEstados.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            controlarEstados.FormBorderStyle = FormBorderStyle.None;
+            controlarEstados.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(controlarEstados);
+            controlarEstados.BringToFront();
+            controlarEstados.Show();
+        }
     }
 }

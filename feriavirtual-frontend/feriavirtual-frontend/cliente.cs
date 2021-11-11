@@ -27,8 +27,15 @@ namespace feriavirtual_frontend
         private void btnVolver_Click(object sender, EventArgs e)
         {
             gestionarClientes gestionarCliente = new gestionarClientes();
-            this.Hide();
-            gestionarCliente.ShowDialog();
+            gestionarCliente.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            gestionarCliente.FormBorderStyle = FormBorderStyle.None;
+            gestionarCliente.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(gestionarCliente);
+            gestionarCliente.BringToFront();
+            gestionarCliente.Show();
         }
 
         private async void btnAgregarCliente_Click(object sender, EventArgs e)
@@ -68,8 +75,15 @@ namespace feriavirtual_frontend
                 MessageBox.Show("Usuario Ingresado Correctamente");
 
                 gestionarClientes windowGestionarClientes = new gestionarClientes();
-                this.Hide();
-                windowGestionarClientes.ShowDialog();
+                windowGestionarClientes.TopLevel = false;
+
+                menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                windowGestionarClientes.FormBorderStyle = FormBorderStyle.None;
+                windowGestionarClientes.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(windowGestionarClientes);
+                windowGestionarClientes.BringToFront();
+                windowGestionarClientes.Show();
             }
             else
             {
