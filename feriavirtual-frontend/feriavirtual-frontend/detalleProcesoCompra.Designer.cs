@@ -185,6 +185,7 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.btnVolver);
             this.Name = "detalleProcesoCompra";
             this.Text = "detalleProcesoCompra";
+            this.Load += new System.EventHandler(this.detalleProcesoCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDetalleCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

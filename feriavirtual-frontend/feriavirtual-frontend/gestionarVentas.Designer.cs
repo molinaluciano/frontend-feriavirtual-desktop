@@ -52,7 +52,7 @@ namespace feriavirtual_frontend
             this.btnAceptarCompra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAceptarCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnAceptarCompra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarCompra.ForeColor = System.Drawing.Color.Silver;
+            this.btnAceptarCompra.ForeColor = System.Drawing.Color.White;
             this.btnAceptarCompra.Location = new System.Drawing.Point(317, 163);
             this.btnAceptarCompra.Name = "btnAceptarCompra";
             this.btnAceptarCompra.Size = new System.Drawing.Size(363, 85);
@@ -66,7 +66,7 @@ namespace feriavirtual_frontend
             this.btnControlarEstados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnControlarEstados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnControlarEstados.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControlarEstados.ForeColor = System.Drawing.Color.Silver;
+            this.btnControlarEstados.ForeColor = System.Drawing.Color.White;
             this.btnControlarEstados.Location = new System.Drawing.Point(317, 254);
             this.btnControlarEstados.Name = "btnControlarEstados";
             this.btnControlarEstados.Size = new System.Drawing.Size(363, 85);
@@ -80,7 +80,7 @@ namespace feriavirtual_frontend
             this.btnGestionarPagos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGestionarPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnGestionarPagos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionarPagos.ForeColor = System.Drawing.Color.Silver;
+            this.btnGestionarPagos.ForeColor = System.Drawing.Color.White;
             this.btnGestionarPagos.Location = new System.Drawing.Point(317, 345);
             this.btnGestionarPagos.Name = "btnGestionarPagos";
             this.btnGestionarPagos.Size = new System.Drawing.Size(363, 85);
@@ -94,7 +94,7 @@ namespace feriavirtual_frontend
             this.btnIngresarSaldos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnIngresarSaldos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnIngresarSaldos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresarSaldos.ForeColor = System.Drawing.Color.Silver;
+            this.btnIngresarSaldos.ForeColor = System.Drawing.Color.White;
             this.btnIngresarSaldos.Location = new System.Drawing.Point(317, 436);
             this.btnIngresarSaldos.Name = "btnIngresarSaldos";
             this.btnIngresarSaldos.Size = new System.Drawing.Size(363, 85);

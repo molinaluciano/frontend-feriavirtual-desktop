@@ -52,13 +52,16 @@ namespace feriavirtual_frontend
             // btnCrearSubasta
             // 
             this.btnCrearSubasta.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCrearSubasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
+            this.btnCrearSubasta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearSubasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearSubasta.Location = new System.Drawing.Point(381, 402);
+            this.btnCrearSubasta.ForeColor = System.Drawing.Color.White;
+            this.btnCrearSubasta.Location = new System.Drawing.Point(348, 404);
             this.btnCrearSubasta.Name = "btnCrearSubasta";
             this.btnCrearSubasta.Size = new System.Drawing.Size(263, 64);
             this.btnCrearSubasta.TabIndex = 2;
             this.btnCrearSubasta.Text = "Crear Subasta";
-            this.btnCrearSubasta.UseVisualStyleBackColor = true;
+            this.btnCrearSubasta.UseVisualStyleBackColor = false;
             // 
             // dtgvGestionarSubastas
             // 
@@ -103,10 +106,12 @@ namespace feriavirtual_frontend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(984, 542);
             this.Controls.Add(this.dtgvGestionarSubastas);
             this.Controls.Add(this.btnCrearSubasta);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "gestionarSubastas";
             this.Text = "gestionarSubastas";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarSubastas)).EndInit();

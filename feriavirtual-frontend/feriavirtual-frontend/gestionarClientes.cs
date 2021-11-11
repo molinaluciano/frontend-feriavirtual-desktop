@@ -109,7 +109,6 @@ namespace feriavirtual_frontend
             WebResponse oResponseInterno = oRequestInterno.GetResponse();
             StreamReader srInterno = new StreamReader(oResponseInterno.GetResponseStream());
 
-
             return await srInterno.ReadToEndAsync();
         }
 

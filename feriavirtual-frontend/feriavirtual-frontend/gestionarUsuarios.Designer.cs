@@ -53,7 +53,7 @@ namespace feriavirtual_frontend
             this.btnGestionarProductores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnGestionarProductores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarProductores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionarProductores.ForeColor = System.Drawing.Color.Silver;
+            this.btnGestionarProductores.ForeColor = System.Drawing.Color.White;
             this.btnGestionarProductores.Location = new System.Drawing.Point(317, 254);
             this.btnGestionarProductores.Name = "btnGestionarProductores";
             this.btnGestionarProductores.Size = new System.Drawing.Size(363, 85);
@@ -69,7 +69,7 @@ namespace feriavirtual_frontend
             this.btnGestionarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnGestionarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionarClientes.ForeColor = System.Drawing.Color.Silver;
+            this.btnGestionarClientes.ForeColor = System.Drawing.Color.White;
             this.btnGestionarClientes.Location = new System.Drawing.Point(317, 163);
             this.btnGestionarClientes.Name = "btnGestionarClientes";
             this.btnGestionarClientes.Size = new System.Drawing.Size(363, 85);
@@ -85,7 +85,7 @@ namespace feriavirtual_frontend
             this.btnGestionarTransportistas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
             this.btnGestionarTransportistas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarTransportistas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionarTransportistas.ForeColor = System.Drawing.Color.Silver;
+            this.btnGestionarTransportistas.ForeColor = System.Drawing.Color.White;
             this.btnGestionarTransportistas.Location = new System.Drawing.Point(317, 345);
             this.btnGestionarTransportistas.Name = "btnGestionarTransportistas";
             this.btnGestionarTransportistas.Size = new System.Drawing.Size(363, 85);

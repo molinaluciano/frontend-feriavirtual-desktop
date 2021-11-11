@@ -72,7 +72,7 @@ namespace feriavirtual_frontend
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(77, 141);
+            this.label2.Location = new System.Drawing.Point(77, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 21);
             this.label2.TabIndex = 1;
@@ -82,7 +82,7 @@ namespace feriavirtual_frontend
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(386, 138);
+            this.label3.Location = new System.Drawing.Point(366, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 21);
             this.label3.TabIndex = 2;
@@ -116,11 +116,11 @@ namespace feriavirtual_frontend
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(160, 141);
+            this.txtNombre.Location = new System.Drawing.Point(149, 139);
             this.txtNombre.MinimumSize = new System.Drawing.Size(150, 20);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNombre.Size = new System.Drawing.Size(200, 20);
+            this.txtNombre.Size = new System.Drawing.Size(211, 20);
             this.txtNombre.TabIndex = 5;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -128,10 +128,10 @@ namespace feriavirtual_frontend
             // 
             this.txtRut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRut.Location = new System.Drawing.Point(433, 139);
-            this.txtRut.MinimumSize = new System.Drawing.Size(150, 20);
+            this.txtRut.Location = new System.Drawing.Point(404, 138);
+            this.txtRut.MinimumSize = new System.Drawing.Size(30, 20);
             this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(224, 20);
+            this.txtRut.Size = new System.Drawing.Size(270, 20);
             this.txtRut.TabIndex = 6;
             this.txtRut.TextChanged += new System.EventHandler(this.txtRut_TextChanged);
             // 
@@ -146,6 +146,7 @@ namespace feriavirtual_frontend
             "Cliente Local",
             "Cliente Interno"});
             this.cbxTipoCliente.Location = new System.Drawing.Point(715, 134);
+            this.cbxTipoCliente.MinimumSize = new System.Drawing.Size(100, 0);
             this.cbxTipoCliente.Name = "cbxTipoCliente";
             this.cbxTipoCliente.Size = new System.Drawing.Size(180, 24);
             this.cbxTipoCliente.TabIndex = 7;
