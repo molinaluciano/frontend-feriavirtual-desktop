@@ -30,5 +30,10 @@ namespace feriavirtual_frontend
             gestionarVenta.BringToFront();
             gestionarVenta.Show(); 
         }
+
+        private void dtgvControlarEstados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,6 @@ namespace feriavirtual_frontend
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCrearSubasta = new System.Windows.Forms.Button();
             this.dtgvGestionarSubastas = new System.Windows.Forms.DataGridView();
             this.dataGridIdSubasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,20 +47,6 @@ namespace feriavirtual_frontend
             this.label1.Size = new System.Drawing.Size(344, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestionar Subastas";
-            // 
-            // btnCrearSubasta
-            // 
-            this.btnCrearSubasta.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCrearSubasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(145)))));
-            this.btnCrearSubasta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearSubasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearSubasta.ForeColor = System.Drawing.Color.White;
-            this.btnCrearSubasta.Location = new System.Drawing.Point(348, 404);
-            this.btnCrearSubasta.Name = "btnCrearSubasta";
-            this.btnCrearSubasta.Size = new System.Drawing.Size(263, 64);
-            this.btnCrearSubasta.TabIndex = 2;
-            this.btnCrearSubasta.Text = "Crear Subasta";
-            this.btnCrearSubasta.UseVisualStyleBackColor = false;
             // 
             // dtgvGestionarSubastas
             // 
@@ -109,7 +94,6 @@ namespace feriavirtual_frontend
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(984, 542);
             this.Controls.Add(this.dtgvGestionarSubastas);
-            this.Controls.Add(this.btnCrearSubasta);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "gestionarSubastas";
@@ -123,7 +107,6 @@ namespace feriavirtual_frontend
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCrearSubasta;
         private System.Windows.Forms.DataGridView dtgvGestionarSubastas;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdSubasta;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNomCliente;
