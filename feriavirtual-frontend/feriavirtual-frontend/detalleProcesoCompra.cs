@@ -16,6 +16,7 @@ namespace feriavirtual_frontend
 {
     public partial class detalleProcesoCompra : Form
     {
+
         private int selectedSolicitud;
         public detalleProcesoCompra(int idSolicitud)
         {
@@ -23,10 +24,11 @@ namespace feriavirtual_frontend
             this.selectedSolicitud = idSolicitud;
         }
 
-        string url = "http://localhost:8080/requests/0";
+        string urlSolicitud = "http://localhost:8080/requests/0";
         string urlExterno = "http://localhost:8080/select-user/2";
         string urlLocal = "http://localhost:8080/select-user/3";
         string urlInterno = "http://localhost:8080/select-user/4";
+        string urlDetalleSolicitud = "http://localhost:8080/detail-requests";
 
         private async void detalleProcesoCompra_Load(object sender, EventArgs e)
         {
@@ -56,8 +58,39 @@ namespace feriavirtual_frontend
             if (lstInternos == null) { } else { lstUsuarios.AddRange(lstInternos); };
 
             string requestSolicitud = await GetHtppSolicitud();
+            string requestDetalleSolicitud = await GetHtppDetalleSolicitud();
 
             List<Solicitudes> lstSolicitud = JsonConvert.DeserializeObject<List<Solicitudes>>(requestSolicitud);
+            List<detalleSolicitud> lstDetalleSolicitud = JsonConvert.DeserializeObject<List<detalleSolicitud>>(requestDetalleSolicitud);
+
+
+            foreach (var solicitud in lstSolicitud)
+            {
+                if (solicitud.idSolicitud == selectedSolicitud)
+                {
+                    lbTipoSolicitud.Text = solicitud.idTipoSolicitud.ToString();
+                    lbPedido.Text = solicitud.idSolicitud.ToString();
+                }
+                foreach(var usuario in lstUsuarios)
+                {
+                    if (usuario.idUsuario == solicitud.idUsuario)
+                    {
+                        lbNomCliente.Text = usuario.nombre;
+                        lbPais.Text = usuario.idPais.ToString();
+                    }
+                }
+                foreach (var detalle in lstDetalleSolicitud)
+                {
+                    if(detalle.idSolicitud == solicitud.idSolicitud)
+                    {
+                        lbFruta.Text = detalle.idFruta.ToString();
+                        lbKilos.Text = detalle.kilos.ToString();
+                        lbCalidad.Text = detalle.idCalidad.ToString();
+                    }
+                }
+            }
+
+
         }
 
         public async Task<string> GetHtppExterno()
@@ -87,10 +120,31 @@ namespace feriavirtual_frontend
 
         public async Task<string> GetHtppSolicitud()
         {
-            WebRequest oRequestSolicitud = WebRequest.Create(url);
+            WebRequest oRequestSolicitud = WebRequest.Create(urlSolicitud);
             WebResponse oResponseSolicitud = oRequestSolicitud.GetResponse();
             StreamReader srSolicitud = new StreamReader(oResponseSolicitud.GetResponseStream());
             return await srSolicitud.ReadToEndAsync();
+        }
+        public async Task<string> GetHtppDetalleSolicitud()
+        {
+            WebRequest oRequestDetalleSolicitud = WebRequest.Create(urlDetalleSolicitud);
+            WebResponse oResponseDetalleSolicitud = oRequestDetalleSolicitud.GetResponse();
+            StreamReader srDetalleSolicitud = new StreamReader(oResponseDetalleSolicitud.GetResponseStream());
+            return await srDetalleSolicitud.ReadToEndAsync();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            aceptarProcesoCompra aceptarProceso = new aceptarProcesoCompra();
+            aceptarProceso.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            aceptarProceso.FormBorderStyle = FormBorderStyle.None;
+            aceptarProceso.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(aceptarProceso);
+            aceptarProceso.BringToFront();
+            aceptarProceso.Show(); ;
         }
     }
 }

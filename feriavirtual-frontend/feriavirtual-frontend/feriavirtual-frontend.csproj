@@ -195,6 +195,7 @@
       <DependentUpon>menuAdministrador.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Contrato.cs" />
+    <Compile Include="Models\detalleSolicitud.cs" />
     <Compile Include="Models\Productores.cs" />
     <Compile Include="Models\Solicitudes.cs" />
     <Compile Include="Models\Transportistas.cs" />

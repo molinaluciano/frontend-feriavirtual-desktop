@@ -39,8 +39,8 @@ namespace feriavirtual_frontend
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.panelContent.SuspendLayout();
@@ -54,7 +54,7 @@ namespace feriavirtual_frontend
             this.btnIngresar.FlatAppearance.BorderSize = 5;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(391, 319);
+            this.btnIngresar.Location = new System.Drawing.Point(400, 319);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(273, 54);
             this.btnIngresar.TabIndex = 0;
@@ -120,8 +120,9 @@ namespace feriavirtual_frontend
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.BackColor = System.Drawing.Color.Brown;
-            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSalir.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnSalir.FlatAppearance.BorderSize = 3;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(896, 423);
@@ -171,6 +172,18 @@ namespace feriavirtual_frontend
             this.panelContent.Size = new System.Drawing.Size(1084, 508);
             this.panelContent.TabIndex = 9;
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(451, 395);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(171, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Olvidaste tu contraseña?";
+            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -182,18 +195,6 @@ namespace feriavirtual_frontend
             this.label4.Size = new System.Drawing.Size(237, 41);
             this.label4.TabIndex = 7;
             this.label4.Text = "Iniciar Sesión";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(441, 395);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Olvidaste tu contraseña?";
             // 
             // LoginFeriaVirtual
             // 
