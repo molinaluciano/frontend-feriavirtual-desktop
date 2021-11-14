@@ -38,7 +38,7 @@ namespace feriavirtual_frontend
 
         private void dtgvControlarEstados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int idVenta = Int32.Parse(dtgvControlarEstados.CurrentRow.Cells["dataGridVenta"].Value.ToString());
+            int idVenta = Int32.Parse(dtgvControlarEstados.CurrentRow.Cells["dataGrididVenta"].Value.ToString());
             estadoVenta estado = new estadoVenta(idVenta);
             estado.TopLevel = false;
 

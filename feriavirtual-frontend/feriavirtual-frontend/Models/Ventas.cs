@@ -22,7 +22,7 @@ namespace feriavirtual_frontend.Models
         public int idSolicitud { get; set; }
         public int idEstadoVenta { get; set; }
         public int idVenta { get; set; }
-        public int idTipoPago { get; set; }
+        public int? idTipoPago { get; set; }
 
     }
 }
