@@ -198,8 +198,10 @@
     <Compile Include="Models\detalleSolicitud.cs" />
     <Compile Include="Models\Productores.cs" />
     <Compile Include="Models\Solicitudes.cs" />
+    <Compile Include="Models\Subastas.cs" />
     <Compile Include="Models\Transportistas.cs" />
     <Compile Include="Models\Usuarios.cs" />
+    <Compile Include="Models\Ventas.cs" />
     <Compile Include="productores.cs">
       <SubType>Form</SubType>
     </Compile>

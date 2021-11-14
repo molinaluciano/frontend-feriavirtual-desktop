@@ -73,7 +73,7 @@ namespace feriavirtual_frontend
             this.btnVolver.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(430, 389);
+            this.btnVolver.Location = new System.Drawing.Point(390, 392);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(205, 50);
             this.btnVolver.TabIndex = 2;
@@ -84,6 +84,7 @@ namespace feriavirtual_frontend
             // dataGridIdVenta
             // 
             this.dataGridIdVenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridIdVenta.DataPropertyName = "idVenta";
             this.dataGridIdVenta.HeaderText = "Id Venta";
             this.dataGridIdVenta.Name = "dataGridIdVenta";
             this.dataGridIdVenta.ReadOnly = true;
@@ -97,10 +98,10 @@ namespace feriavirtual_frontend
             // 
             // dataGridOpcion1
             // 
-            this.dataGridOpcion1.HeaderText = "Opcion1";
+            this.dataGridOpcion1.HeaderText = "Controlar Estado";
             this.dataGridOpcion1.Name = "dataGridOpcion1";
             this.dataGridOpcion1.ReadOnly = true;
-            this.dataGridOpcion1.Text = "Editar";
+            this.dataGridOpcion1.Text = "Cambiar";
             this.dataGridOpcion1.UseColumnTextForButtonValue = true;
             // 
             // controlarEstadosVenta
@@ -113,6 +114,7 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.label1);
             this.Name = "controlarEstadosVenta";
             this.Text = "controlarEstadosVenta";
+            this.Load += new System.EventHandler(this.controlarEstadosVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvControlarEstados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -32,8 +32,12 @@ namespace feriavirtual_frontend
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvGestionarSubastas = new System.Windows.Forms.DataGridView();
             this.dataGridIdSubasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridOptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdEstadoSubasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridFechaPublicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridFechaTermino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridCamionSeleccionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarSubastas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,8 +63,12 @@ namespace feriavirtual_frontend
             this.dtgvGestionarSubastas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvGestionarSubastas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridIdSubasta,
+            this.dataGridIdSolicitud,
             this.dataGridNomCliente,
-            this.dataGridOptions});
+            this.dataGridIdEstadoSubasta,
+            this.dataGridFechaPublicacion,
+            this.dataGridFechaTermino,
+            this.dataGridCamionSeleccionado});
             this.dtgvGestionarSubastas.Location = new System.Drawing.Point(112, 145);
             this.dtgvGestionarSubastas.Name = "dtgvGestionarSubastas";
             this.dtgvGestionarSubastas.ReadOnly = true;
@@ -69,10 +77,21 @@ namespace feriavirtual_frontend
             // 
             // dataGridIdSubasta
             // 
-            this.dataGridIdSubasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridIdSubasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridIdSubasta.DataPropertyName = "idSubasta";
             this.dataGridIdSubasta.HeaderText = "Id Subasta";
             this.dataGridIdSubasta.Name = "dataGridIdSubasta";
             this.dataGridIdSubasta.ReadOnly = true;
+            this.dataGridIdSubasta.Width = 83;
+            // 
+            // dataGridIdSolicitud
+            // 
+            this.dataGridIdSolicitud.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridIdSolicitud.DataPropertyName = "idSolicitud";
+            this.dataGridIdSolicitud.HeaderText = "Id Solicitud";
+            this.dataGridIdSolicitud.Name = "dataGridIdSolicitud";
+            this.dataGridIdSolicitud.ReadOnly = true;
+            this.dataGridIdSolicitud.Width = 84;
             // 
             // dataGridNomCliente
             // 
@@ -81,11 +100,39 @@ namespace feriavirtual_frontend
             this.dataGridNomCliente.Name = "dataGridNomCliente";
             this.dataGridNomCliente.ReadOnly = true;
             // 
-            // dataGridOptions
+            // dataGridIdEstadoSubasta
             // 
-            this.dataGridOptions.HeaderText = "Options";
-            this.dataGridOptions.Name = "dataGridOptions";
-            this.dataGridOptions.ReadOnly = true;
+            this.dataGridIdEstadoSubasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridIdEstadoSubasta.DataPropertyName = "idEstadoSubasta";
+            this.dataGridIdEstadoSubasta.HeaderText = "IdEstadoSubasta";
+            this.dataGridIdEstadoSubasta.Name = "dataGridIdEstadoSubasta";
+            this.dataGridIdEstadoSubasta.ReadOnly = true;
+            this.dataGridIdEstadoSubasta.Width = 113;
+            // 
+            // dataGridFechaPublicacion
+            // 
+            this.dataGridFechaPublicacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridFechaPublicacion.DataPropertyName = "fechaPublicacion";
+            this.dataGridFechaPublicacion.HeaderText = "Fecha Publicacion";
+            this.dataGridFechaPublicacion.Name = "dataGridFechaPublicacion";
+            this.dataGridFechaPublicacion.ReadOnly = true;
+            // 
+            // dataGridFechaTermino
+            // 
+            this.dataGridFechaTermino.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridFechaTermino.DataPropertyName = "fechaTermino";
+            this.dataGridFechaTermino.HeaderText = "Fecha Termino";
+            this.dataGridFechaTermino.Name = "dataGridFechaTermino";
+            this.dataGridFechaTermino.ReadOnly = true;
+            // 
+            // dataGridCamionSeleccionado
+            // 
+            this.dataGridCamionSeleccionado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridCamionSeleccionado.DataPropertyName = "camionSeleccionado";
+            this.dataGridCamionSeleccionado.HeaderText = "Camion Seleccionado";
+            this.dataGridCamionSeleccionado.Name = "dataGridCamionSeleccionado";
+            this.dataGridCamionSeleccionado.ReadOnly = true;
+            this.dataGridCamionSeleccionado.Width = 123;
             // 
             // gestionarSubastas
             // 
@@ -98,6 +145,7 @@ namespace feriavirtual_frontend
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "gestionarSubastas";
             this.Text = "gestionarSubastas";
+            this.Load += new System.EventHandler(this.gestionarSubastas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarSubastas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -109,7 +157,11 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgvGestionarSubastas;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdSubasta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNomCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridOptions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdEstadoSubasta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridFechaPublicacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridFechaTermino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridCamionSeleccionado;
     }
 }

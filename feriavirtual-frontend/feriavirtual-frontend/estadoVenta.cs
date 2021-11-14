@@ -12,9 +12,11 @@ namespace feriavirtual_frontend
 {
     public partial class estadoVenta : Form
     {
-        public estadoVenta()
+        int selectedVenta = 0;
+        public estadoVenta(int idVenta)
         {
             InitializeComponent();
+            this.selectedVenta = idVenta;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -29,6 +31,11 @@ namespace feriavirtual_frontend
             panelDesktop.Controls.Add(controlarEstados);
             controlarEstados.BringToFront();
             controlarEstados.Show();
+        }
+
+        private void estadoVenta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

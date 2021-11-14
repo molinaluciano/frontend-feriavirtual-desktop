@@ -31,7 +31,6 @@ namespace feriavirtual_frontend
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@ namespace feriavirtual_frontend
             this.label7 = new System.Windows.Forms.Label();
             this.lbIdVenta = new System.Windows.Forms.Label();
             this.lbNomCliente = new System.Windows.Forms.Label();
-            this.lbDescripcion = new System.Windows.Forms.Label();
             this.lbPrecioBruto = new System.Windows.Forms.Label();
             this.lbprecioNeto = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
@@ -67,21 +65,11 @@ namespace feriavirtual_frontend
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre Cliente:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(330, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Descripción:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(328, 217);
+            this.label4.Location = new System.Drawing.Point(328, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 17);
             this.label4.TabIndex = 3;
@@ -91,7 +79,7 @@ namespace feriavirtual_frontend
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(328, 244);
+            this.label5.Location = new System.Drawing.Point(328, 217);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 17);
             this.label5.TabIndex = 4;
@@ -101,7 +89,7 @@ namespace feriavirtual_frontend
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(365, 270);
+            this.label6.Location = new System.Drawing.Point(365, 243);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 17);
             this.label6.TabIndex = 5;
@@ -109,13 +97,13 @@ namespace feriavirtual_frontend
             // 
             // cbxEstadoVenta
             // 
+            this.cbxEstadoVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstadoVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEstadoVenta.FormattingEnabled = true;
-            this.cbxEstadoVenta.Location = new System.Drawing.Point(424, 305);
+            this.cbxEstadoVenta.Location = new System.Drawing.Point(423, 280);
             this.cbxEstadoVenta.Name = "cbxEstadoVenta";
             this.cbxEstadoVenta.Size = new System.Drawing.Size(204, 25);
             this.cbxEstadoVenta.TabIndex = 6;
-            this.cbxEstadoVenta.Text = "Estado Venta";
             // 
             // btnVolver
             // 
@@ -134,7 +122,7 @@ namespace feriavirtual_frontend
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(298, 305);
+            this.label7.Location = new System.Drawing.Point(299, 280);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 17);
             this.label7.TabIndex = 8;
@@ -161,21 +149,11 @@ namespace feriavirtual_frontend
             this.lbNomCliente.TabIndex = 10;
             this.lbNomCliente.Text = "_nomCliente";
             // 
-            // lbDescripcion
-            // 
-            this.lbDescripcion.AutoSize = true;
-            this.lbDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescripcion.Location = new System.Drawing.Point(421, 189);
-            this.lbDescripcion.Name = "lbDescripcion";
-            this.lbDescripcion.Size = new System.Drawing.Size(89, 17);
-            this.lbDescripcion.TabIndex = 11;
-            this.lbDescripcion.Text = "_descripcion";
-            // 
             // lbPrecioBruto
             // 
             this.lbPrecioBruto.AutoSize = true;
             this.lbPrecioBruto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrecioBruto.Location = new System.Drawing.Point(421, 217);
+            this.lbPrecioBruto.Location = new System.Drawing.Point(421, 190);
             this.lbPrecioBruto.Name = "lbPrecioBruto";
             this.lbPrecioBruto.Size = new System.Drawing.Size(89, 17);
             this.lbPrecioBruto.TabIndex = 12;
@@ -185,7 +163,7 @@ namespace feriavirtual_frontend
             // 
             this.lbprecioNeto.AutoSize = true;
             this.lbprecioNeto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbprecioNeto.Location = new System.Drawing.Point(421, 244);
+            this.lbprecioNeto.Location = new System.Drawing.Point(421, 217);
             this.lbprecioNeto.Name = "lbprecioNeto";
             this.lbprecioNeto.Size = new System.Drawing.Size(88, 17);
             this.lbprecioNeto.TabIndex = 13;
@@ -195,7 +173,7 @@ namespace feriavirtual_frontend
             // 
             this.lbFecha.AutoSize = true;
             this.lbFecha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFecha.Location = new System.Drawing.Point(421, 270);
+            this.lbFecha.Location = new System.Drawing.Point(421, 243);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.Size = new System.Drawing.Size(52, 17);
             this.lbFecha.TabIndex = 14;
@@ -209,7 +187,6 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.lbFecha);
             this.Controls.Add(this.lbprecioNeto);
             this.Controls.Add(this.lbPrecioBruto);
-            this.Controls.Add(this.lbDescripcion);
             this.Controls.Add(this.lbNomCliente);
             this.Controls.Add(this.lbIdVenta);
             this.Controls.Add(this.label7);
@@ -218,11 +195,11 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "estadoVenta";
             this.Text = "estadoVenta";
+            this.Load += new System.EventHandler(this.estadoVenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +209,6 @@ namespace feriavirtual_frontend
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -241,7 +217,6 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbIdVenta;
         private System.Windows.Forms.Label lbNomCliente;
-        private System.Windows.Forms.Label lbDescripcion;
         private System.Windows.Forms.Label lbPrecioBruto;
         private System.Windows.Forms.Label lbprecioNeto;
         private System.Windows.Forms.Label lbFecha;
