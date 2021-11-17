@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using feriavirtual_frontend.Models;
+using Newtonsoft.Json;
 
 namespace feriavirtual_frontend
 {
     public partial class ingresarSaldos : Form
     {
+
+        string urlFruta = "http://localhost:8080/select-fruit";
+        string urlCategoria = "http://localhost:8080/select-category-fruit"; 
+        string urlCalidad = "http://localhost:8080/select-quality-fruit";
+
         public ingresarSaldos()
         {
             InitializeComponent();
@@ -29,6 +38,113 @@ namespace feriavirtual_frontend
             panelDesktop.Controls.Add(gestionarVenta);
             gestionarVenta.BringToFront();
             gestionarVenta.Show();
+        }
+
+        private async void ingresarSaldos_Load(object sender, EventArgs e)
+        {
+            string requestFruta = await GetHtppFruta();
+            string requestCategoria = await GetHtppCategoria();
+            string requestCalidad = await GetHtppCalidad();
+
+            List<Frutas> lstFrutas = JsonConvert.DeserializeObject<List<Frutas>>(requestFruta);
+            List<Categoria> lstCategoria = JsonConvert.DeserializeObject<List<Categoria>>(requestCategoria);
+            List<Calidad> lstCalidad = JsonConvert.DeserializeObject<List<Calidad>>(requestCalidad);
+
+            foreach (var categoria in lstCategoria)
+            {
+                cbxCategoria.Items.Add(categoria.categoria);
+            }
+            foreach (var calidad in lstCalidad)
+            {
+                cbxCalidad.Items.Add(calidad.calidad);
+            }
+        }
+
+        public async Task<string> GetHtppFruta()
+        {
+            WebRequest oRequestFruta = WebRequest.Create(urlFruta);
+            WebResponse oResponseFruta = oRequestFruta.GetResponse();
+            StreamReader srFruta = new StreamReader(oResponseFruta.GetResponseStream());
+            return await srFruta.ReadToEndAsync();
+        }
+        public async Task<string> GetHtppCategoria()
+        {
+            WebRequest oRequestCategoria = WebRequest.Create(urlCategoria);
+            WebResponse oResponseCategoria = oRequestCategoria.GetResponse();
+            StreamReader srCategoria = new StreamReader(oResponseCategoria.GetResponseStream());
+            return await srCategoria.ReadToEndAsync();
+        }
+        public async Task<string> GetHtppCalidad()
+        {
+            WebRequest oRequestCalidad = WebRequest.Create(urlCalidad);
+            WebResponse oResponseCalidad = oRequestCalidad.GetResponse();
+            StreamReader srCalidad = new StreamReader(oResponseCalidad.GetResponseStream());
+            return await srCalidad.ReadToEndAsync();
+        }
+
+        private async void cbxCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string requestFruta = await GetHtppFruta();
+            string requestCategoria = await GetHtppCategoria();
+
+            List<Frutas> lstFrutas = JsonConvert.DeserializeObject<List<Frutas>>(requestFruta);
+            List<Categoria> lstCategoria = JsonConvert.DeserializeObject<List<Categoria>>(requestCategoria);
+
+            switch (cbxCategoria.SelectedIndex)
+            {
+                case 0:
+                    cbxFruta.Items.Clear();
+                    foreach (var fruta in lstFrutas)
+                    {
+                        if (fruta.idCategoriaFruta == 1)
+                        {
+                            cbxFruta.Items.Add(fruta.nombreFruta);
+                        }
+                    }
+                    break;
+                case 1:
+                    cbxFruta.Items.Clear();
+                    foreach (var fruta in lstFrutas)
+                    {
+                        if (fruta.idCategoriaFruta == 2)
+                        {
+                            cbxFruta.Items.Add(fruta.nombreFruta);
+                        }
+                    }
+                    break;
+                case 2:
+                    cbxFruta.Items.Clear();
+                    foreach (var fruta in lstFrutas)
+                    {
+                        if (fruta.idCategoriaFruta == 3)
+                        {
+                            cbxFruta.Items.Add(fruta.nombreFruta);
+                        }
+                    }
+                    break;
+                case 3:
+                    cbxFruta.Items.Clear();
+                    foreach (var fruta in lstFrutas)
+                    {
+                        if (fruta.idCategoriaFruta == 4)
+                        {
+                            cbxFruta.Items.Add(fruta.nombreFruta);
+                        }
+                    }
+                    break;
+                case 4:
+                    cbxFruta.Items.Clear();
+                    foreach (var fruta in lstFrutas)
+                    {
+                        if (fruta.idCategoriaFruta == 5)
+                        {
+                            cbxFruta.Items.Add(fruta.nombreFruta);
+                        }
+                    }
+                    break;
+            }
+
+            
         }
     }
 }
