@@ -90,5 +90,10 @@ namespace feriavirtual_frontend
                 MessageBox.Show("Error Usuario no fue ingresado");
             }
         }
+
+        private void cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

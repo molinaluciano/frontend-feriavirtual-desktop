@@ -79,7 +79,11 @@ namespace feriavirtual_frontend
             this.cbxPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPais.FormattingEnabled = true;
             this.cbxPais.Items.AddRange(new object[] {
-            "Chile"});
+            "Chile",
+            "Argentina",
+            "Peru",
+            "China",
+            "Estados Unidos"});
             this.cbxPais.Location = new System.Drawing.Point(101, 449);
             this.cbxPais.Name = "cbxPais";
             this.cbxPais.Size = new System.Drawing.Size(217, 21);
@@ -400,6 +404,7 @@ namespace feriavirtual_frontend
             this.Controls.Add(this.label1);
             this.Name = "cliente";
             this.Text = "cliente";
+            this.Load += new System.EventHandler(this.cliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

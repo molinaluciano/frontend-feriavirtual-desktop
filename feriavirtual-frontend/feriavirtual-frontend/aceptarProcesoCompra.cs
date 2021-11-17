@@ -25,6 +25,8 @@ namespace feriavirtual_frontend
         string urlExterno = "http://localhost:8080/select-user/2";
         string urlLocal = "http://localhost:8080/select-user/3";
         string urlInterno = "http://localhost:8080/select-user/4";
+        string urlEstadoSolicitud = "http://localhost:8080/select-status-request";
+
         public aceptarProcesoCompra()
         {
             InitializeComponent();
@@ -72,13 +74,18 @@ namespace feriavirtual_frontend
             if (lstInternos == null) { } else { lstUsuarios.AddRange(lstInternos); };
 
             string requestSolicitud = await GetHtppSolicitud();
+            string requestEstadoSolicitud = await GetHtppEstadoSolicitud();
 
             List<Solicitudes> lstSolicitud = JsonConvert.DeserializeObject<List<Solicitudes>>(requestSolicitud);
+            List<EstadoSolicitud> lstEstadoSolicitud = JsonConvert.DeserializeObject<List<EstadoSolicitud>>(requestEstadoSolicitud);
             int  idCliente = 0;
 
             dtgvAceptarCompra.DataSource = lstSolicitud;
+
             foreach (DataGridViewRow fila in dtgvAceptarCompra.Rows)
             {
+                string estado = "";
+                estado = fila.Cells["dataGridIdEstadoSolicitud"].Value.ToString();
                 idCliente = Int32.Parse(fila.Cells["dataGridIdUsuario"].Value.ToString());
                 foreach (var cliente in lstUsuarios)
                 {
@@ -87,6 +94,14 @@ namespace feriavirtual_frontend
                         fila.Cells["dataGridNombreCliente"].Value = cliente.nombre;
                     } 
                 }
+                foreach(var estadoSolicitud in lstEstadoSolicitud)
+                {
+                    if(estado == estadoSolicitud.idEstadoSolicitud.ToString())
+                    {
+                        fila.Cells["dataGridEstadoSolicitud"].Value = estadoSolicitud.descripcion;
+                    }
+                }
+                
             }
         }
         public async Task<string> GetHtppExterno()
@@ -128,7 +143,13 @@ namespace feriavirtual_frontend
             StreamReader srEditarEstado = new StreamReader(oResponseEditarEstado.GetResponseStream());
             return await srEditarEstado.ReadToEndAsync();
         }
-
+        public async Task<string> GetHtppEstadoSolicitud()
+        {
+            WebRequest oRequestEstadoSolicitud = WebRequest.Create(urlEstadoSolicitud);
+            WebResponse oResponseEstadoSolicitud = oRequestEstadoSolicitud.GetResponse();
+            StreamReader srEstadoSolicitud = new StreamReader(oResponseEstadoSolicitud.GetResponseStream());
+            return await srEstadoSolicitud.ReadToEndAsync();
+        }
 
 
         private async void dtgvAceptarCompra_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -19,6 +19,9 @@ namespace feriavirtual_frontend
             this.selectedVenta = idVenta;
         }
 
+        string urlVenta = "http://localhost:8080/sales";
+
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
             controlarEstadosVenta controlarEstados = new controlarEstadosVenta();

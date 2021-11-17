@@ -29,6 +29,9 @@ namespace feriavirtual_frontend
         string urlLocal = "http://localhost:8080/select-user/3";
         string urlInterno = "http://localhost:8080/select-user/4";
         string urlDetalleSolicitud = "http://localhost:8080/detail-requests";
+        string urlFruta = "http://localhost:8080/select-fruit"; 
+        string urlCalidad = "http://localhost:8080/select-quality-fruit";
+
 
         private async void detalleProcesoCompra_Load(object sender, EventArgs e)
         {
@@ -59,16 +62,27 @@ namespace feriavirtual_frontend
 
             string requestSolicitud = await GetHtppSolicitud();
             string requestDetalleSolicitud = await GetHtppDetalleSolicitud();
+            string requestFruta = await GetHtppFruta();
+            string requestCalidad = await GetHtppCalidad();
 
             List<Solicitudes> lstSolicitud = JsonConvert.DeserializeObject<List<Solicitudes>>(requestSolicitud);
             List<detalleSolicitud> lstDetalleSolicitud = JsonConvert.DeserializeObject<List<detalleSolicitud>>(requestDetalleSolicitud);
+            List<Frutas> lstFrutas = JsonConvert.DeserializeObject<List<Frutas>>(requestFruta);
+            List<Calidad> lstCalidad = JsonConvert.DeserializeObject<List<Calidad>>(requestCalidad);
 
 
             foreach (var solicitud in lstSolicitud)
             {
                 if (solicitud.idSolicitud == selectedSolicitud)
-                {
-                    lbTipoSolicitud.Text = solicitud.idTipoSolicitud.ToString();
+                {   
+                    if(solicitud.idTipoSolicitud.ToString() == "1")
+                    {
+                        lbTipoSolicitud.Text = "SOLICITUD SALDOS";
+                    }
+                    else
+                    {
+                        lbTipoSolicitud.Text = "SOLICITUD CON PRODUCTOR";
+                    }
                     lbPedido.Text = solicitud.idSolicitud.ToString();
                 }
                 foreach(var usuario in lstUsuarios)
@@ -76,16 +90,52 @@ namespace feriavirtual_frontend
                     if (usuario.idUsuario == solicitud.idUsuario)
                     {
                         lbNomCliente.Text = usuario.nombre;
-                        lbPais.Text = usuario.idPais.ToString();
+                        if (usuario.idPais.ToString() == "1") 
+                        {
+                            lbPais.Text = "CHILE";                         
+                        }
+                        if (usuario.idPais.ToString() == "2")
+                        {
+                            lbPais.Text = "ARGENTINA";
+                        }
+                        if (usuario.idPais.ToString() == "3")
+                        {
+                            lbPais.Text = "PERU";
+                        }
+                        if (usuario.idPais.ToString() == "4")
+                        {
+                            lbPais.Text = "CHINA";
+                        }
+                        if (usuario.idPais.ToString() == "5")
+                        {
+                            lbPais.Text = "ESTADOS UNIDOS";
+                        }
+
                     }
                 }
                 foreach (var detalle in lstDetalleSolicitud)
                 {
                     if(detalle.idSolicitud == solicitud.idSolicitud)
                     {
-                        lbFruta.Text = detalle.idFruta.ToString();
+                        foreach(var fruta in lstFrutas)
+                        {
+                            if(detalle.idFruta == fruta.idFruta)
+                            {
+                                lbFruta.Text = fruta.nombreFruta;
+                            }
+
+                        }
+
+                        foreach (var calidad in lstCalidad)
+                        {
+                            if (detalle.idCalidad == calidad.idCalidad)
+                            {
+                                lbCalidad.Text = calidad.calidad;
+                            }
+
+                        }
+
                         lbKilos.Text = detalle.kilos.ToString();
-                        lbCalidad.Text = detalle.idCalidad.ToString();
                     }
                 }
             }
@@ -99,6 +149,20 @@ namespace feriavirtual_frontend
             WebResponse oResponseExterno = oRequestExterno.GetResponse();
             StreamReader srExterno = new StreamReader(oResponseExterno.GetResponseStream());
             return await srExterno.ReadToEndAsync();
+        }
+        public async Task<string> GetHtppFruta()
+        {
+            WebRequest oRequestFruta = WebRequest.Create(urlFruta);
+            WebResponse oResponseFruta = oRequestFruta.GetResponse();
+            StreamReader srFruta = new StreamReader(oResponseFruta.GetResponseStream());
+            return await srFruta.ReadToEndAsync();
+        }
+        public async Task<string> GetHtppCalidad()
+        {
+            WebRequest oRequestCalidad = WebRequest.Create(urlCalidad);
+            WebResponse oResponseCalidad = oRequestCalidad.GetResponse();
+            StreamReader srCalidad = new StreamReader(oResponseCalidad.GetResponseStream());
+            return await srCalidad.ReadToEndAsync();
         }
 
         public async Task<string> GetHtppLocal()

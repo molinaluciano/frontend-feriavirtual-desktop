@@ -35,6 +35,7 @@ namespace feriavirtual_frontend
             this.dataGridNumeroSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdEstadoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridEstadoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdTipoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridProductorSeleccionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +81,7 @@ namespace feriavirtual_frontend
             this.dataGridNumeroSolicitud,
             this.dataGridNombreCliente,
             this.dataGridIdEstadoSolicitud,
+            this.dataGridEstadoSolicitud,
             this.dataGridIdUsuario,
             this.dataGridIdTipoSolicitud,
             this.dataGridProductorSeleccionado,
@@ -114,10 +116,17 @@ namespace feriavirtual_frontend
             // 
             this.dataGridIdEstadoSolicitud.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridIdEstadoSolicitud.DataPropertyName = "idEstadoSolicitud";
-            this.dataGridIdEstadoSolicitud.HeaderText = "EstadoSolicitud";
+            this.dataGridIdEstadoSolicitud.HeaderText = "IdEstadoSolicitud";
             this.dataGridIdEstadoSolicitud.Name = "dataGridIdEstadoSolicitud";
             this.dataGridIdEstadoSolicitud.ReadOnly = true;
-            this.dataGridIdEstadoSolicitud.Width = 105;
+            this.dataGridIdEstadoSolicitud.Width = 114;
+            // 
+            // dataGridEstadoSolicitud
+            // 
+            this.dataGridEstadoSolicitud.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridEstadoSolicitud.HeaderText = "EstadoSolicitud";
+            this.dataGridEstadoSolicitud.Name = "dataGridEstadoSolicitud";
+            this.dataGridEstadoSolicitud.ReadOnly = true;
             // 
             // dataGridIdUsuario
             // 
@@ -206,6 +215,7 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNumeroSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdEstadoSolicitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridEstadoSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdTipoSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridProductorSeleccionado;

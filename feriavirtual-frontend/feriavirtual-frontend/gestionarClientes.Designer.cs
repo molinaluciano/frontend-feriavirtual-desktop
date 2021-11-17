@@ -38,9 +38,11 @@ namespace feriavirtual_frontend
             this.txtRut = new System.Windows.Forms.TextBox();
             this.cbxTipoCliente = new System.Windows.Forms.ComboBox();
             this.dtgvGestionarClientes = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             this.dataGridRut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdTipoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridTipoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridApellidoPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +55,6 @@ namespace feriavirtual_frontend
             this.dataGridTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOpcion1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridOpcion2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGestionarClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,6 +165,7 @@ namespace feriavirtual_frontend
             this.dataGridRut,
             this.dataGridNomCliente,
             this.dataGridIdTipoCliente,
+            this.dataGridTipoCliente,
             this.dataGridIdPais,
             this.dataGridIdUsuario,
             this.dataGridApellidoPaterno,
@@ -183,6 +185,17 @@ namespace feriavirtual_frontend
             this.dtgvGestionarClientes.TabIndex = 8;
             this.dtgvGestionarClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvGestionarClientes_CellContentClick);
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(712, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Tipo Cliente";
+            // 
             // dataGridRut
             // 
             this.dataGridRut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -190,7 +203,6 @@ namespace feriavirtual_frontend
             this.dataGridRut.HeaderText = "Rut";
             this.dataGridRut.Name = "dataGridRut";
             this.dataGridRut.ReadOnly = true;
-            this.dataGridRut.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridNomCliente
             // 
@@ -199,16 +211,22 @@ namespace feriavirtual_frontend
             this.dataGridNomCliente.HeaderText = "Nombre Cliente";
             this.dataGridNomCliente.Name = "dataGridNomCliente";
             this.dataGridNomCliente.ReadOnly = true;
-            this.dataGridNomCliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridIdTipoCliente
             // 
-            this.dataGridIdTipoCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridIdTipoCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridIdTipoCliente.DataPropertyName = "idTipoUsuario";
-            this.dataGridIdTipoCliente.HeaderText = "Id Tipo Cliente";
+            this.dataGridIdTipoCliente.HeaderText = "IdTipoCliente";
             this.dataGridIdTipoCliente.Name = "dataGridIdTipoCliente";
             this.dataGridIdTipoCliente.ReadOnly = true;
-            this.dataGridIdTipoCliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridIdTipoCliente.Width = 94;
+            // 
+            // dataGridTipoCliente
+            // 
+            this.dataGridTipoCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridTipoCliente.HeaderText = "Tipo Cliente";
+            this.dataGridTipoCliente.Name = "dataGridTipoCliente";
+            this.dataGridTipoCliente.ReadOnly = true;
             // 
             // dataGridIdPais
             // 
@@ -298,7 +316,7 @@ namespace feriavirtual_frontend
             this.dataGridOpcion1.ReadOnly = true;
             this.dataGridOpcion1.Text = "Editar";
             this.dataGridOpcion1.UseColumnTextForButtonValue = true;
-            this.dataGridOpcion1.Width = 50;
+            this.dataGridOpcion1.Width = 56;
             // 
             // dataGridOpcion2
             // 
@@ -308,18 +326,7 @@ namespace feriavirtual_frontend
             this.dataGridOpcion2.ReadOnly = true;
             this.dataGridOpcion2.Text = "Eliminar";
             this.dataGridOpcion2.UseColumnTextForButtonValue = true;
-            this.dataGridOpcion2.Width = 50;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(712, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 17);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Tipo Cliente";
+            this.dataGridOpcion2.Width = 56;
             // 
             // gestionarClientes
             // 
@@ -360,6 +367,7 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridRut;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNomCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdTipoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridTipoCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdPais;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridApellidoPaterno;

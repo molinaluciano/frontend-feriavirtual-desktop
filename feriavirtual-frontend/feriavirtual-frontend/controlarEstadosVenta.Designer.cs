@@ -33,8 +33,12 @@ namespace feriavirtual_frontend
             this.dtgvControlarEstados = new System.Windows.Forms.DataGridView();
             this.btnVolver = new System.Windows.Forms.Button();
             this.dataGridIdVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdEstadoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdTipoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridNomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOpcion1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridEstadoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvControlarEstados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,8 +63,12 @@ namespace feriavirtual_frontend
             this.dtgvControlarEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvControlarEstados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridIdVenta,
-            this.dataGridNombreCliente,
-            this.dataGridOpcion1});
+            this.dataGridIdSolicitud,
+            this.dataGridIdEstadoVenta,
+            this.dataGridIdTipoPago,
+            this.dataGridNomCliente,
+            this.dataGridOpcion1,
+            this.dataGridEstadoVenta});
             this.dtgvControlarEstados.Location = new System.Drawing.Point(131, 139);
             this.dtgvControlarEstados.Name = "dtgvControlarEstados";
             this.dtgvControlarEstados.ReadOnly = true;
@@ -89,12 +97,34 @@ namespace feriavirtual_frontend
             this.dataGridIdVenta.Name = "dataGridIdVenta";
             this.dataGridIdVenta.ReadOnly = true;
             // 
-            // dataGridNombreCliente
+            // dataGridIdSolicitud
             // 
-            this.dataGridNombreCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridNombreCliente.HeaderText = "Nombre Cliente";
-            this.dataGridNombreCliente.Name = "dataGridNombreCliente";
-            this.dataGridNombreCliente.ReadOnly = true;
+            this.dataGridIdSolicitud.DataPropertyName = "idSolicitud";
+            this.dataGridIdSolicitud.HeaderText = "IdSolicitud";
+            this.dataGridIdSolicitud.Name = "dataGridIdSolicitud";
+            this.dataGridIdSolicitud.ReadOnly = true;
+            // 
+            // dataGridIdEstadoVenta
+            // 
+            this.dataGridIdEstadoVenta.DataPropertyName = "idEstadoVenta";
+            this.dataGridIdEstadoVenta.HeaderText = "IdEstadoVenta";
+            this.dataGridIdEstadoVenta.Name = "dataGridIdEstadoVenta";
+            this.dataGridIdEstadoVenta.ReadOnly = true;
+            // 
+            // dataGridIdTipoPago
+            // 
+            this.dataGridIdTipoPago.DataPropertyName = "idTipoPago";
+            this.dataGridIdTipoPago.HeaderText = "IdTipoPago";
+            this.dataGridIdTipoPago.Name = "dataGridIdTipoPago";
+            this.dataGridIdTipoPago.ReadOnly = true;
+            this.dataGridIdTipoPago.Visible = false;
+            // 
+            // dataGridNomCliente
+            // 
+            this.dataGridNomCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridNomCliente.HeaderText = "Nombre Cliente";
+            this.dataGridNomCliente.Name = "dataGridNomCliente";
+            this.dataGridNomCliente.ReadOnly = true;
             // 
             // dataGridOpcion1
             // 
@@ -103,6 +133,12 @@ namespace feriavirtual_frontend
             this.dataGridOpcion1.ReadOnly = true;
             this.dataGridOpcion1.Text = "Cambiar";
             this.dataGridOpcion1.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridEstadoVenta
+            // 
+            this.dataGridEstadoVenta.HeaderText = "EstadoVenta";
+            this.dataGridEstadoVenta.Name = "dataGridEstadoVenta";
+            this.dataGridEstadoVenta.ReadOnly = true;
             // 
             // controlarEstadosVenta
             // 
@@ -127,7 +163,11 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.DataGridView dtgvControlarEstados;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdSolicitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdEstadoVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdTipoPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNomCliente;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridEstadoVenta;
     }
 }

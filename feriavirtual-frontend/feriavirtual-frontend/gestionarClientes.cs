@@ -86,6 +86,23 @@ namespace feriavirtual_frontend
 
 
             dtgvGestionarClientes.DataSource = lstUsuarios;
+
+            foreach (DataGridViewRow fila in dtgvGestionarClientes.Rows)
+            {
+                if (fila.Cells["dataGridIdTipoCliente"].Value.ToString() == "2")
+                {
+                    fila.Cells["dataGridTipoCliente"].Value = "Cliente Externo";
+                }
+                if (fila.Cells["dataGridIdTipoCliente"].Value.ToString() == "3")
+                {
+                    fila.Cells["dataGridTipoCliente"].Value = "Cliente Local";
+                }
+                if (fila.Cells["dataGridIdTipoCliente"].Value.ToString() == "4")
+                {
+                    fila.Cells["dataGridTipoCliente"].Value = "Cliente Interno";
+                }
+            }
+
         }
         public async Task<string> GetHtppExterno()
         {
@@ -219,8 +236,7 @@ namespace feriavirtual_frontend
                 {
                     MessageBox.Show("Error Cliente no puedo ser eliminado");
                 }
-            }
-            
+            }  
         }
     }
 }

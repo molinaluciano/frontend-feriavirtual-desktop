@@ -175,7 +175,7 @@ namespace feriavirtual_frontend
             // 
             this.lbKilos.AutoSize = true;
             this.lbKilos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbKilos.Location = new System.Drawing.Point(295, 341);
+            this.lbKilos.Location = new System.Drawing.Point(326, 344);
             this.lbKilos.Name = "lbKilos";
             this.lbKilos.Size = new System.Drawing.Size(37, 21);
             this.lbKilos.TabIndex = 16;
@@ -205,11 +205,11 @@ namespace feriavirtual_frontend
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(237, 343);
+            this.label8.Location = new System.Drawing.Point(237, 346);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 19);
+            this.label8.Size = new System.Drawing.Size(83, 19);
             this.label8.TabIndex = 19;
-            this.label8.Text = "Kilos:";
+            this.label8.Text = "Kilos (kg):";
             // 
             // detalleProcesoCompra
             // 
