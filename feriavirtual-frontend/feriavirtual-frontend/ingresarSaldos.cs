@@ -6,10 +6,13 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using feriavirtual_frontend.Models;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 
 namespace feriavirtual_frontend
@@ -20,6 +23,7 @@ namespace feriavirtual_frontend
         string urlFruta = "http://localhost:8080/select-fruit";
         string urlCategoria = "http://localhost:8080/select-category-fruit"; 
         string urlCalidad = "http://localhost:8080/select-quality-fruit";
+        string urlSaldo = "http://localhost:8080/create-balance";
 
         public ingresarSaldos()
         {
@@ -145,6 +149,62 @@ namespace feriavirtual_frontend
             }
 
             
+        }
+
+        private async void btnAgregarSaldo_Click(object sender, EventArgs e)
+        {
+            var saldos = new HttpClient();
+            string requestFruta = await GetHtppFruta();
+
+            List<Frutas> lstFrutas = JsonConvert.DeserializeObject<List<Frutas>>(requestFruta);
+
+            int selectedCalidad = cbxCalidad.SelectedIndex + 1;
+            int selectedFruta = 0;
+
+            foreach(var fruta in lstFrutas)
+            {
+                if(fruta.nombreFruta == cbxFruta.SelectedItem.ToString())
+                {
+                    selectedFruta = fruta.idFruta;
+                }
+            }
+
+            Saldos saldo = new Saldos()
+            {
+                idSaldo = null,
+                kilos = Int32.Parse(txtKg.Text),
+                disponible = 1,
+                idClienteComprador = null,
+                idCalidad = selectedCalidad,
+                idFruta = selectedFruta
+            };
+
+            var data = System.Text.Json.JsonSerializer.Serialize<Saldos>(saldo);
+            HttpContent content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+
+            var httpResponse = await saldos.PostAsync(urlSaldo, content);
+
+            if (httpResponse.IsSuccessStatusCode) { 
+           
+                var result = await httpResponse.Content.ReadAsStringAsync();
+
+                MessageBox.Show("Saldo Ingresado Correctamente");
+
+                gestionarVentas windowGestionarVentas = new gestionarVentas();
+                windowGestionarVentas.TopLevel = false;
+
+                menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                windowGestionarVentas.FormBorderStyle = FormBorderStyle.None;
+                windowGestionarVentas.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(windowGestionarVentas);
+                windowGestionarVentas.BringToFront();
+                windowGestionarVentas.Show();
+            }
+            else
+            {
+                MessageBox.Show("Error Saldo no fue ingresado");
+            }
         }
     }
 }
