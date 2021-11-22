@@ -42,6 +42,7 @@ namespace feriavirtual_frontend
             this.lbPrecioBruto = new System.Windows.Forms.Label();
             this.lbprecioNeto = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
+            this.btnCambiarEstado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -107,10 +108,9 @@ namespace feriavirtual_frontend
             // 
             // btnVolver
             // 
-            this.btnVolver.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(390, 410);
+            this.btnVolver.Location = new System.Drawing.Point(87, 452);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(238, 44);
             this.btnVolver.TabIndex = 7;
@@ -179,11 +179,25 @@ namespace feriavirtual_frontend
             this.lbFecha.TabIndex = 14;
             this.lbFecha.Text = "_fecha";
             // 
+            // btnCambiarEstado
+            // 
+            this.btnCambiarEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCambiarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarEstado.Location = new System.Drawing.Point(678, 452);
+            this.btnCambiarEstado.Name = "btnCambiarEstado";
+            this.btnCambiarEstado.Size = new System.Drawing.Size(203, 44);
+            this.btnCambiarEstado.TabIndex = 15;
+            this.btnCambiarEstado.Text = "Cambiar Estado";
+            this.btnCambiarEstado.UseVisualStyleBackColor = true;
+            this.btnCambiarEstado.Click += new System.EventHandler(this.btnCambiarEstado_Click);
+            // 
             // estadoVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 542);
+            this.Controls.Add(this.btnCambiarEstado);
             this.Controls.Add(this.lbFecha);
             this.Controls.Add(this.lbprecioNeto);
             this.Controls.Add(this.lbPrecioBruto);
@@ -220,5 +234,6 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.Label lbPrecioBruto;
         private System.Windows.Forms.Label lbprecioNeto;
         private System.Windows.Forms.Label lbFecha;
+        private System.Windows.Forms.Button btnCambiarEstado;
     }
 }

@@ -198,6 +198,7 @@
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Contrato.cs" />
     <Compile Include="Models\detalleSolicitud.cs" />
+    <Compile Include="Models\DetalleVenta.cs" />
     <Compile Include="Models\EstadoSolicitud.cs" />
     <Compile Include="Models\EstadoVenta.cs" />
     <Compile Include="Models\Frutas.cs" />
