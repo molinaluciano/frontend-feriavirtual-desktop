@@ -47,6 +47,7 @@ namespace feriavirtual_frontend
             string requestEstadoVenta = await GetHtppEstadoVenta();
             string requestVenta = await GetHtppVentas();
 
+
             List<EstadoVenta> lstEstadoVenta = JsonConvert.DeserializeObject<List<EstadoVenta>>(requestEstadoVenta);
             List<Ventas> lstVentas = JsonConvert.DeserializeObject<List<Ventas>>(requestVenta);
 
@@ -66,7 +67,7 @@ namespace feriavirtual_frontend
 
             try 
             {
-                lbIdVenta.Text = detalle.idVenta.ToString();
+                lbIdVenta.Text = selectedVenta.ToString();
                 lbPrecioBruto.Text = detalle.precioBruto.ToString();
                 lbprecioNeto.Text = detalle.precioNeto.ToString();
             }
