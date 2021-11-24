@@ -35,20 +35,23 @@ namespace feriavirtual_frontend
             this.dataGridNumeroSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdEstadoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridIdUsuaio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridEstadoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdTipoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridProductorSeleccionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridFechaPublicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridOpcion1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridOpcion2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridOpcion3 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAceptarCompra)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(147, 37);
+            this.label1.Location = new System.Drawing.Point(218, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(531, 42);
             this.label1.TabIndex = 0;
@@ -56,10 +59,11 @@ namespace feriavirtual_frontend
             // 
             // btnVolver
             // 
+            this.btnVolver.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(303, 365);
+            this.btnVolver.Location = new System.Drawing.Point(384, 407);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(219, 36);
+            this.btnVolver.Size = new System.Drawing.Size(219, 46);
             this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -69,21 +73,26 @@ namespace feriavirtual_frontend
             // 
             this.dtgvAceptarCompra.AllowUserToAddRows = false;
             this.dtgvAceptarCompra.AllowUserToDeleteRows = false;
+            this.dtgvAceptarCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvAceptarCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvAceptarCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridNumeroSolicitud,
             this.dataGridNombreCliente,
             this.dataGridIdEstadoSolicitud,
-            this.dataGridIdUsuaio,
+            this.dataGridEstadoSolicitud,
+            this.dataGridIdUsuario,
             this.dataGridIdTipoSolicitud,
             this.dataGridProductorSeleccionado,
             this.dataGridFechaPublicacion,
             this.dataGridOpcion1,
-            this.dataGridOpcion2});
-            this.dtgvAceptarCompra.Location = new System.Drawing.Point(75, 113);
+            this.dataGridOpcion2,
+            this.dataGridOpcion3});
+            this.dtgvAceptarCompra.Location = new System.Drawing.Point(88, 127);
             this.dtgvAceptarCompra.Name = "dtgvAceptarCompra";
             this.dtgvAceptarCompra.ReadOnly = true;
-            this.dtgvAceptarCompra.Size = new System.Drawing.Size(674, 232);
+            this.dtgvAceptarCompra.Size = new System.Drawing.Size(808, 232);
             this.dtgvAceptarCompra.TabIndex = 2;
             this.dtgvAceptarCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvAceptarCompra_CellContentClick);
             // 
@@ -107,18 +116,25 @@ namespace feriavirtual_frontend
             // 
             this.dataGridIdEstadoSolicitud.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.dataGridIdEstadoSolicitud.DataPropertyName = "idEstadoSolicitud";
-            this.dataGridIdEstadoSolicitud.HeaderText = "EstadoSolicitud";
+            this.dataGridIdEstadoSolicitud.HeaderText = "IdEstadoSolicitud";
             this.dataGridIdEstadoSolicitud.Name = "dataGridIdEstadoSolicitud";
             this.dataGridIdEstadoSolicitud.ReadOnly = true;
-            this.dataGridIdEstadoSolicitud.Width = 105;
+            this.dataGridIdEstadoSolicitud.Width = 114;
             // 
-            // dataGridIdUsuaio
+            // dataGridEstadoSolicitud
             // 
-            this.dataGridIdUsuaio.DataPropertyName = "idUsuario";
-            this.dataGridIdUsuaio.HeaderText = "idUsuario";
-            this.dataGridIdUsuaio.Name = "dataGridIdUsuaio";
-            this.dataGridIdUsuaio.ReadOnly = true;
-            this.dataGridIdUsuaio.Visible = false;
+            this.dataGridEstadoSolicitud.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridEstadoSolicitud.HeaderText = "EstadoSolicitud";
+            this.dataGridEstadoSolicitud.Name = "dataGridEstadoSolicitud";
+            this.dataGridEstadoSolicitud.ReadOnly = true;
+            // 
+            // dataGridIdUsuario
+            // 
+            this.dataGridIdUsuario.DataPropertyName = "idUsuario";
+            this.dataGridIdUsuario.HeaderText = "idUsuario";
+            this.dataGridIdUsuario.Name = "dataGridIdUsuario";
+            this.dataGridIdUsuario.ReadOnly = true;
+            this.dataGridIdUsuario.Visible = false;
             // 
             // dataGridIdTipoSolicitud
             // 
@@ -138,6 +154,7 @@ namespace feriavirtual_frontend
             // 
             // dataGridFechaPublicacion
             // 
+            this.dataGridFechaPublicacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridFechaPublicacion.DataPropertyName = "fechaPublicacion";
             this.dataGridFechaPublicacion.HeaderText = "FechaPublicacion";
             this.dataGridFechaPublicacion.Name = "dataGridFechaPublicacion";
@@ -146,28 +163,38 @@ namespace feriavirtual_frontend
             // dataGridOpcion1
             // 
             this.dataGridOpcion1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridOpcion1.HeaderText = "Opcion1";
+            this.dataGridOpcion1.HeaderText = "Opcion_1";
             this.dataGridOpcion1.Name = "dataGridOpcion1";
             this.dataGridOpcion1.ReadOnly = true;
             this.dataGridOpcion1.Text = "Aceptar";
             this.dataGridOpcion1.UseColumnTextForButtonValue = true;
-            this.dataGridOpcion1.Width = 53;
+            this.dataGridOpcion1.Width = 59;
             // 
             // dataGridOpcion2
             // 
             this.dataGridOpcion2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridOpcion2.HeaderText = "Opcion2";
+            this.dataGridOpcion2.HeaderText = "Opcion_2";
             this.dataGridOpcion2.Name = "dataGridOpcion2";
             this.dataGridOpcion2.ReadOnly = true;
             this.dataGridOpcion2.Text = "Rechazar";
             this.dataGridOpcion2.UseColumnTextForButtonValue = true;
-            this.dataGridOpcion2.Width = 53;
+            this.dataGridOpcion2.Width = 59;
+            // 
+            // dataGridOpcion3
+            // 
+            this.dataGridOpcion3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridOpcion3.HeaderText = "Opcion_3";
+            this.dataGridOpcion3.Name = "dataGridOpcion3";
+            this.dataGridOpcion3.ReadOnly = true;
+            this.dataGridOpcion3.Text = "Detalle";
+            this.dataGridOpcion3.UseColumnTextForButtonValue = true;
+            this.dataGridOpcion3.Width = 59;
             // 
             // aceptarProcesoCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 542);
             this.Controls.Add(this.dtgvAceptarCompra);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label1);
@@ -188,11 +215,13 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNumeroSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdEstadoSolicitud;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdUsuaio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridEstadoSolicitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdTipoSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridProductorSeleccionado;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridFechaPublicacion;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion1;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion2;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridOpcion3;
     }
 }

@@ -108,8 +108,15 @@ namespace feriavirtual_frontend
                 MessageBox.Show("Productor ingresado correctamente");
 
                 gestionarProductores windowGestionarProductores = new gestionarProductores();
-                this.Hide();
-                windowGestionarProductores.ShowDialog();
+                windowGestionarProductores.TopLevel = false;
+
+                menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                windowGestionarProductores.FormBorderStyle = FormBorderStyle.None;
+                windowGestionarProductores.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(windowGestionarProductores);
+                windowGestionarProductores.BringToFront();
+                windowGestionarProductores.Show();
             }
             else
             {
@@ -122,8 +129,15 @@ namespace feriavirtual_frontend
         private void btnVolver_Click_1(object sender, EventArgs e)
         {
             gestionarProductores gestionarProductores = new gestionarProductores();
-            this.Hide();
-            gestionarProductores.ShowDialog();
+            gestionarProductores.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            gestionarProductores.FormBorderStyle = FormBorderStyle.None;
+            gestionarProductores.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(gestionarProductores);
+            gestionarProductores.BringToFront();
+            gestionarProductores.Show();
         }
 
         private void productores_Load(object sender, EventArgs e)

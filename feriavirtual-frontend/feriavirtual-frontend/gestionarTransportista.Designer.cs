@@ -59,6 +59,9 @@ namespace feriavirtual_frontend
             // 
             this.dtgvGestionarTransportistas.AllowUserToAddRows = false;
             this.dtgvGestionarTransportistas.AllowUserToDeleteRows = false;
+            this.dtgvGestionarTransportistas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvGestionarTransportistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvGestionarTransportistas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridRut,
@@ -76,10 +79,11 @@ namespace feriavirtual_frontend
             this.dataGridTelefono,
             this.dataGridOpcion1,
             this.dataGridOpcion2});
-            this.dtgvGestionarTransportistas.Location = new System.Drawing.Point(83, 142);
+            this.dtgvGestionarTransportistas.Location = new System.Drawing.Point(84, 157);
+            this.dtgvGestionarTransportistas.MinimumSize = new System.Drawing.Size(550, 50);
             this.dtgvGestionarTransportistas.Name = "dtgvGestionarTransportistas";
             this.dtgvGestionarTransportistas.ReadOnly = true;
-            this.dtgvGestionarTransportistas.Size = new System.Drawing.Size(638, 259);
+            this.dtgvGestionarTransportistas.Size = new System.Drawing.Size(779, 259);
             this.dtgvGestionarTransportistas.TabIndex = 17;
             this.dtgvGestionarTransportistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvGestionarTransportistas_CellContentClick);
             // 
@@ -205,26 +209,31 @@ namespace feriavirtual_frontend
             // 
             // txtRut
             // 
-            this.txtRut.Location = new System.Drawing.Point(492, 97);
+            this.txtRut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRut.Location = new System.Drawing.Point(481, 116);
+            this.txtRut.MinimumSize = new System.Drawing.Size(150, 20);
             this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(229, 20);
+            this.txtRut.Size = new System.Drawing.Size(382, 20);
             this.txtRut.TabIndex = 15;
             this.txtRut.TextChanged += new System.EventHandler(this.txtRut_TextChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(151, 97);
+            this.txtNombre.Location = new System.Drawing.Point(152, 116);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(214, 20);
+            this.txtNombre.Size = new System.Drawing.Size(271, 20);
             this.txtNombre.TabIndex = 14;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnNuevoTransportista
             // 
+            this.btnNuevoTransportista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevoTransportista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoTransportista.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoTransportista.Location = new System.Drawing.Point(492, 420);
+            this.btnNuevoTransportista.Location = new System.Drawing.Point(626, 447);
             this.btnNuevoTransportista.Name = "btnNuevoTransportista";
-            this.btnNuevoTransportista.Size = new System.Drawing.Size(229, 34);
+            this.btnNuevoTransportista.Size = new System.Drawing.Size(237, 44);
             this.btnNuevoTransportista.TabIndex = 13;
             this.btnNuevoTransportista.Text = "Nuevo Transportista";
             this.btnNuevoTransportista.UseVisualStyleBackColor = true;
@@ -232,10 +241,12 @@ namespace feriavirtual_frontend
             // 
             // btnVolver
             // 
+            this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(83, 420);
+            this.btnVolver.Location = new System.Drawing.Point(84, 447);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(177, 34);
+            this.btnVolver.Size = new System.Drawing.Size(215, 44);
             this.btnVolver.TabIndex = 12;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -245,7 +256,7 @@ namespace feriavirtual_frontend
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(453, 102);
+            this.label3.Location = new System.Drawing.Point(442, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 17);
             this.label3.TabIndex = 11;
@@ -255,7 +266,7 @@ namespace feriavirtual_frontend
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 102);
+            this.label2.Location = new System.Drawing.Point(81, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 17);
             this.label2.TabIndex = 10;
@@ -263,9 +274,10 @@ namespace feriavirtual_frontend
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(168, 9);
+            this.label1.Location = new System.Drawing.Point(283, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(420, 42);
             this.label1.TabIndex = 9;
@@ -275,7 +287,7 @@ namespace feriavirtual_frontend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 474);
+            this.ClientSize = new System.Drawing.Size(984, 542);
             this.Controls.Add(this.dtgvGestionarTransportistas);
             this.Controls.Add(this.txtRut);
             this.Controls.Add(this.txtNombre);

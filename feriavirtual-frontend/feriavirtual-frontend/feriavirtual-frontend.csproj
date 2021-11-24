@@ -194,12 +194,21 @@
     <Compile Include="menuAdministrador.Designer.cs">
       <DependentUpon>menuAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Calidad.cs" />
+    <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Contrato.cs" />
+    <Compile Include="Models\detalleSolicitud.cs" />
+    <Compile Include="Models\DetalleVenta.cs" />
+    <Compile Include="Models\EstadoSolicitud.cs" />
+    <Compile Include="Models\EstadoVenta.cs" />
+    <Compile Include="Models\Frutas.cs" />
     <Compile Include="Models\Productores.cs" />
-    <Compile Include="Models\responseId.cs" />
+    <Compile Include="Models\Saldos.cs" />
     <Compile Include="Models\Solicitudes.cs" />
+    <Compile Include="Models\Subastas.cs" />
     <Compile Include="Models\Transportistas.cs" />
     <Compile Include="Models\Usuarios.cs" />
+    <Compile Include="Models\Ventas.cs" />
     <Compile Include="productores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +292,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="transportista.resx">
       <DependentUpon>transportista.cs</DependentUpon>
@@ -300,6 +310,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-feriaS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-feria.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
