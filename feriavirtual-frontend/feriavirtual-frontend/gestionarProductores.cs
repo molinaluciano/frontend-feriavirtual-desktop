@@ -26,8 +26,15 @@ namespace feriavirtual_frontend
         private void btnVolver_Click(object sender, EventArgs e)
         {
             gestionarUsuarios gestionarUsuario = new gestionarUsuarios();
-            this.Hide();
-            gestionarUsuario.ShowDialog();
+            gestionarUsuario.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            gestionarUsuario.FormBorderStyle = FormBorderStyle.None;
+            gestionarUsuario.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(gestionarUsuario);
+            gestionarUsuario.BringToFront();
+            gestionarUsuario.Show();
         }
 
         private async void gestionarProductores_Load(object sender, EventArgs e)
@@ -58,8 +65,15 @@ namespace feriavirtual_frontend
         private void btnNuevoProductor_Click(object sender, EventArgs e)
         {
             productores nuevoProductor = new productores();
-            this.Hide();
-            nuevoProductor.ShowDialog();
+            nuevoProductor.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            nuevoProductor.FormBorderStyle = FormBorderStyle.None;
+            nuevoProductor.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(nuevoProductor);
+            nuevoProductor.BringToFront();
+            nuevoProductor.Show();
         }
 
         private async void dtgvGestionarProductor_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -68,8 +82,15 @@ namespace feriavirtual_frontend
             {
                 int idUsuario = Int32.Parse(dtgvGestionarProductor.CurrentRow.Cells["dataGridIdUsuario"].Value.ToString());
                 editarProductor editar = new editarProductor(idUsuario);
-                this.Hide();
-                editar.ShowDialog();
+                editar.TopLevel = false;
+
+                menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                editar.FormBorderStyle = FormBorderStyle.None;
+                editar.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(editar);
+                editar.BringToFront();
+                editar.Show();
 
             }
             if(dtgvGestionarProductor.Columns[e.ColumnIndex].Name == "dataGridOpcion2")
@@ -98,8 +119,15 @@ namespace feriavirtual_frontend
 
                     MessageBox.Show("Productor Eliminado correctamente");
                     gestionarProductores gestionar = new gestionarProductores();
-                    this.Hide();
-                    gestionar.ShowDialog();
+                    gestionar.TopLevel = false;
+
+                    menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                    Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                    gestionar.FormBorderStyle = FormBorderStyle.None;
+                    gestionar.Dock = DockStyle.Fill;
+                    panelDesktop.Controls.Add(gestionar);
+                    gestionar.BringToFront();
+                    gestionar.Show();
                 }
                 else
                 {

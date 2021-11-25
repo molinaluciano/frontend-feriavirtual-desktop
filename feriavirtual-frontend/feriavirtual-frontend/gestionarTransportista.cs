@@ -26,15 +26,29 @@ namespace feriavirtual_frontend
         private void btnVolver_Click(object sender, EventArgs e)
         {
             gestionarUsuarios gestionarUsuario = new gestionarUsuarios();
-            this.Hide();
-            gestionarUsuario.ShowDialog();
+            gestionarUsuario.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            gestionarUsuario.FormBorderStyle = FormBorderStyle.None;
+            gestionarUsuario.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(gestionarUsuario);
+            gestionarUsuario.BringToFront();
+            gestionarUsuario.Show();
         }
 
         private void btnNuevoTransportista_Click(object sender, EventArgs e)
         {
             transportista transportistas = new transportista();
-            this.Hide();
-            transportistas.ShowDialog();
+            transportistas.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            transportistas.FormBorderStyle = FormBorderStyle.None;
+            transportistas.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(transportistas);
+            transportistas.BringToFront();
+            transportistas.Show();
         }
 
         private async void gestionarTransportista_Load(object sender, EventArgs e)
@@ -91,8 +105,15 @@ namespace feriavirtual_frontend
             {
                 int idUsuario = Int32.Parse(dtgvGestionarTransportistas.CurrentRow.Cells["dataGridIdTransportista"].Value.ToString());
                 editarTransportista editar = new editarTransportista(idUsuario);
-                this.Hide();
-                editar.ShowDialog();
+                editar.TopLevel = false;
+
+                menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                editar.FormBorderStyle = FormBorderStyle.None;
+                editar.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(editar);
+                editar.BringToFront();
+                editar.Show();
             }
 
             if (dtgvGestionarTransportistas.Columns[e.ColumnIndex].Name == "dataGridOpcion2")
@@ -121,8 +142,15 @@ namespace feriavirtual_frontend
 
                     MessageBox.Show("Transportista Eliminado correctamente");
                     gestionarTransportista gestionarT = new gestionarTransportista();
-                    this.Hide();
-                    gestionarT.ShowDialog();
+                    gestionarT.TopLevel = false;
+
+                    menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                    Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                    gestionarT.FormBorderStyle = FormBorderStyle.None;
+                    gestionarT.Dock = DockStyle.Fill;
+                    panelDesktop.Controls.Add(gestionarT);
+                    gestionarT.BringToFront();
+                    gestionarT.Show();
                 }
                 else
                 {

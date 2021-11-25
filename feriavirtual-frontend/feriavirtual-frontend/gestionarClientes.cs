@@ -33,15 +33,28 @@ namespace feriavirtual_frontend
         private void btnVolver_Click(object sender, EventArgs e)
         {
             gestionarUsuarios gestionarUsuario = new gestionarUsuarios();
-            this.Hide();
-            gestionarUsuario.ShowDialog();
+            gestionarUsuario.TopLevel = false;
+
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            gestionarUsuario.FormBorderStyle = FormBorderStyle.None;
+            gestionarUsuario.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(gestionarUsuario);
+            gestionarUsuario.BringToFront();
+            gestionarUsuario.Show();
         }
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             cliente clientes = new cliente();
-            this.Hide();
-            clientes.ShowDialog();
+            clientes.TopLevel = false;
 
+            menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+            Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+            clientes.FormBorderStyle = FormBorderStyle.None;
+            clientes.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(clientes);
+            clientes.BringToFront();
+            clientes.Show();
         }
 
         private async void gestionarClientes_Load(object sender, EventArgs e)
@@ -73,6 +86,23 @@ namespace feriavirtual_frontend
 
 
             dtgvGestionarClientes.DataSource = lstUsuarios;
+
+            foreach (DataGridViewRow fila in dtgvGestionarClientes.Rows)
+            {
+                if (fila.Cells["dataGridIdTipoCliente"].Value.ToString() == "2")
+                {
+                    fila.Cells["dataGridTipoCliente"].Value = "Cliente Externo";
+                }
+                if (fila.Cells["dataGridIdTipoCliente"].Value.ToString() == "3")
+                {
+                    fila.Cells["dataGridTipoCliente"].Value = "Cliente Local";
+                }
+                if (fila.Cells["dataGridIdTipoCliente"].Value.ToString() == "4")
+                {
+                    fila.Cells["dataGridTipoCliente"].Value = "Cliente Interno";
+                }
+            }
+
         }
         public async Task<string> GetHtppExterno()
         {
@@ -95,7 +125,6 @@ namespace feriavirtual_frontend
             WebRequest oRequestInterno = WebRequest.Create(urlInterno);
             WebResponse oResponseInterno = oRequestInterno.GetResponse();
             StreamReader srInterno = new StreamReader(oResponseInterno.GetResponseStream());
-
 
             return await srInterno.ReadToEndAsync();
         }
@@ -156,8 +185,15 @@ namespace feriavirtual_frontend
             {
                 int idUsuario = Int32.Parse(dtgvGestionarClientes.CurrentRow.Cells["dataGridIdUsuario"].Value.ToString());
                 editarCliente editarClientes = new editarCliente(idUsuario);
-                this.Hide();
-                editarClientes.ShowDialog();
+                editarClientes.TopLevel = false;
+
+                menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                editarClientes.FormBorderStyle = FormBorderStyle.None;
+                editarClientes.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(editarClientes);
+                editarClientes.BringToFront();
+                editarClientes.Show();
 
             }
             if (dtgvGestionarClientes.Columns[e.ColumnIndex].Name == "dataGridOpcion2")
@@ -186,15 +222,21 @@ namespace feriavirtual_frontend
 
                     MessageBox.Show("Cliente Eliminado correctamente");
                     gestionarClientes gestionarCliente = new gestionarClientes();
-                    this.Hide();
-                    gestionarCliente.ShowDialog();
+                    gestionarCliente.TopLevel = false;
+
+                    menuAdministrador menu = (menuAdministrador)Application.OpenForms["menuAdministrador"];
+                    Panel panelDesktop = (Panel)menu.Controls["panelDesktop"];
+                    gestionarCliente.FormBorderStyle = FormBorderStyle.None;
+                    gestionarCliente.Dock = DockStyle.Fill;
+                    panelDesktop.Controls.Add(gestionarCliente);
+                    gestionarCliente.BringToFront();
+                    gestionarCliente.Show();
                 }
                 else
                 {
                     MessageBox.Show("Error Cliente no puedo ser eliminado");
                 }
-            }
-            
+            }  
         }
     }
 }
