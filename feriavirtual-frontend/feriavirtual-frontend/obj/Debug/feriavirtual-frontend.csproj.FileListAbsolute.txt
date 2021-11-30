@@ -135,3 +135,4 @@ C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\fer
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\bin\Debug\Newtonsoft.Json.xml
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.productores.resources
 C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.detallePagos.resources
+C:\Users\phili\Desktop\Desarrollo Iteración 1\frontend-feriavirtual-desktop\feriavirtual-frontend\feriavirtual-frontend\obj\Debug\feriavirtual_frontend.gestionarInformes.resources

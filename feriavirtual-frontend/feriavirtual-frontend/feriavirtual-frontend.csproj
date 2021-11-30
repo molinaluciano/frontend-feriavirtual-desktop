@@ -152,6 +152,12 @@
     <Compile Include="gestionarClientes.Designer.cs">
       <DependentUpon>gestionarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="gestionarInformes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestionarInformes.Designer.cs">
+      <DependentUpon>gestionarInformes.cs</DependentUpon>
+    </Compile>
     <Compile Include="gestionarPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gestionarClientes.resx">
       <DependentUpon>gestionarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gestionarInformes.resx">
+      <DependentUpon>gestionarInformes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gestionarPagos.resx">
       <DependentUpon>gestionarPagos.cs</DependentUpon>

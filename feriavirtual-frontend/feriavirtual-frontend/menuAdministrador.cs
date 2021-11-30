@@ -78,7 +78,7 @@ namespace feriavirtual_frontend
 
         private void btnGestionarInformes_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new gestionarInformes(), sender);
         }
 
         private void btnGestionarSubastas_Click(object sender, EventArgs e)
