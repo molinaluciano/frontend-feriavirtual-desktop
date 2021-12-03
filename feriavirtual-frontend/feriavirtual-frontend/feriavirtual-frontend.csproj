@@ -209,7 +209,7 @@
     <Compile Include="Models\Calidad.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Contrato.cs" />
-    <Compile Include="Models\detalleSolicitud.cs" />
+    <Compile Include="Models\detallesSolicitud.cs" />
     <Compile Include="Models\DetalleSubasta.cs" />
     <Compile Include="Models\DetalleVenta.cs" />
     <Compile Include="Models\EstadoSolicitud.cs" />

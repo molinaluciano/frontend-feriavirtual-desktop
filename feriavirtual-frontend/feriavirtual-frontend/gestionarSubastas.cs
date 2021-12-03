@@ -73,7 +73,14 @@ namespace feriavirtual_frontend
             foreach(var subasta in lstSubastas)
             {
                 subasta.fechaPublicacion = Convert.ToDateTime(subasta.fechaPublicacion).ToString("dd/MM/yyyy");
-                subasta.fechaTermino = Convert.ToDateTime(subasta.fechaTermino).ToString("dd/MM/yyyy");
+                if(subasta.fechaTermino == null)
+                {
+
+                }
+                else
+                {
+                    subasta.fechaTermino = Convert.ToDateTime(subasta.fechaTermino).ToString("dd/MM/yyyy");
+                }
             }
 
             dtgvGestionarSubastas.DataSource = lstSubastas;

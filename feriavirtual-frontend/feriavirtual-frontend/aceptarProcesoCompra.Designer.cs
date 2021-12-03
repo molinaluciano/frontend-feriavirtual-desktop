@@ -33,6 +33,7 @@ namespace feriavirtual_frontend
             this.btnVolver = new System.Windows.Forms.Button();
             this.dtgvAceptarCompra = new System.Windows.Forms.DataGridView();
             this.dataGridNumeroSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridIdEstadoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridEstadoSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +80,7 @@ namespace feriavirtual_frontend
             this.dtgvAceptarCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvAceptarCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridNumeroSolicitud,
+            this.dataGridVenta,
             this.dataGridNombreCliente,
             this.dataGridIdEstadoSolicitud,
             this.dataGridEstadoSolicitud,
@@ -104,6 +106,14 @@ namespace feriavirtual_frontend
             this.dataGridNumeroSolicitud.Name = "dataGridNumeroSolicitud";
             this.dataGridNumeroSolicitud.ReadOnly = true;
             this.dataGridNumeroSolicitud.Width = 103;
+            // 
+            // dataGridVenta
+            // 
+            this.dataGridVenta.DataPropertyName = "venta";
+            this.dataGridVenta.HeaderText = "Venta";
+            this.dataGridVenta.Name = "dataGridVenta";
+            this.dataGridVenta.ReadOnly = true;
+            this.dataGridVenta.Visible = false;
             // 
             // dataGridNombreCliente
             // 
@@ -213,6 +223,7 @@ namespace feriavirtual_frontend
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.DataGridView dtgvAceptarCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNumeroSolicitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridNombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridIdEstadoSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridEstadoSolicitud;

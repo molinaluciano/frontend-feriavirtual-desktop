@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace feriavirtual_frontend.Models
 {
-    class detalleSolicitud
+    class detallesSolicitud
     {
-        [JsonConstructor] public detalleSolicitud() { }
-        public detalleSolicitud(int idSolicitud, int idFruta, int idCalidad, int idDetalleSolicitud, int kilos) 
+        [JsonConstructor] public detallesSolicitud() { }
+        public detallesSolicitud(int idSolicitud, int idFruta, int idCalidad, int idDetalleSolicitud, int kilos) 
         {
             this.idSolicitud = idSolicitud;
             this.idFruta = idFruta;

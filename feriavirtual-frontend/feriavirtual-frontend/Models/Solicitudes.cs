@@ -34,6 +34,7 @@ namespace feriavirtual_frontend.Models
         public int? idSolicitud { get; set; }
         public string productorSeleccionado { get; set; }
         public string fechaPublicacion { get; set; }
-
+        public detallesSolicitud[] detallesSolicitud { get; set; }
+        public Ventas venta { get; set; }
     }
 }

@@ -66,7 +66,7 @@ namespace feriavirtual_frontend
             string requestCalidad = await GetHtppCalidad();
 
             List<Solicitudes> lstSolicitud = JsonConvert.DeserializeObject<List<Solicitudes>>(requestSolicitud);
-            List<detalleSolicitud> lstDetalleSolicitud = JsonConvert.DeserializeObject<List<detalleSolicitud>>(requestDetalleSolicitud);
+            List<detallesSolicitud> lstDetalleSolicitud = JsonConvert.DeserializeObject<List<detallesSolicitud>>(requestDetalleSolicitud);
             List<Frutas> lstFrutas = JsonConvert.DeserializeObject<List<Frutas>>(requestFruta);
             List<Calidad> lstCalidad = JsonConvert.DeserializeObject<List<Calidad>>(requestCalidad);
 
@@ -74,8 +74,8 @@ namespace feriavirtual_frontend
             foreach (var solicitud in lstSolicitud)
             {
                 if (solicitud.idSolicitud == selectedSolicitud)
-                {   
-                    if(solicitud.idTipoSolicitud.ToString() == "1")
+                {
+                    if (solicitud.idTipoSolicitud.ToString() == "1")
                     {
                         lbTipoSolicitud.Text = "SOLICITUD SALDOS";
                     }
@@ -84,63 +84,42 @@ namespace feriavirtual_frontend
                         lbTipoSolicitud.Text = "SOLICITUD CON PRODUCTOR";
                     }
                     lbPedido.Text = solicitud.idSolicitud.ToString();
-                }
-                foreach(var usuario in lstUsuarios)
-                {
-                    if (usuario.idUsuario == solicitud.idUsuario)
+
+                    foreach(var detalleSolicitud in solicitud.detallesSolicitud)
                     {
-                        lbNomCliente.Text = usuario.nombre;
-                        if (usuario.idPais.ToString() == "1") 
-                        {
-                            lbPais.Text = "CHILE";                         
-                        }
-                        if (usuario.idPais.ToString() == "2")
-                        {
-                            lbPais.Text = "ARGENTINA";
-                        }
-                        if (usuario.idPais.ToString() == "3")
-                        {
-                            lbPais.Text = "PERU";
-                        }
-                        if (usuario.idPais.ToString() == "4")
-                        {
-                            lbPais.Text = "CHINA";
-                        }
-                        if (usuario.idPais.ToString() == "5")
-                        {
-                            lbPais.Text = "ESTADOS UNIDOS";
-                        }
-
+                        lbKilos.Text = detalleSolicitud.kilos.ToString();
+                        lbCalidad.Text = detalleSolicitud.idCalidad.ToString();
+                        lbFruta.Text = detalleSolicitud.idCalidad.ToString();
                     }
-                }
-                foreach (var detalle in lstDetalleSolicitud)
-                {
-                    if(detalle.idSolicitud == solicitud.idSolicitud)
+                    foreach(var usuario in lstUsuarios)
                     {
-                        foreach(var fruta in lstFrutas)
+                        if (usuario.idUsuario == solicitud.idUsuario)
                         {
-                            if(detalle.idFruta == fruta.idFruta)
+                            lbNomCliente.Text = usuario.nombre;
+                            if (usuario.idPais.ToString() == "1") 
                             {
-                                lbFruta.Text = fruta.nombreFruta;
+                                lbPais.Text = "CHILE";                         
                             }
-
-                        }
-
-                        foreach (var calidad in lstCalidad)
-                        {
-                            if (detalle.idCalidad == calidad.idCalidad)
+                            if (usuario.idPais.ToString() == "2")
                             {
-                                lbCalidad.Text = calidad.calidad;
+                                lbPais.Text = "ARGENTINA";
                             }
-
+                            if (usuario.idPais.ToString() == "3")
+                            {
+                                lbPais.Text = "PERU";
+                            }
+                            if (usuario.idPais.ToString() == "4")
+                            {
+                                lbPais.Text = "CHINA";
+                            }
+                            if (usuario.idPais.ToString() == "5")
+                            {
+                                lbPais.Text = "ESTADOS UNIDOS";
+                            }
                         }
-
-                        lbKilos.Text = detalle.kilos.ToString();
                     }
-                }
+                }   
             }
-
-
         }
 
         public async Task<string> GetHtppExterno()

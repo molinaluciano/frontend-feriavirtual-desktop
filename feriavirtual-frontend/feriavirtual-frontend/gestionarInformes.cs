@@ -48,40 +48,31 @@ namespace feriavirtual_frontend
             {
                 DateTime fechaSolicitud;
                 fechaSolicitud = Convert.ToDateTime(solicitud.fechaPublicacion);
-
                 if (cbxMes.SelectedItem.ToString() == fechaSolicitud.Month.ToString())
                 {
                     solicitudesRealizadas = solicitudesRealizadas + 1;
                 }
-            }
-            foreach(var venta in lstVentas)
-            {
-                DateTime fechaVenta;
-                fechaVenta = Convert.ToDateTime(venta.detalleVenta.fechaFin);
-                if (venta.idEstadoVenta == 6 && fechaVenta.Month.ToString() == cbxMes.SelectedItem.ToString())
+                if(solicitud.venta == null)
                 {
-                    ventasRealizadas = ventasRealizadas + 1;
-                    ganancias = ganancias + (venta.detalleVenta.precioBruto - venta.detalleVenta.precioBruto/1.2);   
-                }
-            }
-            foreach(var saldo in lstSaldos)
-            {
-                foreach (var solicitud in lstSolicitud)
-                {
-                    DateTime fechaSolicitud;
-                    fechaSolicitud = Convert.ToDateTime(solicitud.fechaPublicacion);
 
-                    if (solicitud.idTipoSolicitud == 2 && fechaSolicitud.Month.ToString() == cbxMes.SelectedItem.ToString())
+                }
+                else
+                {
+                    DateTime fechaVenta;
+                    fechaVenta = Convert.ToDateTime(solicitud.venta.detalleVenta.fechaFin);
+
+                    if (solicitud.venta.idEstadoVenta == 6 && fechaVenta.Month.ToString() == cbxMes.SelectedItem.ToString())
                     {
-                        if (saldo.disponible == 0 )
-                        {
-                            saldosVendidos = saldosVendidos + 1;
-                            ganancias = ganancias + saldo.precio;
-                            ventasRealizadas = ventasRealizadas + 1;
-                        }
+                        ventasRealizadas = ventasRealizadas + 1;
+                        ganancias = ganancias + (solicitud.venta.detalleVenta.precioBruto - solicitud.venta.detalleVenta.precioBruto / 1.2);
                     }
                 }
+                if (solicitud.idTipoSolicitud == 1 && fechaSolicitud.Month.ToString() == cbxMes.SelectedItem.ToString())
+                {
+                    saldosVendidos = saldosVendidos + 1;
+                }
             }
+
 
             lbCantidadSolicitudes.Text = solicitudesRealizadas.ToString();
             lbVentasFinalizadas.Text = ventasRealizadas.ToString();
