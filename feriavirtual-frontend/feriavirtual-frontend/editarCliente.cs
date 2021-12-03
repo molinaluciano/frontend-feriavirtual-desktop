@@ -50,7 +50,21 @@ namespace feriavirtual_frontend
             try
             {
                 requestExterno = await GetHtppExterno();
+            }
+            catch (WebException err)
+            {
+                Console.WriteLine(err);
+            }
+            try
+            {
                 requestLocal = await GetHtppLocal();
+            }
+            catch (WebException err)
+            {
+                Console.WriteLine(err);
+            }
+            try
+            {
                 requestInterno = await GetHtppInterno();
             }
             catch (WebException err)

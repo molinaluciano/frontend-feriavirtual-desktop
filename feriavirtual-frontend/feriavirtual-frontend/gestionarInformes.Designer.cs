@@ -83,9 +83,9 @@ namespace feriavirtual_frontend
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(324, 306);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 21);
+            this.label4.Size = new System.Drawing.Size(150, 21);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Saldos vendidos:";
+            this.label4.Text = "Saldos ingresados:";
             // 
             // label5
             // 
@@ -162,7 +162,7 @@ namespace feriavirtual_frontend
             this.lbSaldosVendidos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbSaldosVendidos.AutoSize = true;
             this.lbSaldosVendidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSaldosVendidos.Location = new System.Drawing.Point(468, 306);
+            this.lbSaldosVendidos.Location = new System.Drawing.Point(480, 306);
             this.lbSaldosVendidos.Name = "lbSaldosVendidos";
             this.lbSaldosVendidos.Size = new System.Drawing.Size(139, 21);
             this.lbSaldosVendidos.TabIndex = 11;
